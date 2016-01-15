@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "谭胖子"
 date:   2016-01-14 21:50:38 +0800
 categories: jekyll update
 ---
