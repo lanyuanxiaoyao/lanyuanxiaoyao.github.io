@@ -1,6 +1,7 @@
 title: 兰缘小妖的后花园
 email: lanyuanxiaoyao@qq.com
 description: > # this means to ignore newlines until "baseurl:"
+  
   世界上有一条最孤独的鲸鱼叫做Alice
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lanyuanxiaoyao.github.io/" # the base hostname & protocol for your site
