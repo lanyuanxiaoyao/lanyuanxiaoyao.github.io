@@ -1,34 +1,25 @@
-<footer class="site-footer">
+<footer role="contentinfo" class='post-footer'>
+    <div class="inner">
+        <div class="vcard">
+            {% if site.logo %}
+            <a href="{{ site.baseurl }}" class="photo circle">
+              <span style="background-image: url('{{ site.baseurl }}/assets/images/{{ site.logo }}');">
+                <img src="{{ site.baseurl }}/assets/images/{{ site.logo }}" alt="{{ site.title }}"/>
+              </span>
+            </a>
+            {% endif %}
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">享受孤独</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>E-mail:</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-		<li>GitHub:</li>
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-		<li>我听说...</li>
-        <p>{{ site.description }}</p>
-      </div>
+            <div class="details">
+				<br/>
+                <h4><a href="{{ site.url }}" class="url n">{{ site.title }}</a></h4>
+                <a href="{{ site.baseurl | prepend: site.url }}" class="js-remove-domain-schema">{{ site.url }}{{ site.baseurl }}</a><br>
+            </div>
+        </div>
+        <div id="user_bio">
+            <div class="inner">
+				<br/><br/><br/>
+                {{ site.description }}
+            </div>
+        </div>
     </div>
-
-  </div>
-
 </footer>
