@@ -1,44 +1,25 @@
 ---
 layout: default
-body_class: "home-template user"
 ---
 {% include header.html %}
+<script type="text/javascript">
+	function checkuser() {
+         if($('password') == "李明卡") {
+           return true;
+         }else {
+            return false;
+         }
+      }
 
-<div class="page-content">
-  <div class="wrapper">
-    <div class="home">
-      {% for post in site.posts %}
-      <article class="{%comment%}post_class{%endcomment%}">
-
-          {% if post.image %}
-              <div class="image-holder show">
-                <a href="{{ post.url | prepend: site.baseurl }}" class="inner" style="background-image: url('{{ site.baseurl }}/content/images/{{ post.image }}');">
-                  <img src="{{ site.baseurl }}/content/images/{{ post.image }}">
-              </a>
-            </div>
-          {% endif %}
-
-          <div class="meta">
-            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%B %-d, %Y" }}</a>
-            </time>
-          </div>
-
-          <header>
-              <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
-          </header>
-
-          <div class="text">
-              <p>{{ post.excerpt }}</p>
-              <a href="{{ post.url | prepend: site.baseurl }}" class="readmore">Continue Reading</a>
-          </div>
-      </article>
-      {% endfor %}
-
-      {% include pagination.html %}
-
-    </div>
-  </div>
+      function $(id) {
+        return document.getElementById(id).value;
+      }
+</script>
+<div>
+	<form action="index2.html">
+	<span>请输入你的名字（注：如无反应则无访问权限）</span>
+	<input type="text" id="password">
+	<input type="submit" value="确认" onclick="return checkuser()">
+	</form>
 </div>
-
 {% include footer.html %}
