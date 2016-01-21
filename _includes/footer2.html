@@ -2,7 +2,7 @@
     <div class="inner">
         <div class="vcard">
             {% if site.logo %}
-            <a href="{{ site.baseurl }}/index2.html" class="photo circle">
+            <a href="{{ site.baseurl }}" class="photo circle">
               <span style="background-image: url('{{ site.baseurl }}/assets/images/{{ site.logo }}');">
                 <img src="{{ site.baseurl }}/assets/images/{{ site.logo }}" alt="{{ site.title }}"/>
               </span>
@@ -11,7 +11,7 @@
 
             <div class="details">
 				<br/>
-                <h4><a href="{{ site.url }}/index2.html" class="url n">{{ site.title }}</a></h4>
+                <h4><a href="{{ site.url }}" class="url n">{{ site.title }}</a></h4>
                 <a href="{{ site.baseurl | prepend: site.url }}" class="js-remove-domain-schema">{{ site.url }}{{ site.baseurl }}</a><br>
             </div>
         </div>
