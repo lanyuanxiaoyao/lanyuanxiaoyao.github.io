@@ -6,6 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   不谈代码 记录人生
 url: "http://www.lanyuanxiaoyao.cn"
 baseurl: ""
+users: ['张家城','李明卡','姚华婧']
 
 # Build settings
 markdown: kramdown

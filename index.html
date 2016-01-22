@@ -1,16 +1,17 @@
 ---
-layout: default
+layout: default2
 ---
 {% include header2.html %}
 <script type="text/javascript">
 	function checkuser() {
-         if($('password') == "李明卡") {
+         {% for name in site.users %}
+		 if($('password') == "{{name}}") {
            return true;
-         }else {
-            return false;
          }
-      }
-
+		 {% endfor %}
+		return false;
+	  }
+		
       function $(id) {
         return document.getElementById(id).value;
       }
@@ -18,7 +19,7 @@ layout: default
 <div>
 	<form action="index2.html">
 	<span>请输入你的名字（注：如无反应则无访问权限）</span>
-	<input type="text" id="password">
+	<input type="password" id="password">
 	<input type="submit" value="确认" onclick="return checkuser()">
 	</form>
 </div>
