@@ -2,8 +2,8 @@
 <html>
 
   {% include head.html %}
-
-  <body class="{{ page.body_class }}">
+<script language="JavaScript" src="{{site.baseurl}}/assets/javascript/check_cookie.js"></script>
+  <body class="{{ page.body_class }}" onload="check()">
 
     {{ content }}
 
