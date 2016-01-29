@@ -3,24 +3,31 @@ layout: default2
 ---
 {% include header2.html %}
 <script type="text/javascript">
-	function checkuser() {
-         {% for name in site.users %}
-		 if($('password') == "{{name}}") {
-           return true;
-         }
-		 {% endfor %}
-		return false;
-	  }
+var flag = 0;
+function checkuser() {
+{% for name in site.users %}
+if($('password') == "{{name}}") {
+	flag = 1;
+    return true;
+    }
+	{% endfor %}
+	if(flag == 0){
+	alert("你没有访问权限，请联系lanyuanxiaoyao@qq.com");
+	}
+	return false;
+}
 		
-      function $(id) {
-        return document.getElementById(id).value;
-      }
+function $(id) {
+    return document.getElementById(id).value;
+}
 </script>
-<div>
+<!-- <script language="JavaScript" src="{{site.baseurl}}/assets/javascript/login.js">
+</script> -->
+<div id="login">
 	<form action="index2.html">
-	<span>请输入你的名字（注：如无反应则无访问权限）</span>
+	<span>请输入你的名字(或拼音)</span><br/><br/>
 	<input type="password" id="password">
-	<input type="submit" value="确认" onclick="return checkuser()">
+	<input type="submit" value="进入" onclick="return checkuser()">
 	</form>
 </div>
 {% include footer2.html %}
