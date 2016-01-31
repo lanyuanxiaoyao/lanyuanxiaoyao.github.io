@@ -1627,6 +1627,19 @@ body.touch.user article .readmore {
 	opacity: 1
 }
 
+#goTopBtn {
+	position: fixed;
+	width: 35px;
+	bottom: 35px;
+	height: 30px;
+	right: 0px;
+}
+
+#up {
+	width: 35px;
+	height: 35px;
+}
+
 @media only screen and (max-width: 1200px) {
 	body.user article.feature .wrap {
 		padding-top: 25%
@@ -1670,12 +1683,36 @@ body.touch.user article .readmore {
 		{
 		padding-top: 30%
 	}
+	#goTopBtn {
+		position: fixed;
+		width: 25px;
+		bottom: 25px;
+		height: 25px;
+		right: 0px;
+	}
+
+	#up {
+		width: 25px;
+		height: 25px;
+	}
 }
 
 @media only screen and (max-width: 680px) {
 	article .text strong .roon-img {
 		margin-left: -7.5%;
 		width: 115%
+	}
+	#goTopBtn {
+		position: fixed;
+		width: 20px;
+		bottom: 20px;
+		height: 20px;
+		right: 0px;
+	}
+
+	#up {
+		width: 20px;
+		height: 20px;
 	}
 }
 
@@ -1927,6 +1964,19 @@ body.touch.user article .readmore {
 		margin-bottom: 60px;
 		padding: 15px 25px
 	}
+	
+	#goTopBtn {
+		position: fixed;
+		width: 20px;
+		bottom: 20px;
+		height: 20px;
+		right: 0px;
+	}
+
+	#up {
+		width: 20px;
+		height: 20px;
+	}
 }
 
 @media only screen and (max-width: 360px) {
@@ -1941,17 +1991,4 @@ body.touch.user article .readmore {
 
 #login {
 	font-size: 20px;
-}
-
-#goTopBtn {
-	position: fixed;
-	width: 35px;
-	bottom: 35px;
-	height: 30px;
-	right: 0px;
-}
-
-#up {
-	width: 35px;
-	height: 35px;
 }
