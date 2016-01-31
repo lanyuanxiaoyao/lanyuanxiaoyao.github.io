@@ -1629,15 +1629,15 @@ body.touch.user article .readmore {
 
 #goTopBtn {
 	position: fixed;
-	width: 35px;
-	bottom: 35px;
-	height: 30px;
-	right: 0px;
+	width: 50px;
+	bottom: 50px;
+	height: 50px;
+	right: 15px;
 }
 
 #up {
-	width: 35px;
-	height: 35px;
+	width: 50px;
+	height: 50px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1685,15 +1685,15 @@ body.touch.user article .readmore {
 	}
 	#goTopBtn {
 		position: fixed;
-		width: 25px;
-		bottom: 25px;
-		height: 25px;
-		right: 0px;
+		width: 40px;
+		bottom: 40px;
+		height: 40px;
+		right: 15px;
 	}
 
 	#up {
-		width: 25px;
-		height: 25px;
+		width: 40px;
+		height: 40px;
 	}
 }
 
@@ -1701,18 +1701,6 @@ body.touch.user article .readmore {
 	article .text strong .roon-img {
 		margin-left: -7.5%;
 		width: 115%
-	}
-	#goTopBtn {
-		position: fixed;
-		width: 20px;
-		bottom: 20px;
-		height: 20px;
-		right: 0px;
-	}
-
-	#up {
-		width: 20px;
-		height: 20px;
 	}
 }
 
@@ -1967,15 +1955,15 @@ body.touch.user article .readmore {
 	
 	#goTopBtn {
 		position: fixed;
-		width: 20px;
-		bottom: 20px;
-		height: 20px;
-		right: 0px;
+		width: 35px;
+		bottom: 35px;
+		height: 35px;
+		right: 5px;
 	}
 
 	#up {
-		width: 20px;
-		height: 20px;
+		width: 35px;
+		height: 35px;
 	}
 }
 
