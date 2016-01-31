@@ -1,42 +1,67 @@
+--- 
+layout: default 
+body_class: post-template 
 ---
-layout: default
-body_class: post-template
----
+<!-- <a name="top"></a> -->
 {% if page.image %}
 <div id="feature_image">
-  <div class="inner" style="background-image: url('{{ site.baseurl }}/content/images//{{ page.image }}')">
-    <img src='{{ site.baseurl }}/content/images/{{ page.image }}'>
-    </div>
+	<div class="inner"
+		style="background-image: url('{{ site.baseurl }}/content/images//{{ page.image }}')">
+		<img src='{{ site.baseurl }}/content/images/{{ page.image }}'>
+	</div>
 </div>
 {% endif %}
 
 <article role="main" class="{% if page.image %}image{% endif %}">
-    <header>
-      <a href="{{ site.baseurl }}/index2.html" id="home_link">«</a>
-      <div class="meta"><time datetime="{{ page.date | date:'%Y-%m-%d' }}"><a href="{{ page.url }}">{{ page.date | date: "%B %d, %Y" }}</a></time>
-        <span class="count" id="js-reading-time">&nbsp;</span>
-      </div>
-      <h1>{{ page.title }}</h1>
-    </header>
+	<header>
+		<a href="{{ site.baseurl }}/index2.html" id="home_link"><</a>
+		<div class="meta">
+			<time datetime="{{ page.date | date:'%Y-%m-%d' }}">
+				<a href="{{ page.url }}">{{ page.date | date: "%B %d, %Y" }}</a>
+			</time>
+			<span class="count" id="js-reading-time">&nbsp;</span>
+		</div>
+		<h1>{{ page.title }}</h1>
 
-    <div class="text" id="js-post-content">
-        {{ content }}
-    </div>
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="www.lanyuanxiaoyao.cn{{page.url}}"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-		var duoshuoQuery = {short_name:"lanyuanxiaoyao"};
-				(function() {
-					var ds = document.createElement('script');
-					ds.type = 'text/javascript';ds.async = true;
-					ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-					ds.charset = 'UTF-8';
-					(document.getElementsByTagName('head')[0] 
-					|| document.getElementsByTagName('body')[0]).appendChild(ds);
-				})();
+		<script type="text/javascript" src="{{site.baseurl}}/assets/javascript/to_top.js"></script>
+	</header>
+	<div class="text" id="js-post-content">{{ content }}</div>
+
+	<div style="display: none" id="goTopBtn">
+		<img id="up" border=0 src="{{ site.baseurl }}/assets/images/up.png"
+			alt="杩斿洖椤堕儴"></img>
+	</div>
+	<script type=text/javascript>
+		goTopEx();
 	</script>
-    {% include footer.html %}
+
+	<!-- style="width: 30px; height: 30px; position: fixed; right: 20px; bottom: 20px" -->
+	<!-- <map name="updown" id="updown">
+		<area shape="rect" coords="0,0,30,30" alt="杩斿洖椤堕儴" href="javascript:;" />
+	</map> -->
+
+	<!-- 澶氳璇勮妗� start -->
+	<div class="ds-thread" data-thread-key="{{ page.id }}"
+		data-title="{{ page.title }}"
+		data-url="www.lanyuanxiaoyao.cn{{page.url}}"></div>
+	<!-- 澶氳璇勮妗� end -->
+	<!-- 澶氳鍏叡JS浠ｇ爜 start (涓�涓綉椤靛彧闇�鎻掑叆涓�娆�) -->
+	<script type="text/javascript">
+		var duoshuoQuery = {
+			short_name : "lanyuanxiaoyao"
+		};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';
+			ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:'
+					: 'http:')
+					+ '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0] || document
+					.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+	</script>
+	{% include footer.html %}
 
 </article>
