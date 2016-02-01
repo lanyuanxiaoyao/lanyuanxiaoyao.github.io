@@ -24,16 +24,18 @@
             <span style="background-image:
             url('{{ site.baseurl }}/assets/images/menu0.png');" onclick="start()"></span>
     </a>
-	<a id="one" class="menu_positive">目录</a>
-	<a href="{{ site.baseurl }}/about.html" id="two" class="menu_positive">关于</a>
-	<a href="{{ site.baseurl }}/index2.html" id="three" class="menu_positive">主页</a>
+	<a id="one" class="menu_positive"><span style="background-image:
+            url('{{ site.baseurl }}/assets/images/menu1.png');"></span>
+	</a>
+	<a href="{{ site.baseurl }}/about.html" id="two" class="menu_positive">
+	<span style="background-image:
+            url('{{ site.baseurl }}/assets/images/menu2.png');"></span>
+	</a>
+	<a href="{{ site.baseurl }}/index2.html" id="three" class="menu_positive">
+	<span style="background-image:
+            url('{{ site.baseurl }}/assets/images/menu3.png');"></span>
+	</a>
     {{/if}}
-	<!-- <span style="background-image:
-            url('{{ site.baseurl }}/assets/images/menu1.png');"></span> -->
-	<!-- <span style="background-image:
-            url('{{ site.baseurl }}/assets/images/menu2.png');"></span> -->
-	<!-- <span style="background-image:
-            url('{{ site.baseurl }}/assets/images/menu3.png');"></span> -->
     <script>
       function no_schema_links () {
         var links = document.querySelectorAll('.js-remove-domain-schema');
