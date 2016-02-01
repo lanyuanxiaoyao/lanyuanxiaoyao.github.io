@@ -4,10 +4,10 @@
 	var start_pos;
 	
 	function move() {
-		var timer;
 		var img1 = $("one");
 		var img2 = $("two");
 		var img3 = $("three");
+		/*var timer;
 		if (img3.offsetTop < 240) {
 			img3.style.top = (img3.offsetTop + speed) + 'px';
 			if (img2.offsetTop < 170) {
@@ -20,26 +20,44 @@
 			clearTimeout(timer);
 			return;
 		}
-		timer = setTimeout("move()", rate);
+		timer = setTimeout("move()", rate);*/
+		for(var i = start_pos;i < 100;i += speed){
+			img1.style.top = (img1.offsetTop + speed) + 'px';
+		}
+		for(var i = start_pos;i < 170;i += speed){
+			img2.style.top = (img2.offsetTop + speed) + 'px';
+		}
+		for(var i = start_pos;i < 240;i += speed){
+			img3.style.top = (img3.offsetTop + speed) + 'px';
+		}
 	}
 	function move_back() {
-		var timer6;
-		var img4 = $("one");
-		var img5 = $("two");
-		var img6 = $("three");
-		if (img6.offsetTop > start_pos) {
-			img6.style.top = (img6.offsetTop - speed) + 'px';
-			if (img5.offsetTop > start_pos) {
-			img5.style.top = (img5.offsetTop - speed) + 'px';
-			if (img4.offsetTop > start_pos) {
-			img4.style.top = (img4.offsetTop - speed) + 'px';
+		var img1 = $("one");
+		var img2 = $("two");
+		var img3 = $("three");
+		/*var timer;
+		if (img3.offsetTop < 240) {
+			img3.style.top = (img3.offsetTop - speed) + 'px';
+			if (img2.offsetTop < 170) {
+			img2.style.top = (img2.offsetTop - speed) + 'px';
+			if (img1.offsetTop < 100) {
+			img1.style.top = (img1.offsetTop - speed) + 'px';
 		}
 		}
 		} else {
-			clearTimeout(timer6);
+			clearTimeout(timer);
 			return;
 		}
-		timer6 = setTimeout("move_back()", rate);
+		timer = setTimeout("move()", rate);*/
+		for(var i = 100;i > start_pos;i -= speed){
+			img1.style.top = (img1.offsetTop - speed) + 'px';
+		}
+		for(var i = 170;i > start_pos;i -= speed){
+			img2.style.top = (img2.offsetTop - speed) + 'px';
+		}
+		for(var i = 240;i > start_pos;i -= speed){
+			img3.style.top = (img3.offsetTop - speed) + 'px';
+		}
 	}
 	function $(name) {
 		return document.getElementById(name);
