@@ -1389,56 +1389,6 @@ body>footer #user_bio .inner, .post-footer #user_bio .inner {
 	z-index:0;
 }
 
-.menu_positive {
-	position: absolute;
-	display: block;
-	top: 30px;
-	right: 26px;
-	width: 62px;
-	height: 62px;
-	background-color: #fff;
-	background-size: cover;
-	border: 1px solid rgba(33, 39, 45, 0.17);
-	-webkit-border-radius: 60px;
-	-moz-border-radius: 60px;
-	-ms-border-radius: 60px;
-	-o-border-radius: 60px;
-	border-radius: 60px;
-	z-index: 3;
-	-webkit-transition-property: all 0.2s;
-	-moz-transition-property: all 0.2s;
-	-o-transition-property: all 0.2s;
-	transition-property: all 0.2s;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-}
-
-.menu_positive:hover {
-	-webkit-filter: grayscale(0%);
-	filter: grayscale(0%);
-}
-
-.menu_positive span {
-	font-size: 1px;
-	color: transparent;
-	background-size: cover;
-	background-position: center center;
-	background-repeat: round;
-	position: absolute;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
-}
-
-body.user .menu_positive {
-	-webkit-transition-property: none;
-	-moz-transition-property: none;
-	-o-transition-property: none;
-	transition-property: none
-}
-
 body>.no-posts {
 	text-align: center;
 	margin: 50px auto 120px auto;
@@ -1566,16 +1516,6 @@ html[dir=rtl] body>footer .image, html[dir=rtl] .post-footer .image {
 	margin-right: 0
 }
 
-html[dir=rtl] .menu_positive span {
-	margin-left: 0;
-	margin-right: 1px
-}
-
-html[dir=rtl] .menu_positive span {
-	margin-left: 0;
-	margin-right: 17px
-}
-
 html[dir=rtl] article>header a#home_link {
 	margin-left: 10px;
 	margin-right: 0
@@ -1625,11 +1565,6 @@ html[dir=rtl] body>a.btn.nav.prev span {
 	-ms-transform: rotate(0deg) translate(0, 0);
 	-o-transform: rotate(0deg) translate(0, 0);
 	transform: rotate(0deg) translate(0, 0)
-}
-
-html[dir=rtl] .menu_positive {
-	left: 26px;
-	right: inherit
 }
 
 body>iframe {
@@ -1811,14 +1746,6 @@ body.touch.user article .readmore {
 		zoom: 1;
 		*display: inline
 	}
-	html[dir=rtl] body.user>.menu_positive span {
-		margin-left: 0;
-		margin-right: 12px
-	}
-	html[dir=rtl] body.user>.menu_positive {
-		left: 10px;
-		right: inherit
-	}
 	body>footer #user_bio, body>footer #user_profile, .post-footer #user_bio,
 		.post-footer #user_profile {
 		display: block;
@@ -1939,28 +1866,7 @@ body.touch.user article .readmore {
 		background: linear-gradient(rgba(33, 39, 45, 0.25) 0%,
 			rgba(33, 39, 45, 0.9) 75%)
 	}
-	.menu_positive {
-		background-size: cover;
-		top: 15px;
-		right: 10px;
-		width: 43px;
-		height: 43px
-	}
-	.menu_positive span {
-		background-size: cover;
-		top: 9px;
-		right: 9px;
-		bottom: 9px;
-		left: 9px;
-	}
-	html[dir=rtl] .menu_positive span {
-		margin-left: 0;
-		margin-right: 12px
-	}
-	html[dir=rtl] .menu_positive {
-		left: 10px;
-		right: inherit
-	}
+
 	body>footer>.inner {
 		padding: 0 20px
 	}
