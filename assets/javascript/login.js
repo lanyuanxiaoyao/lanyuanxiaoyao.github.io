@@ -2,7 +2,7 @@ var flag = 0;
 function checkuser() {
 	if($('password') == "limingka") {
 		flag = 1;
-		return true;
+		window.location.href="liangjiayi.html";
     }
 	if($('password') == "yaohuajing") {
 		flag = 1;
@@ -21,7 +21,7 @@ function checkuser() {
 		window.location.href="liangjiayi.html";
     }
 	if(flag == 0){
-		alert("你没有访问权限，请联系lanyuanxiaoyao@qq.com");
+		alert("You do not have access to this site. If you want to request access, please contact the bloggers.");
 	}
 	return false;
 }
