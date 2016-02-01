@@ -7,6 +7,9 @@
 		var img1 = $("one");
 		var img2 = $("two");
 		var img3 = $("three");
+		img1.style.top = 100 + 'px';
+		img2.style.top = 170 + 'px';
+		img3.style.top = 240 + 'px';
 		/*var timer;
 		if (img3.offsetTop < 240) {
 			img3.style.top = (img3.offsetTop + speed) + 'px';
@@ -21,7 +24,7 @@
 			return;
 		}
 		timer = setTimeout("move()", rate);*/
-		for(var i = start_pos;i < 100;i += speed){
+		/*for(var i = start_pos;i < 100;i += speed){
 			img1.style.top = (img1.offsetTop + speed) + 'px';
 		}
 		for(var i = start_pos;i < 170;i += speed){
@@ -29,12 +32,15 @@
 		}
 		for(var i = start_pos;i < 240;i += speed){
 			img3.style.top = (img3.offsetTop + speed) + 'px';
-		}
+		}*/
 	}
 	function move_back() {
 		var img1 = $("one");
 		var img2 = $("two");
 		var img3 = $("three");
+		img1.style.top = start_pos + 'px';
+		img2.style.top = start_pos + 'px';
+		img3.style.top = start_pos + 'px';
 		/*var timer;
 		if (img3.offsetTop < 240) {
 			img3.style.top = (img3.offsetTop - speed) + 'px';
@@ -49,7 +55,7 @@
 			return;
 		}
 		timer = setTimeout("move()", rate);*/
-		for(var i = 100;i > start_pos;i -= speed){
+		/*for(var i = 100;i > start_pos;i -= speed){
 			img1.style.top = (img1.offsetTop - speed) + 'px';
 		}
 		for(var i = 170;i > start_pos;i -= speed){
@@ -57,7 +63,7 @@
 		}
 		for(var i = 240;i > start_pos;i -= speed){
 			img3.style.top = (img3.offsetTop - speed) + 'px';
-		}
+		}*/
 	}
 	function $(name) {
 		return document.getElementById(name);
