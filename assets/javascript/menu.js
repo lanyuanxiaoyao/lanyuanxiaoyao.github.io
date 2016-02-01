@@ -3,38 +3,24 @@
 	var flag = 0;
 	var start_pos;
 	
-	function move_one() {
-		var timer1;
+	function move() {
+		var timer;
 		var img1 = $("one");
-		if (img1.offsetTop < 100) {
-			img1.style.top = (img1.offsetTop + speed) + 'px';
-		} else {
-			clearTimeout(timer1);
-			return;
-		}
-		timer1 = setTimeout("move_one()", rate);
-	}
-	function move_two() {
-		var timer2;
 		var img2 = $("two");
-		if (img2.offsetTop < 170) {
-			img2.style.top = (img2.offsetTop + speed) + 'px';
-		} else {
-			clearTimeout(timer2);
-			return;
-		}
-		timer2 = setTimeout("move_two()", rate);
-	}
-	function move_three() {
-		var timer3;
 		var img3 = $("three");
 		if (img3.offsetTop < 240) {
 			img3.style.top = (img3.offsetTop + speed) + 'px';
+			if (img2.offsetTop < 170) {
+			img2.style.top = (img2.offsetTop + speed) + 'px';
+			if (img1.offsetTop < 100) {
+			img1.style.top = (img1.offsetTop + speed) + 'px';
+		}
+		}
 		} else {
-			clearTimeout(timer3);
+			clearTimeout(timer);
 			return;
 		}
-		timer3 = setTimeout("move_three()", rate);
+		timer = setTimeout("move()", rate);
 	}
 	function move_one_back() {
 		var timer4;
@@ -76,9 +62,7 @@
 	function start() {
 		start_pos = $("blog_badge").offsetTop;
 		if (!flag) {
-			move_one();
-			move_two();
-			move_three();
+			move();
 			flag = 1;
 		} else {
 			move_one_back();
