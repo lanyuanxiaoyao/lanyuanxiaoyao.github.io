@@ -2,16 +2,40 @@
 <html>
 
   {% include head.html %}
-<script language="JavaScript" src="{{site.baseurl}}/assets/javascript/check_cookie.js"></script>
+  <script type="text/javascript">
+	window.onresize = function {
+		start_pos = $("blog_badge").offsetTop;
+		$("one").style.top = start_pos + 'px';
+		$("two").style.top = start_pos + 'px';
+		$("three").style.top = start_pos + 'px';
+	}
+	function $(name) {
+		return document.getElementById(name);
+	}
+  </script>
+  <script language="JavaScript" src="{{site.baseurl}}/assets/javascript/check_cookie.js"></script>
+  <script language="JavaScript" src="{{site.baseurl}}/assets/javascript/menu.js"></script>
   <body class="{{ page.body_class }}" onload="check()">
 
     {{ content }}
 
     {{ if site.logo}}
-    <a href="{{ site.baseurl }}/index2.html" id="blog_badge">
+    <a id="blog_badge" class="menu_positive">
             <span style="background-image:
-            url('{{ site.baseurl }}/assets/images/{{ site.logo }}');">{{ site.name }}</span>
-        </a>
+            url('{{ site.baseurl }}/assets/images/menu0.png');" onclick="start()"></span>
+    </a>
+	<a id="one" class="menu_positive">
+            <span style="background-image:
+            url('{{ site.baseurl }}/assets/images/menu1.png');"></span>
+    </a>
+	<a href="{{ site.baseurl }}/about.html" id="two" class="menu_positive">
+            <span style="background-image:
+            url('{{ site.baseurl }}/assets/images/menu2.png');"></span>
+    </a>
+	<a href="{{ site.baseurl }}/index2.html" id="three" class="menu_positive">
+            <span style="background-image:
+            url('{{ site.baseurl }}/assets/images/menu3.png');"></span>
+    </a>
     {{/if}}
 
     <script>
