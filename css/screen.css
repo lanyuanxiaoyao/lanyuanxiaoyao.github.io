@@ -1397,6 +1397,7 @@ body>footer #user_bio .inner, .post-footer #user_bio .inner {
 	width: 62px;
 	height: 62px;
 	background-color: #fff;
+	background-size: cover;
 	border: 1px solid rgba(33, 39, 45, 0.17);
 	-webkit-border-radius: 60px;
 	-moz-border-radius: 60px;
@@ -1421,9 +1422,9 @@ body>footer #user_bio .inner, .post-footer #user_bio .inner {
 .menu_positive span {
 	font-size: 1px;
 	color: transparent;
-	background-size: contain;
+	background-size: cover;
 	background-position: center center;
-	background-repeat: no-repeat;
+	background-repeat: round;
 	position: absolute;
 	top: -1px;
 	right: -1px;
@@ -1939,12 +1940,14 @@ body.touch.user article .readmore {
 			rgba(33, 39, 45, 0.9) 75%)
 	}
 	.menu_positive {
+		background-size: cover;
 		top: 15px;
 		right: 10px;
 		width: 43px;
 		height: 43px
 	}
 	.menu_positive span {
+		background-size: cover;
 		top: 9px;
 		right: 9px;
 		bottom: 9px;
