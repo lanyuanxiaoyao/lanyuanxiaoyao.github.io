@@ -1,1 +1,34 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('n 2=0;7 m(){3($(\'5\')=="l"){2=1;a.9.c="6.d"}3($(\'5\')=="k"){2=1;4 8}3($(\'5\')=="p"){2=1;4 8}3($(\'5\')=="o"){2=1;4 8}3($(\'5\')=="6"){2=1;a.9.c="6.d"}3(2==0){h("j i q D b g E B. C F I g G b, H A t u.")}4 r}7 $(f){4 e.s(f).v}7 y(){e.z="w=x"}',45,45,'||flag|if|return|password|liangjiayi|function|true|location|window|access|href|html|document|id|to|alert|do|You|yaohuajing|limingka|checkuser|var|yangzhiying|shaoguoji|not|false|getElementById|the|bloggers|value|permission|yes|cookie_permissiom|cookie|contact|site|If|have|this|you|request|please|want'.split('|'),0,{}))
+var flag = 0;
+function checkuser() {
+	if($('password') == "limingka") {
+		flag = 1;
+		window.location.href="limingka.html";
+    }
+	if($('password') == "yaohuajing") {
+		flag = 1;
+		return true;
+    }
+	if($('password') == "shaoguoji") {
+		flag = 1;
+		return true;
+    }
+	if($('password') == "yangzhiying") {
+		flag = 1;
+		return true;
+    }
+	if($('password') == "liangjiayi") {
+		flag = 1;
+		window.location.href="liangjiayi.html";
+    }
+	if(flag == 0){
+		alert("You do not have access to this site. If you want to request access, please contact the bloggers.");
+	}
+	return false;
+}
+		
+function $(id) {
+    return document.getElementById(id).value;
+}
+function cookie_permissiom(){
+	document.cookie = "permission=yes";
+}

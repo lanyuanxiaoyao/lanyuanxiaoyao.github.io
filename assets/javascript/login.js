@@ -2,7 +2,7 @@ var flag = 0;
 function checkuser() {
 	if($('password') == "limingka") {
 		flag = 1;
-		window.location.href="liangjiayi.html";
+		window.location.href="limingka.html";
     }
 	if($('password') == "yaohuajing") {
 		flag = 1;
