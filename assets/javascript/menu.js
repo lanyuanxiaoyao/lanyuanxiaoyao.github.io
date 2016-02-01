@@ -7,9 +7,9 @@
 		var img1 = $("one");
 		var img2 = $("two");
 		var img3 = $("three");
-		img1.style.top = start_pos*3.5 + 'px';
-		img2.style.top = start_pos*5.8 + 'px';
-		img3.style.top = start_pos*8.1 + 'px';
+		img1.style.top = start_pos*4 + 'px';
+		img2.style.top = start_pos*6.7 + 'px';
+		img3.style.top = start_pos*9.4 + 'px';
 		/*var timer;
 		if (img3.offsetTop < 240) {
 			img3.style.top = (img3.offsetTop + speed) + 'px';
