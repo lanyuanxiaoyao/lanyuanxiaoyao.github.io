@@ -3,7 +3,7 @@ layout: page
 title: 归档
 image: 10.jpg
 ---
-<!-- <div>
+<div>
     <blockquote>归档目录</blockquote>
     <div style="text-align: left">
         <ul>
@@ -34,6 +34,4 @@ image: 10.jpg
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
     {% endfor %}
-</div> -->
-* 归档目录
-{:toc}
+</div>
