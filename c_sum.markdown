@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 归档
-image: 10.jpg
+image: 13.jpg
 ---
 <blockquote>归档目录</blockquote>
 <div style="text-align: left">
@@ -18,12 +18,6 @@ image: 10.jpg
     </ul>
 </div>
 <hr>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <div style="text-align: left">
     {% for post in site.posts %}
     {% capture ym %}{{ post.date | date:"%Y 年 %m 月" }}{% endcapture %}
@@ -33,7 +27,8 @@ image: 10.jpg
     {% endif %}
     <ul>
         <li>
-            <time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
+            <!-- <time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time> -->
+            <span>{{ post.date | date:"%d 日" }}</span>
             <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
         </li>
     </ul>
