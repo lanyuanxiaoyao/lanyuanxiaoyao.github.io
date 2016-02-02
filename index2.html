@@ -20,7 +20,7 @@ body_class: "home-template user"
 
           <div class="meta">
             <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%B %-d, %Y" }}</a>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y 年 %m 月 %d 日" }}</a>
             </time>
           </div>
 
