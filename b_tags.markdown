@@ -6,7 +6,7 @@ image: 10.jpg
 
 <div id='tag_cloud'>
 {% for tag in site.tags %}
-<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}" style="font-size: {{ tag[1].size | divided_by:5 | times:20 | plus:100 }}%;">{{ tag[0] }}({{ tag[1].size }})</a>
 {% endfor %}
 </div>
 
