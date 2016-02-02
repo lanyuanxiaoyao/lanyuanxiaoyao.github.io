@@ -6,11 +6,9 @@ body_class: post-template
 <div id="feature_image">
 	<div class="inner"
 		style="background-image: url('{{ site.baseurl }}/content/images//{{ page.image }}')">
-		<img src='{{ site.baseurl }}/content/images/{{ page.image }}'>
-	</div>
+		<img src='{{ site.baseurl }}/content/images/{{ page.image }}'></div>
 </div>
 {% endif %}
-
 <article role="main" class="{% if page.image %}image{% endif %}">
 	<header>
 		<a href="{{ site.baseurl }}/index2.html" id="home_link">«</a>
@@ -26,18 +24,16 @@ body_class: post-template
 	</header>
 	<div class="text" id="js-post-content">{{ content }}</div>
 
-	<div style="display: none" id="goTopBtn">
+	<!--<div style="display: none" id="goTopBtn">
 		<img id="up" border=0 src="{{ site.baseurl }}/assets/images/up.png"
 			alt="返回顶部"></img>
 	</div>
-	<script type=text/javascript>
-		goTopEx();
-	</script>
+	<script type=text/javascript>goTopEx();</script> -->
 
-	<div class="ds-thread" data-thread-key="{{ page.id }}"
+<div class="ds-thread" data-thread-key="{{ page.id }}"
 		data-title="{{ page.title }}"
 		data-url="www.lanyuanxiaoyao.cn{{page.url}}"></div>
-	<script type="text/javascript">
+<script type="text/javascript">
 		var duoshuoQuery = {
 			short_name : "lanyuanxiaoyao"
 		};
@@ -53,6 +49,5 @@ body_class: post-template
 					.getElementsByTagName('body')[0]).appendChild(ds);
 		})();
 	</script>
-	{% include footer.html %}
-
+{% include footer.html %}
 </article>
