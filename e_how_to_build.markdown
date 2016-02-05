@@ -1,6 +1,7 @@
 ---
 layout: page
-title: [超详细]Jekyll + Github Pages建立独立博客教程
+title: 【超详细】Jekyll + Github独立博客建造指南
+image: 13.jpg
 published: false
 ---
 
