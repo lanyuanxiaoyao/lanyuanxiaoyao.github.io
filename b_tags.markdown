@@ -6,7 +6,7 @@ image: 10.jpg
 
 <div id='tag_cloud'>
 {% for tag in site.tags %}
-<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}" style="font-size: {{ tag[1].size | divided_by:5 | times:20 | plus:100 }}%;">{{ tag[0] }}({{ tag[1].size }})</a>
+<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}" style="font-size: {{ tag[1].size | divided_by:5 | times:20 | plus:100 }}%;margin: 5px;color: #FFFFFF;background-color: #77D7FF;border-radius: 10px;text-align: center;display: inline-block;padding: 5px;">{{ tag[0] }}({{ tag[1].size }})</a>
 {% endfor %}
 </div>
 
