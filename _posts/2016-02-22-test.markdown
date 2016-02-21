@@ -1,8 +1,0 @@
----
-layout: post
-title: 我的第一个独立博客
-image: 17.jpg
-excerpt: 愿这是我的一片难得的净土
-tag: 生活
----
-　　哈哈哈哈
