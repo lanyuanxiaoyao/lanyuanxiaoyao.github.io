@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 怦然心动(Flipped)
+title: 怦然心动(Flippedd)
 image: 15.jpg
 excerpt: 初恋让人成长，这是一个关于美好的故事
 tag: 电影
