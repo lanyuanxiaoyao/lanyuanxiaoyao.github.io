@@ -1,0 +1,10 @@
+---
+layout: post
+title: test
+image: 14.jpg
+excerpt: this is a test
+tag: 生活
+---
+哈哈哈哈
+
+哈哈哈哈哈哈
