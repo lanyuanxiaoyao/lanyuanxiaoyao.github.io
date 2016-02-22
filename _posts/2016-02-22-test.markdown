@@ -1,0 +1,8 @@
+---
+layout: post
+title: 测试
+image: 1.jpg
+excerpt: 测试看看是不是不能显示文章
+tag: 生活
+---
+　　测试看看是不是不能显示文章
