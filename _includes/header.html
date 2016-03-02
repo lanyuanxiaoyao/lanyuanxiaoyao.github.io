@@ -20,7 +20,7 @@
   <hr>
   <div id="title_bar">
 	{% for page in site.pages %}
-	{% if page.title %}
+	{% if page.share != true %}
 	<span class="bar_item"><a href="{{ page.url | prepend: site.baseurl }}" class="title_link">{{ page.title }}</a></span>
 	{% endif %}
 	{% endfor %}

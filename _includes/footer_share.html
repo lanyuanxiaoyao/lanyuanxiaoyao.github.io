@@ -1,0 +1,23 @@
+<footer role="contentinfo" class='post-footer'>
+    <div class="inner">
+        <div class="vcard">
+            {% if site.logo %}
+            <a href="{{ site.baseurl }}" class="photo circle">
+              <span style="background-image: url('{{ site.baseurl }}/assets/images/{{ site.logo }}');">
+                <img src="{{ site.baseurl }}/assets/images/{{ site.logo }}" alt="{{ site.title }}"/>
+              </span>
+            </a>
+            {% endif %}
+
+            <div class="details">
+				<br/>
+                <h4><a href="" class="url n">{{ site.title }}</a></h4>
+            </div>
+        </div>
+        <div id="user_bio">
+            <div class="inner">
+                {{ site.description }}
+            </div>
+        </div>
+    </div>
+</footer>
