@@ -2,6 +2,7 @@
 layout: page
 title: 分类
 image: 10.jpg
+bar: true
 ---
 
 <div id='tag_cloud'>

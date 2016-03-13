@@ -3,6 +3,7 @@ layout: page
 title: 关于
 image: 11.jpg
 tag: about
+bar: true
 ---
 ><font size="4">纠结的人写不出什么好的简介　　——兰缘小妖</font>
 

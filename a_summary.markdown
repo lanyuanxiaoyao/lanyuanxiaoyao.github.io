@@ -3,6 +3,7 @@ layout: page
 title: 小记
 image: 2.jpg
 excerpt: 走在路上听歌仿佛人生都回响着热血的bgm
+bar: true
 ---
 2016-3-9
 

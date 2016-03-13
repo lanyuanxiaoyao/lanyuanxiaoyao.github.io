@@ -2,6 +2,7 @@
 layout: page
 title: 归档
 image: 13.jpg
+bar: true
 ---
 <blockquote>归档目录</blockquote>
 <div style="text-align: left">
