@@ -11,14 +11,12 @@
 		}
 		function setcookie(){
 			alert("setcookie");
-			document.cookie = "user=lan";
+			document.cookie = "username=lanyuan";
 			alert(document.cookie.length);
 		}
 		function getcookie(c_name){
 			alert("getcookie");
-			alert(document.cookie.length);
 			if (document.cookie.length>0) {
-				alert(document.cookie.length);
 				c_start = document.cookie.indexOf(c_name+"=");
 				if (c_start!=-1) {
 					c_start = c_start+c_name.length+1;
