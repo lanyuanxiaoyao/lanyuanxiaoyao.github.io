@@ -8,7 +8,7 @@ url: "http://www.lanyuanxiaoyao.cn"
 baseurl: ""
 
 gems: [jekyll-paginate]
-paginate: 5
+paginate: 6
 paginate_path: "page:num"
 
 # Build settings
