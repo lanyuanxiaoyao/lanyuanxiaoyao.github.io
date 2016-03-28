@@ -1,13 +1,17 @@
-{%if paginator.previous_page%}
-    <a href="{{ paginator.previous_page_path }}" class="btn nav prev">
-      <span aria-hidden="true" data-icon=">"></span>
-      Newer
-    </a>
+{% if paginator.total_pages > 1 %}
+{% if paginator.previous_page %}
+    <a class="paginator_bar" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
 {% endif %}
-{%if paginator.next_page%}
-    <a href="{{ paginator.next_page_path }}" class="btn nav next">
-      <span aria-hidden="true" data-icon=">"></span>
-      Older
-    </a>
+{% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="paginator_bar">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a class="paginator_bar" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a class="paginator_bar" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+{% endfor %}
+{% if paginator.next_page %}
+    <a class="paginator_bar" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
 {% endif %}
-
+{% endif %}

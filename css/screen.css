@@ -1902,3 +1902,8 @@ body.touch.user article .readmore {
 #login {
 	font-size: 20px;
 }
+
+.paginator_bar{
+	font-size: 20px;
+	margin-left: 5px;
+}
