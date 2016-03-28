@@ -22,3 +22,4 @@ function charge(){
 		window.location.href="{{site.baseurl}}/login.html";
 	}
 }
+charge();

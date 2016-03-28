@@ -8,17 +8,17 @@ function checkuser() {
 	if($('password') == "yaohuajing") {
 		flag = 1;
 		set_cookie();
-		window.location.href="login.html";
+		window.location.href="jump.html";
     }
 	if($('password') == "shaoguoji") {
 		flag = 1;
 		set_cookie();
-		window.location.href="login.html";
+		window.location.href="jump.html";
     }
 	if($('password') == "yangzhiying") {
 		flag = 1;
 		set_cookie();
-		window.location.href="login.html";
+		window.location.href="jump.html";
     }
 	if($('password') == "liangjiayi") {
 		flag = 1;
