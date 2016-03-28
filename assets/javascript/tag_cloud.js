@@ -32,8 +32,6 @@
   $.fn.tagcloud.defaults = {
     size: {start: 14, end: 18, unit: "pt"}
   };
-
-  // Converts hex to an RGB array
   function toRGB (code) {
     if (code.length == 4) {
       code = jQuery.map(/\w+/.exec(code), function(el) {return el + el; }).join("");

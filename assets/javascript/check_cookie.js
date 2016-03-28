@@ -1,5 +1,3 @@
----
----
 function getcookie(c_name){
 	if (document.cookie.length>0) {
 		c_start = document.cookie.indexOf(c_name+"=");
@@ -19,7 +17,7 @@ function getcookie(c_name){
 function charge(){
 	username = getcookie("username");
 	if(username!="lanyuan"){
-		window.location.href="{{site.baseurl}}/login.html";
+		window.location.href="login.html";
 	}
 }
 charge();
