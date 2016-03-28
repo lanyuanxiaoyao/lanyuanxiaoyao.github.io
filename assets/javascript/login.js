@@ -2,22 +2,27 @@ var flag = 0;
 function checkuser() {
 	if($('password') == "limingka") {
 		flag = 1;
+		set_cookie();
 		window.location.href="limingka.html";
     }
 	if($('password') == "yaohuajing") {
 		flag = 1;
-		return true;
+		set_cookie();
+		window.location.href="HgbNmugF.html";
     }
 	if($('password') == "shaoguoji") {
 		flag = 1;
-		return true;
+		set_cookie();
+		window.location.href="HgbNmugF.html";
     }
 	if($('password') == "yangzhiying") {
 		flag = 1;
-		return true;
+		set_cookie();
+		window.location.href="HgbNmugF.html";
     }
 	if($('password') == "liangjiayi") {
 		flag = 1;
+		set_cookie();
 		window.location.href="liangjiayi.html";
     }
 	if(flag == 0){
@@ -29,6 +34,6 @@ function checkuser() {
 function $(id) {
     return document.getElementById(id).value;
 }
-function cookie_permissiom(){
-	document.cookie = "permission=yes";
+function set_cookie(){
+	document.cookie = "username=lanyuan";
 }

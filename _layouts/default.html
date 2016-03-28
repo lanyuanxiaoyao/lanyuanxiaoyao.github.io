@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
   <div style="display: none">
@@ -11,6 +13,7 @@
     <img id="up" border=0 src="{{ site.baseurl }}/assets/images/up_b.png"
       alt="返回顶部" style="z-index: 5"></div>
   <script type=text/javascript>goTopEx();</script>
+  <script type="text/javascript" src="{{site.baseurl}}/assets/javascript/check_cookie.js"></script>
   <script>
       function no_schema_links () {
         var links = document.querySelectorAll('.js-remove-domain-schema');
@@ -26,7 +29,8 @@
 
       window.onload = function () {
         no_schema_links();
+        charge();
       }
-    </script></body>
-
+    </script>
+  </body>
 </html>
