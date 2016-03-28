@@ -17,7 +17,7 @@ function getcookie(c_name){
 function charge(){
 	username = getcookie("username");
 	if(username!="lanyuan"){
-		window.location.href="login.html";
+		window.location.href="../../../login.html";
 	}
 }
 charge();
