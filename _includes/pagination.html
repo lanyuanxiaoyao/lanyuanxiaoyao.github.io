@@ -8,7 +8,7 @@
     {% elsif page == 1 %}
       <a class="paginator_bar" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
     {% else %}
-      <a class="paginator_bar" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      <a class="paginator_bar" href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
 {% endfor %}
 {% if paginator.next_page %}
