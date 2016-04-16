@@ -1,0 +1,8 @@
+---
+layout: post
+title: 青春告别，科比再见
+image: 27.jpg
+excerpt: 其实科比不仅仅是一个球员，那是我们打球的青春的象征呢……
+tag: 生活
+---
+……
