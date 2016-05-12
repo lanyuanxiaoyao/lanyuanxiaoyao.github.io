@@ -23,6 +23,7 @@ function checkuser() {
 	if($('password') == "liangjiayi") {
 		flag = 1;
 		set_cookie();
+		write_to_wilddog("liangjiayi");
 		window.location.href="liangjiayi.html";
     }
 	if(flag == 0){
@@ -30,7 +31,18 @@ function checkuser() {
 	}
 	return false;
 }
-		
+
+function write_to_wilddog(name){
+	var dog = require("wilddog");
+	var ref = new Wilddog("https://screct-garden.wilddogio.com");
+	var userRef = ref.child("name");
+	userRef.set({
+		test{
+			"name":"liangjiayi"
+		}
+	})
+}
+
 function $(id) {
     return document.getElementById(id).value;
 }
