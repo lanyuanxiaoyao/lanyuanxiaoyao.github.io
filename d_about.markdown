@@ -50,5 +50,6 @@ bar: true
 <br></div>
 <div class="about_me"><img src="{{ site.baseurl }}/content/images/12.jpg" height="250" width="180"></div>
 <div class="about_me">
-    这个丑逼就是本作者<br/><b>常年不务正业，非职业程序猿</b><br/><b>职业逗逼，偶尔文艺</b><br/><br/>没有联系方式<br/><b>有事别联系我，没事更别联系我</b><br/>噢，当然，下面有评论，有事没事都可以写<br/>如果你不写的话我是绝对不会知道你来过的
+    这个丑逼就是本作者<br/><b>常年不务正业，非职业程序猿</b><br/><b>职业逗逼，偶尔文艺</b><br/><br/>没有联系方式<br/><b>有事别联系我，没事更别联系我</b><br/>噢，当然，下面有评论，有事没事都可以写<br/>如果你不写的话我是绝对不会知道你来过的<br><br><br>于2016年5月14日开通了同名微信公众号<br>扫描二维码可关注<br><br>
+    <img src="{{ site.baseurl }}/assets/images/w.jpg" height="200" width="200"><br>当然公众号并没有什么新功能<br>内容完全同步博客<br>只是出于无聊
 </div>
