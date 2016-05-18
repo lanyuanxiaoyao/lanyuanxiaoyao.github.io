@@ -5,6 +5,7 @@ image: 2.jpg
 excerpt: 走在路上听歌仿佛人生都回响着热血的bgm
 bar: true
 ---
+<script type="text/javascript" src="{{site.baseurl}}/assets/javascript/check_cookie_use.js"></script>
 2016-5-15
 
 　　这一阵子被这场发烧感冒喉咙痛算是整残了整天浑浑噩噩的
