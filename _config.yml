@@ -3,5 +3,5 @@ kramdown:
   input: GFM
 highlighter: rouge
 permalink: /:year/:month/:title/
-url: https://lanyuanxiaoyao.github.io/
+url: https://www.lanyuanxiaoyao.cn
 author: 兰缘小妖
