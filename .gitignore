@@ -1,3 +1,4 @@
 _site
-.sass-cache
-BlogCreater.exe
+media/
+_posts/_figure
+_posts/_cache

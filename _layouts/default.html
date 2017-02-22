@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <!-- <script type="text/javascript" src="{{site.baseurl}}/assets/javascript/check_cookie_use.js"></script> -->
-  <div style="display: none">
-    <img src="{{ site.baseurl }}/assets/images/share-wechat.png"></div>
-  {% include head.html %}
- 
-<body class="{{ page.body_class }}">
-  {{ content }}
-  <script type="text/javascript" src="{{site.baseurl}}/assets/javascript/to_top.js"></script>
-  <div style="display: none" id="goTopBtn">
-    <img id="up" border=0 src="{{ site.baseurl }}/assets/images/up_b.png"
-      alt="返回顶部" style="z-index: 5"></div>
-  <script type=text/javascript>goTopEx();</script>
-  <script>
-      function no_schema_links () {
-        var links = document.querySelectorAll('.js-remove-domain-schema');
-        if (links) {
-          for (i = 0; i < links.length; ++i) {
-            var link = links[i],
-              text = link.innerHTML,
-            no_schema = text.replace(/.*?:\/\//g, "");
-            link.innerHTML = no_schema;
-          }
-        }
-      }
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
 
-      window.onload = function () {
-        no_schema_links();
-      }
-    </script>
-  </body>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="这是兰缘小妖的个人独立博客，记录一些打代码、学习相关的事。">
+    <meta name="author" content="{{ site.author }}" />
+    <title>{{ page.title }} | {{ site.author }}</title>
+    <link rel="shortcut icon" href="/favicon.png">
+    <link href="{{ site.url }}/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css">
+    <link rel="stylesheet" href="/media/css/highlight.css">
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1><center><a class="" href="/">程序猿</a></center></h1>  
+        </header>
+        <center> <ul class="nav pills">
+        <li><a title="主站" class="" href="/">主页</a></li>
+        <li><a title="文章列表" class="" href="/archive/">归档</a></li>
+        <li><a title="文章分类" class="" href="/categories/">分类</a></li>
+        <li><a title="关于我和博客" class="" href="/about/">关于</a></li>
+        <li><a title="个人简历" class="" href="/vitae/">简历</a></li>
+       </ul> </center>
+
+        <article class="content">
+        {{ content }}
+        </article>
+          
+      </div>
+    </div>
+
+    </body>
+    
+<footer><p><small><center>
+              <a href="http://www.zhihu.com/people/songcl" title="兰缘小妖的知乎" target="_blank">知乎</a> :: 
+              <a href="https://github.com/lanyuanxiaoyao" title="兰缘小妖的 GitHub" target="_blank">GitHub</a> :: 
+              <a href="http://songchunlin.net/cn/feed/" title="RSS 订阅" target="_blank" >RSS</a>
+            </center></small></p>
+</footer>
 </html>

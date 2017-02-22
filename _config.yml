@@ -1,15 +1,7 @@
-# Site settings
-title: 兰缘小妖的秘密花园
-logo: logo.png
-email: lanyuanxiaoyao@qq.com
-description: > # this means to ignore newlines until "baseurl:"
-  不谈代码 记录人生
-url: "http://www.lanyuanxiaoyao.cn"
-baseurl: ""
-
-gems: [jekyll-paginate]
-paginate: 6
-paginate_path: "page:num"
-
-# Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+permalink: /:year/:month/:title/
+url: https://lanyuanxiaoyao.github.io/
+author: 兰缘小妖
