@@ -1,0 +1,361 @@
+/*------------------------------------
+*
+* @author Chunlin Song (original version by Xingfeng Si and Yihui Xie)
+* @link http://songchunlin.net
+* @contributor linghua.zhang@me.com
+* @update 2016-08-03
+* 
+* --------------------------------- */
+
+body{
+  font-size: 15px;
+  font-size: 1rem;
+  line-height:1.5;
+  font-family:normal, 'Avenir Next', Avenir,'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 微软雅黑,  sans-serif;
+  text-rendering: optimizeLegibility;
+  color: #1e1e1e;
+}
+
+*{
+  padding:0;
+  margin: 0;
+  border:none;
+  outline:none;
+}
+
+a {
+color:#4e4e4e;
+text-decoration:none;
+}
+
+a:hover {
+color:#00A2D1;
+text-decoration:blink;
+}
+
+p a {
+border-bottom:1px solid #dedede;
+}
+
+
+hr{
+  margin:.7em 0;
+  border-top:1px dashed #d0d0d0;
+  border-bottom:1px dashed #f9f9f9;
+}
+
+p{
+  padding:.5em 0;
+}
+
+li{
+  padding:.2em 0;
+}
+
+ol,ul{  
+  margin-left: 2em;
+  text-indent: -0em;
+  list-style-position: inside;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin-left:1em;
+}
+
+pre code{
+  margin:1em 0;
+  font-size:13px;
+  line-height:1.6;
+  display:block;
+  overflow:auto;
+}
+
+blockquote{
+  display:block;
+  text-align:justify;
+  border-left:4px solid #eeeeee;
+}
+
+blockquote{
+  margin:1em 0em;
+  padding-left:1.5em;
+}
+
+blockquote p{
+  margin:0;
+  padding:.5em 0;
+}
+
+table, td, th {
+    border: 0px solid white;
+}
+
+td {
+    padding: 0px;
+}
+
+#container{
+  width:640px;
+  margin:2em auto;
+  display:block;
+  padding:0 2em;
+}
+
+.content{
+  font-size:15px;
+  line-height:2;
+}
+
+.content h1{
+  padding:.5em 0;
+}
+
+.content img{
+  max-width:600px;
+  display:block;
+  margin:4px auto;
+  -webkit-box-shadow:#999 1px 1px 4px;
+  -moz-box-shadow:#999 1px 1px 4px;
+  box-shadow:#999 1px 1px 4px;
+}
+
+#tag_cloud{
+  margin-bottom: 1em;
+}
+
+#tag_cloud a:hover{
+  color:#333333 !important;
+  text-decoration:none;
+}
+
+.listing-item,.listing-seperator{
+  list-style-type:none;
+}
+
+.listing-item a{
+  padding:.2em 1em;
+}
+
+.listing-item time{
+  color:#999999;
+}
+
+.listing-seperator{
+  font-size:16px;
+}
+
+.meta{
+  text-align:right;
+  font-size:12px;
+}
+
+header{
+  padding:.5em 0;
+  font-size:1.3em;
+  border-bottom: 1px solid #ffffff;
+}
+
+footer{
+   padding-bottom:2em;
+}
+
+.nav {
+font-family:sans-serif;
+font-size:1em;
+text-transform:uppercase;
+width: 450px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom:20px;
+margin-top:10px;
+list-style:none;
+text-align:center;
+}
+
+.nav>li>a {
+display:inline;
+background-color:#fff;
+
+}
+
+.nav>li>a:hover {
+background-color:#17202a;
+  text-decoration:none;
+  color:#ffffff;
+  -webkit-opacity: 0.30;
+  -moz-opacity: 0.30;
+  opacity: 0.30;
+  -webkit-transition: opacity 3s linear;
+  -moz-transition: opacity 3s linear;
+  -ms-transition: opacity 3s linear;
+  -o-transition: opacity 3s linear;
+  transition: opacity 3s linear;
+}
+
+
+.pills {
+zoom:1px;
+}
+
+.pills>li>a {
+margin-right:0px;
+line-height:36px;
+margin-top:2px;
+margin-bottom:2px;
+-webkit-border-radius:0px;
+-moz-border-radius:5px;
+border-radius:0px;
+border-bottom: 1px solid #ededed;
+border-top: 1px solid #ededed;
+padding:10px 29px;
+}
+
+.pills:before,.pills:after,.pager:before,.pager:after {
+display:table;
+content:"";
+}
+
+.pills:after,.pager:after {
+clear:both;
+}
+
+.pills>li,.pager .previous a,.pull-left {
+float:left;
+}
+
+li,dt,dd {
+line-height:30px;
+}
+
+.post{
+  padding:.5em 0em;
+}
+
+h1 {
+	 font-family: Georgia, Kaiti;
+        -webkit-font-smoothing:antialiased;
+        color: #222222;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 14px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        border-width: 0;
+        border-style: none;
+        
+	    -webkit-opacity: 0.30;
+	    -moz-opacity: 0.30;
+	    opacity: 0.30;
+	    -webkit-transition: opacity 3s linear;
+	    -moz-transition: opacity 3s linear;
+	    -ms-transition: opacity 3s linear;
+	    -o-transition: opacity 3s linear;
+	    transition: opacity 3s linear;
+	}
+
+h1:hover {
+	    color:#17202a;
+	    text-decoration:none
+	    -webkit-opacity: 1;
+	    -moz-opacity: 1;
+	    opacity: 1;
+	    -webkit-transition: all 2s ease;
+	    -moz-transition: all 2s ease;
+	    -ms-transition: all 2s ease;
+	    -o-transition: all 2s ease;
+	    transition: all 2s ease;
+	}
+
+h2{
+font-family: normal, 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 40px;
+  color: #303030;
+  border-width: 0;
+  border-style: none;
+  margin: 0.5em 0 0.5em 0;
+}
+
+h3{
+  font-family: normal, 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
+  font-size:1.2em;
+  line-height:40px;
+  font-style:italic;
+  color:#222;
+}
+
+h4{
+  font-family:normal, 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
+  font-size:1em;
+  line-height:30px;
+  color:#333;
+}
+
+/* Author credits */
+	h5 {
+	    font-size: 14px;
+	    font-weight: normal;
+	    line-height: 1.3em;
+	    color: #202020;
+	    font-family:normal, 'Avenir Next', Avenir,'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
+	    margin: 1em 0 .5em 0;
+	    letter-spacing: .1em;
+	    margin-bottom: 1em;
+	    text-align: center;
+	    -webkit-opacity: 0.30;
+	    -moz-opacity: 0.30;
+	    opacity: 0.30;
+	    -webkit-transition: opacity 3s linear;
+	    -moz-transition: opacity 3s linear;
+	    -ms-transition: opacity 3s linear;
+	    -o-transition: opacity 3s linear;
+	    transition: opacity 3s linear;
+	}
+
+	h5:hover {
+	    -webkit-opacity: 1;
+	    -moz-opacity: 1;
+	    opacity: 1;
+	    -webkit-transition: all 2s ease;
+	    -moz-transition: all 2s ease;
+	    -ms-transition: all 2s ease;
+	    -o-transition: all 2s ease;
+	    transition: all 2s ease;
+	}
+	h5 strong {
+	    color: #56a49f;
+	    font-weight: bold;
+	}
+	img {
+	    border: 0;
+	    padding: 3px;
+	}
+	img a { border: 0 }
+	
+
+pre,code{
+  font-family: normal, 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
+  font-size:13px;
+}
+
+code{
+  background-color:#F7F7F7;
+}
+
+embed,object,iframe{
+  display:block;
+  margin:4px auto;
+}
+
+.gist{
+  font-size: 12px;
+  line-height:1.6;
+}
+
+ul {
+  list-style: inherit;
+}
+
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit; color: inherit}
