@@ -7,87 +7,87 @@ comments: yes
 ---
 
 >　　Hibernate是一个开放源代码的对象关系映射框架，它对JDBC进行了非常轻量级的对象封装，它将POJO与数据库表建立映射关系，是一个全自动的orm框架，hibernate可以自动生成SQL语句，自动执行，使得Java程序员可以随心所欲的使用对象编程思维来操纵数据库。 Hibernate可以应用在任何使用JDBC的场合，既可以在Java的客户端程序使用，也可以在Servlet/JSP的Web应用中使用，最具革命意义的是，Hibernate可以在应用EJB的J2EE架构中取代CMP，完成数据持久化的重任。——《百度百科》
-　　简单来说Hibernate就是一个用于JSP的数据库操作的工具集，可以方便地对数据库进行操作，将数据库基本操作转化为面向对象的操作，而且Hibernate实现了跨数据库操作，可以在使用不同的数据库项目中使用，使程序猿可以专注于项目逻辑的实现，从冗长的数据库命令中解脱出来。
+>　　简单来说Hibernate就是一个用于JSP的数据库操作的工具集，可以方便地对数据库进行操作，将数据库基本操作转化为面向对象的操作，而且Hibernate实现了跨数据库操作，可以在使用不同的数据库项目中使用，使程序猿可以专注于项目逻辑的实现，从冗长的数据库命令中解脱出来。
 
 ### 核心接口和类
 
 　　Hibernate的核心类和接口一共有6个，分别为:Session、SessionFactory、Transaction、Query、Criteria和Configuration。这6个核心类和接口在任何开发中都会用到。通过这些接口，不仅可以对持久化对象进行存取，还能够进行事务控制。下面对这6个核心接口和类分别加以介绍。
 
-####　　Session
+#### 　　Session
 
 　　Session接口负责执行被持久化对象的CRUD操作(CRUD的任务是完成与数据库的交流，包含了很多常见的SQL语句)。但需要注意的是Session对象是非线程安全的。同时，Hibernate的session不同于JSP应用中的HttpSession。这里当使用session这个术语时，其实指的是Hibernate中的session，而以后会将HttpSession对象称为用户session。
 
-####　　SessionFactory
+#### 　　SessionFactory
 
 　　SessionFactory接口负责初始化Hibernate。它充当数据存储源的代理，并负责创建Session对象。这里用到了工厂模式。需要注意的是SessionFactory并不是轻量级的，因为一般情况下，一个项目通常只需要一个SessionFactory就够，当需要操作多个数据库时，可以为每个数据库指定一个SessionFactory。
 
-####　　Transaction
+#### 　　Transaction
 
 　　Transaction 接口是一个可选的API，可以选择不使用这个接口，取而代之的是Hibernate 的设计者自己写的底层事务处理代码。 Transaction 接口是对实际事务实现的一个抽象，这些实现包括JDBC的事务、JTA 中的UserTransaction、甚至可以是CORBA 事务。之所以这样设计是能让开发者能够使用一个统一事务的操作界面，使得自己的项目可以在不同的环境和容器之间方便地移植。
 
-####　　Query
+#### 　　Query
 
 　　Query接口让你方便地对数据库及持久对象进行查询，它可以有两种表达方式：HQL语言或本地数据库的SQL语句。Query经常被用来绑定查询参数、限制查询记录数量，并最终执行查询操作。
 
-####　　Criteria
+#### 　　Criteria
 
 　　Criteria接口与Query接口非常类似，允许创建并执行面向对象的标准化查询。值得注意的是Criteria接口也是轻量级的，它不能在Session之外使用。
 
-####　　Configuration
+#### 　　Configuration
 
 　　Configuration 类的作用是对Hibernate 进行配置，以及对它进行启动。在Hibernate 的启动过程中，Configuration 类的实例首先定位映射文档的位置，读取这些配置，然后创建一个SessionFactory对象。虽然Configuration 类在整个Hibernate 项目中只扮演着一个很小的角色，但它是启动hibernate 时所遇到的第一个对象。
 
-###主键介绍
+### 主键介绍
 
 
 
-####　　Assigned
+#### 　　Assigned
 
 　　Assigned方式由用户生成主键值，并且要在save()之前指定否则会抛出异常
 
 　　特点：主键的生成值完全由用户决定，与底层数据库无关。用户需要维护主键值，在调用session.save()之前要指定主键值。
 
-####　　Hilo
+#### 　　Hilo
 
 　　Hilo使用高低位算法生成主键，高低位算法使用一个高位值和一个低位值，然后把算法得到的两个值拼接起来作为数据库中的唯一主键Hilo方式需要额外的数据库表和字段提供高位值来源。默认情况下使用的表是hibernate_unique_key，默认字段叫作next_hi。next_hi必须有一条记录否则会出现错误。
 
 　　特点：需要额外的数据库表的支持，能保证同一个数据库中主键的唯一性，但不能保证多个数据库之间主键的唯一性。Hilo主键生成方式由Hibernate 维护，所以Hilo方式与底层数据库无关，但不应该手动修改hi/lo算法使用的表的值，否则会引起主键重复的异常。
 
-####　　Increment
+#### 　　Increment
 
 　　Increment方式对主键值采取自动增长的方式生成新的主键值，但要求底层数据库的主键类型为long,int等数值型。主键按数值顺序递增，增量为1。
 
 　　特点：由Hibernate本身维护，适用于所有的数据库，不适合多进程并发更新数据库，适合单一进程访问数据库。不能用于群集环境。
 
-####　　Identity
+#### 　　Identity
 
 　　Identity方式根据底层数据库，来支持自动增长，不同的数据库用不同的主键增长方式。
 
 　　特点：与底层数据库有关，要求数据库支持Identity，如MySQl中是auto_increment, SQL Server 中是Identity，支持的数据库有MySql、SQL Server、DB2、Sybase和HypersonicSQL。 Identity无需Hibernate和用户的干涉，使用较为方便，但不便于在不同的数据库之间移植程序。
 
-####　　Sequence
+#### 　　Sequence
 
 　　Sequence需要底层数据库支持Sequence方式，例如Oracle数据库等
 
 　　特点：需要底层数据库的支持序列，支持序列的数据库有DB2、PostgreSql、Oracle、SAPDb等在不同数据库之间移植程序，特别从支持序列的数据库移植到不支持序列的数据库需要修改配置文件。
 
-####　　Native
+#### 　　Native
 
 　　Native主键生成方式会根据不同的底层数据库自动选择Identity、Sequence、Hilo主键生成方式
 
 　　特点：根据不同的底层数据库采用不同的主键生成方式。由于Hibernate会根据底层数据库采用不同的映射方式，因此便于程序移植，项目中如果用到多个数据库时，可以使用这种方式。
 
-####　　UUID
+#### 　　UUID
 
 　　UUID使用128位UUID算法生成主键，能够保证网络环境下的主键唯一性，也就能够保证在不同数据库及不同服务器下主键的唯一性。
 
 　　特点：能够保证数据库中的主键唯一性，生成的主键占用比较多的存贮空间
 
-####　　Foreign GUID
+#### 　　Foreign GUID
 
 　　Foreign用于一对一关系中。GUID主键生成方式使用了一种特殊算法，保证生成主键的唯一性，支持SQL Server和MySQL
 
-###缓存管理
+### 缓存管理
 
 　　Hibernate 中提供了两级Cache（高速缓冲存储器），第一级别的缓存是Session级别的缓存，它是属于事务范围的缓存。这一级别的缓存由hibernate管理的，一般情况下无需进行干预；第二级别的缓存是SessionFactory级别的缓存，它是属于进程范围或集群范围的缓存。这一级别的缓存可以进行配置和更改，并且可以动态加载和卸载。 Hibernate还为查询结果提供了一个查询缓存，它依赖于第二级缓存。
 
@@ -99,11 +99,11 @@ comments: yes
 
 　　缓存的软件实现 在Hibernate的Session的实现中包含了缓存的实现由第三方提供，Hibernate仅提供了缓存适配器(CacheProvider)。用于把特定的缓存插件集成到Hibernate中。启用缓存的方式只要应用程序通过Session接口来执行保存、更新、删除、加载和查询数据库数据的操作，Hibernate就会启用第一级缓存，把数据库中的数据以对象的形式拷贝到缓存中，对于批量更新和批量删除操作，如果不希望启用第一级缓存，可以绕过Hibernate API，直接通过JDBC　API来执行指操作。用户可以在单个类或类的单个集合的粒度上配置第二级缓存。如果类的实例被经常读但很少被修改，就可以考虑使用第二级缓存。只有为某个类或集合配置了第二级缓存，Hibernate在运行时才会把它的实例加入到第二级缓存中。 用户管理缓存的方式第一级缓存的物理介质为内存，由于内存容量有限，必须通过恰当的检索策略和检索方式来限制加载对象的数目。Session的evit()方法可以显式清空缓存中特定对象，但这种方法不值得推荐。 第二级缓存的物理介质可以是内存和硬盘，因此第二级缓存可以存放大量的数据，数据过期策略的maxElementsInMemory属性值可以控制内存中的对象数目。管理第二级缓存主要包括两个方面：选择需要使用第二级缓存的持久类，设置合适的并发访问策略：选择缓存适配器，设置合适的数据过期策略。
 
-####一级缓存
+#### 一级缓存
 
 　　当应用程序调用Session的save()、update()、saveOrUpdate()、get()或load()，以及调用查询接口的 list()、iterate()或filter()方法时，如果在Session缓存中还不存在相应的对象，Hibernate就会把该对象加入到第一级缓存中。当清理缓存时，Hibernate会根据缓存中对象的状态变化来同步更新数据库。 Session为应用程序提供了两个管理缓存的方法： evict(Object obj)：从缓存中清除参数指定的持久化对象。 clear()：清空缓存中所有持久化对象。
 
-####二级缓存
+#### 二级缓存
 
 　　Hibernate的二级缓存策略的一般过程如下：
 
