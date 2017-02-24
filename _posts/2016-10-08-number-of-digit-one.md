@@ -15,7 +15,7 @@ comments: yes
 >Given n = 13,
 Return 6, because digit 1 occurred in the following numbers: 1, 10, 11, 12, 13.
 
-# My Solution
+## My Solution
 ### (Java) Version 1  Time: *Time Limit Exceeded*:
 *　　这里先记录一个单纯的可爱的直观的暴力解法，当然这个肯定是会超时的，记录一下以作对比。对每一个数转化为string的字符数组然后一个个数，没错，赤果果地超时了，超时的输入是824883294，eclipse也花了我切换几次网页的时间才跑出结果*
 {% highlight java %}

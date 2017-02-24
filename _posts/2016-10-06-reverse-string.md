@@ -14,7 +14,7 @@ comments: yes
 >Given s = "hello", 
 return "olleh".
 
-# My Solution
+## My Solution
 ### (Java) Version 1  Time: 8ms:
 *　　倒序字符串，简单地把字符串从结尾开始取出来，放到一个新的StringBuffer中，然后输出*
 {% highlight java %}

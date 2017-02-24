@@ -16,7 +16,7 @@ Do not allocate extra space for another array, you must do this in place with co
 For example
 >Given input array *nums* = [1,1,2],Your function should return length = 2, with the first two elements of *nums* being 1 and 2 respectively. It doesn't matter what you leave beyond the new length.
 
-# My Solution
+## My Solution
 ### (Java) Version 1  Time: 15ms:
 *　　因为数组已经排好序了，所以只要从前面向后遍历，遇到不一样的数就放到前面去，自此组成新的数组*
 {% highlight java %}

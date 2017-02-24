@@ -9,7 +9,7 @@ comments: yes
 >Reverse a singly linked list.
 倒序输出一个单链表
 
-# My Solution
+## My Solution
 ### (Java) Version 1  Time: 0ms:
 *　　这个本来应该是没有难度的，不过倒是Java自己给我挖了一个坑，Java使用的引用其实就是指针，如果类没有clone方法的话，那么就不能像C语言一样直接用一个变量把某个引用的值保存下来，就只能用一个新的值分别储存其中要使用的值，这确实是一个大坑，Java号称没有指针，其实就是强制全部都用指针的意思吧*
 {% highlight java %}
