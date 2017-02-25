@@ -16,51 +16,51 @@ Returns the index of the first occurrence of needle in haystack, or 
 ### (Java) Version 1  Time: 7ms:
 *　　这就是一个典型的朴素的两重循环比较的算法，没有什么好说的*
 {% highlight java %}
-public class Solution {
-    public int strStr(String haystack, String needle) {
-        if(haystack.length()==needle.length()){
-            if(haystack.length()==0)return 0;
-            else if(haystack.equals(needle))return 0;
-            else return -1;
-        }
-        else if(needle.length()==0)return 0;
-        char[] c1=haystack.toCharArray();
-        char[] c2=needle.toCharArray();
-        for(int i=0;i<c1.length-c2.length+1;i++){
-            for(int j=0;j<c2.length;j++){
-                //System.out.println(c2[j]+"__"+c1[j+i]);
-                if(c2[j]!=c1[j+i])
-                    break;
-                else if(j==c2.length-1)
-                    return i;
-            }
-        }
-        return -1;
-    }
+public class Solution {
+    public int strStr(String haystack, String needle) {
+        if(haystack.length()==needle.length()){
+            if(haystack.length()==0)return 0;
+            else if(haystack.equals(needle))return 0;
+            else return -1;
+        }
+        else if(needle.length()==0)return 0;
+        char[] c1=haystack.toCharArray();
+        char[] c2=needle.toCharArray();
+        for(int i=0;i<c1.length-c2.length+1;i++){
+            for(int j=0;j<c2.length;j++){
+                //System.out.println(c2[j]+"__"+c1[j+i]);
+                if(c2[j]!=c1[j+i])
+                    break;
+                else if(j==c2.length-1)
+                    return i;
+            }
+        }
+        return -1;
+    }
 }
 {% endhighlight %}
 
 ### (Java) Version 2  Time: 6ms (By [Kexin_Li](https://discuss.leetcode.com/user/kexin_li)):
 *　　讲道理，我内心的想法就是——这TMD也可以？？不是很懂contains的使用范围*
 {% highlight java %}
-public class Solution {
-    public int strStr(String haystack, String needle) {
-        return haystack.contains(needle) ? haystack.indexOf(needle) : -1;
-    }
+public class Solution {
+    public int strStr(String haystack, String needle) {
+        return haystack.contains(needle) ? haystack.indexOf(needle) : -1;
+    }
 }
 {% endhighlight %}
 
 ### (Java) Version 3  Time: 6ms (By [Domenickd3](https://discuss.leetcode.com/user/domenickd3)):
 *　　这是用substring切割了字符串，然后做比较，事实上和两个循环并无多大不同，只是第二个循环用了Java自己的方法，也许对比直接用for循环会有优化*
 {% highlight java %}
-public class Solution {
-    public int strStr(String haystack, String needle) {
-        for (int i = 0; i < haystack.length() - needle.length() + 1; ++i) {
-            if (haystack.substring(i, i + needle.length()).equals(needle)) {
-                return i;
-            }
-        }
-        return -1;
-    }
+public class Solution {
+    public int strStr(String haystack, String needle) {
+        for (int i = 0; i < haystack.length() - needle.length() + 1; ++i) {
+            if (haystack.substring(i, i + needle.length()).equals(needle)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
 {% endhighlight %}

@@ -13,54 +13,55 @@ comments: yes
 ### (Java) Version 1  Time: 14ms:
 *　　第一次用到了set，好开心，然而并没有什么用，用list来代替也是可以的，不过应该是接近最大时间了，在leetcode上提交经常是一次AC一次超时的*
 {% highlight java %}
-public class Solution {
-    public boolean containsDuplicate(int[] nums) {
-        HashSet s = new HashSet();
-        for(int i=0;i<nums.length;i++){
-            if(s.contains(nums[i]))return true;
-            else s.add(nums[i]);
-        }
-        return false;
-    }
+public class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashSet s = new HashSet();
+        for(int i=0;i<nums.length;i++){
+            if(s.contains(nums[i]))return true;
+            else s.add(nums[i]);
+        }
+        return false;
+    }
 }
 {% endhighlight %}
 
 ### (Java) Version 2  Time: 3ms (By [dyvsay](https://discuss.leetcode.com/user/dyvsay)):
 *　　这个套路我还不是很懂……值得研究*
 {% highlight java %}
-public class Solution {
-    public boolean containsDuplicate(int[] nums) {
-        byte[] mark = new byte[150000];
-        for (int i : nums) {
-            int j = i/8;
-            int k = i%8;
-            int check = 1<<k;
-            if ((mark[j] & check) != 0) {
-                return true;
-            }
-            mark[j]|=check;
-        }
-        return false;
-    }
+public class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        byte[] mark = new byte[150000];
+        for (int i : nums) {
+            int j = i/8;
+            int k = i%8;
+            int check = 1<<k;
+            if ((mark[j] & check) != 0) {
+                return true;
+            }
+            mark[j]|=check;
+        }
+        return false;
+    }
+}
 }
 {% endhighlight %}
 
 ### (Java) Version 3  Time: 4ms (By [whspecial](https://discuss.leetcode.com/user/whspecial)):
 *　　这个套路在于先排序，为什么排序会这么快，看来以前觉得先排序会浪费时间这个想法是不对的，不知道Java里面默认的排序是哪种*
 {% highlight java %}
-public class Solution {
-    public boolean containsDuplicate(int[] nums) {
-        if (nums.length <= 1) {
-            return false;
-        }
-        Arrays.sort(nums);
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] == nums[i+1]) {
-                return true;
-            }
-        }
-        return false;
-    }
+public class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        if (nums.length <= 1) {
+            return false;
+        }
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i+1]) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 {% endhighlight %}
 
@@ -70,20 +71,20 @@ public class Solution {
 /*
 *这是一行的套路
 */
-public class Solution {
-    public boolean containsDuplicate(int[] nums) {
-         return Arrays.stream(nums).boxed().collect(Collectors.toSet()).size() < nums.length;
-    }
+public class Solution {
+    public boolean containsDuplicate(int[] nums) {
+         return Arrays.stream(nums).boxed().collect(Collectors.toSet()).size() < nums.length;
+    }
 }
 {% endhighlight %}
 {% highlight java %}
 /*
 *这是两行的套路
 */
-public class Solution {
-    public boolean containsDuplicate(int[] nums) {
-         Set<Integer> set = new HashSet<>();
-         return Arrays.stream(nums).filter(i -> !set.add(i)).findAny().isPresent();
-    }
+public class Solution {
+    public boolean containsDuplicate(int[] nums) {
+         Set<Integer> set = new HashSet<>();
+         return Arrays.stream(nums).filter(i -> !set.add(i)).findAny().isPresent();
+    }
 }
 {% endhighlight %}
