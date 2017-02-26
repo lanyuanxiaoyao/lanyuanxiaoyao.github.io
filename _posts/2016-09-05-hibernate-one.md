@@ -1,11 +1,12 @@
 ---
-title: Hibernate(1.0) 简单认识Hibernate
 layout: post
-categories: [Hibernate]
-tags: [Hibernate]
-comments: yes
+title: Hibernate(1.0)＿简单认识Hibernate
+date: 2016-09-05 21:14
+categories: Hibernate
+tags: Hibernate
 ---
-
+* content
+{:toc}
 >　　Hibernate是一个开放源代码的对象关系映射框架，它对JDBC进行了非常轻量级的对象封装，它将POJO与数据库表建立映射关系，是一个全自动的orm框架，hibernate可以自动生成SQL语句，自动执行，使得Java程序员可以随心所欲的使用对象编程思维来操纵数据库。 Hibernate可以应用在任何使用JDBC的场合，既可以在Java的客户端程序使用，也可以在Servlet/JSP的Web应用中使用，最具革命意义的是，Hibernate可以在应用EJB的J2EE架构中取代CMP，完成数据持久化的重任。——《百度百科》
 >　　简单来说Hibernate就是一个用于JSP的数据库操作的工具集，可以方便地对数据库进行操作，将数据库基本操作转化为面向对象的操作，而且Hibernate实现了跨数据库操作，可以在使用不同的数据库项目中使用，使程序猿可以专注于项目逻辑的实现，从冗长的数据库命令中解脱出来。
 

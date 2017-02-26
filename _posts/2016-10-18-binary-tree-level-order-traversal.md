@@ -1,9 +1,9 @@
 ---
-title: 102.Binary Tree Level Order Traversal(Easy)
 layout: post
-categories: [LeetCode]
-tags: [LeetCode]
-comments: yes
+title: 102.Binary Tree Level Order Traversal(Easy)
+date: 2016-10-18 14:46
+categories: LeetCode
+tags: LeetCode
 ---
 
 >Given a binary tree, return the *level order* traversal of its nodes' values. (ie, from left to right, level by level).
@@ -21,10 +21,10 @@ For example:
 return its level order traversal as:
 **[ [3], [9,20], [15,7] ]**
 
-## My Solution
+# My Solution
 ### (Java) Version 1  Time: 3ms:
 *　　队列这个结构就巧妙地把二叉树的立体结构变成线性结构了，也是一种巧妙地遍历方式，先遍历每个小树的根结点，然后把所有子节点都放进队列中，然后对队列进行遍历，用size这个变量来保证每次都刚好遍历了一层，知道队列中没有元素了，就表示树没有再发现新的子节点，于是结束遍历*
-{% highlight java %}
+```java
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -65,4 +65,4 @@ public class Solution {
         return result;
     }
 }
-{% endhighlight %}
+```

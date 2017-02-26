@@ -1,45 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-  <head>
+<html>
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="这是兰缘小妖的个人独立博客，记录一些打代码、学习相关的事。">
-    <meta name="author" content="{{ site.author }}" />
-    <title>{{ page.title }} | {{ site.author }}</title>
-    <link rel="shortcut icon" href="/favicon.png">
-    <link href="{{ site.url }}/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
-    <link rel="stylesheet" href="{{ site.url }}/media/css/style.css">
-    <link rel="stylesheet" href="{{ site.url }}/media/css/highlight.css">
-    <script type="text/javascript" src="{{ site.url }}/media/js/jquery-1.7.1.min.js"></script>
-  </head>
+  {% include head.html %}
 
   <body>
-    <div id="container">
-      <div id="main" role="main">
-        <header>
-        <h1><center><a class="" href="/">程序猿</a></center></h1>  
-        </header>
-        <center> <ul class="nav pills">
-        <li><a title="主站" class="" href="{{ site.url }}">主页</a></li>
-        <li><a title="文章列表" class="" href="{{ site.url }}/archive/">归档</a></li>
-        <li><a title="文章分类" class="" href="{{ site.url }}/categories/">分类</a></li>
-        <li><a title="关于我和博客" class="" href="{{ site.url }}/about/">关于</a></li>
-        <li><a title="个人简历" class="" href="{{ site.url }}/vitae/">简历</a></li>
-       </ul> </center>
 
-        <article class="content">
+    {% include header.html %}
+
         {{ content }}
-        </article>
-          
-      </div>
-    </div>
 
-    </body>
-    
-<footer><p><small><center>
-              <a href="http://www.zhihu.com/people/songcl" title="兰缘小妖的知乎" target="_blank">知乎</a> :: 
-              <a href="https://github.com/lanyuanxiaoyao" title="兰缘小妖的 GitHub" target="_blank">GitHub</a> :: 
-              <a href="{{ site.url }}/feed/" title="RSS 订阅" target="_blank" >RSS</a>
-            </center></small></p>
-</footer>
+    {% include footer.html %}
+    {% include backToTop.html %}
+    <script src="{{ " /js/main.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+  </body>
+
 </html>

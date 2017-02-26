@@ -1,9 +1,9 @@
 ---
-title: 345.Reverse Vowels of a String(Easy)
 layout: post
-categories: [LeetCode]
-tags: [LeetCode]
-comments: yes
+title: 345.Reverse Vowels of a String(Easy)
+date: 2016-10-30 22:55
+categories: LeetCode
+tags: LeetCode
 ---
 
 >Write a function that takes a string as input and reverse only the vowels of a string.
@@ -16,10 +16,10 @@ comments: yes
 **Example 2:**
 >Given s = "leetcode", return "leotcede".
 
-## My Solution
+# My Solution
 ### (Java) Version 1  Time: 5ms:
 *　　先一次遍历把元音字母的下标记下来，然后把通过下标直接把字符串中的元音字母逆序，只需要创建一个简单的int数组*
-{% highlight java %}
+```java
 public class Solution {
     public String reverseVowels(String s) {
         if(s==null)return null;
@@ -42,11 +42,10 @@ public class Solution {
         return String.valueOf(ch);
     }
 }
-{% endhighlight %}
-
+```
 ### (Java) Version 2  Time: 4ms (By [ZUN005](https://discuss.leetcode.com/user/zun005)):
 *　　另一种方法，直接从前和从后同时向中间遍历，两边遇到了元音字母就交换，这样循环的次数少，速度快了不少*
-{% highlight java %}
+```java
 public class Solution {
     public String reverseVowels(String s) {
         char[] chars = s.toCharArray();
@@ -86,11 +85,10 @@ public class Solution {
          }
     }
 }
-{% endhighlight %}
-
+```
 ### (Java) Version 3  Time: 22ms (By [iamash](https://discuss.leetcode.com/user/iamash)):
 *　　慢虽然慢，但是思路很有意思，这里用了堆栈的性质，先进后出，这本身就是一个逆序的操作，简单遍历一遍把原因字母压入堆栈中，然后又依次取出来，就自然形成了逆序，但是两个完整的循环和堆栈操作显然让时间长了不少*
-{% highlight java %}
+```java
 public class Solution {
     public String reverseVowels(String s) {
         StringBuilder res = new StringBuilder(s);
@@ -110,4 +108,4 @@ public class Solution {
         return res.toString();
     }
 }
-{% endhighlight %}
+```

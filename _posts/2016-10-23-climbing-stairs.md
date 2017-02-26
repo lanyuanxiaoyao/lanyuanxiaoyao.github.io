@@ -1,9 +1,9 @@
 ---
-title: 70.Climbing Stairs(Easy)
 layout: post
-categories: [LeetCode]
-tags: [LeetCode]
-comments: yes
+title: 70.Climbing Stairs(Easy)
+date: 2016-10-23 12:50
+categories: LeetCode
+tags: LeetCode
 ---
 
 >You are climbing a stair case. It takes *n* steps to reach to the top.
@@ -12,10 +12,10 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 
 *　　这是以前小学的奥数题，找规律，爬楼梯，显然我们都知道对于一次只走一级或者两级的情况是符合斐波那契数列的，所以题目的答案就变成了求第n个斐波那契数是多少*
 
-## My Solution
+# My Solution
 ### (Java) Version 1  Time: 0ms:
 *　　应该是因为是Easy题，所以测试的样例相当少，求斐波那契数列有很多种方式，可以用迭代也可以用递归，递归的时间应该会增长很快，一般在确定的情况下用迭代会好，比如for循环什么的*
-{% highlight java %}
+```java
 public class Solution {
     public int climbStairs(int n) {
         if(n==0)return 0;
@@ -33,4 +33,4 @@ public class Solution {
         }
     }
 }
-{% endhighlight %}
+```
