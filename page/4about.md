@@ -15,9 +15,9 @@ type: page
 　　至于我本身，比较随和，能动能静，能萌能帅，还有点小幽默，打代码的时候很专注以至于经常忘记事情，不打代码的时候就是个正常的帅哥。
 
 　　如果你要找到我
-**Gmail:<lanyuanxiaoyao@gmail>**
-**QQmail:<lanyuanxiaoyao@qq.com>**
-**163mail:<ZhangJC_LanyuanXY@163.com>**
+　　**Gmail:<lanyuanxiaoyao@gmail>**<br>
+　　**QQmail:<lanyuanxiaoyao@qq.com>**<br>
+　　**163mail:<ZhangJC_LanyuanXY@163.com>**<br>
 
 　　在一些社交网络:
 **[Github](https://github.com/lanyuanxiaoyao)**
