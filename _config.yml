@@ -9,7 +9,7 @@
 title: LanyuanXiaoyao's Blog
 brief-intro: Recording...
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
+url: "http://lanyuanxiaoyao.com" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
