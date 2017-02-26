@@ -7,7 +7,7 @@
 
 # Site settings
 title: LanyuanXiaoyao's Blog
-brief-intro: For recording my trip on coding.
+brief-intro: Recording my trip on coding.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
 
