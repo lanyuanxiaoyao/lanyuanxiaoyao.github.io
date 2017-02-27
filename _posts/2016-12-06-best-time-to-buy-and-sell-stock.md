@@ -3,7 +3,7 @@ layout: post
 title: 121. Best Time to Buy and Sell Stock(Easy)
 date: 2016-12-06 14:33
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,动态规划]
 ---
 
 >Say you have an array for which the _i_<sup style="box-sizing: border-box; position: relative; font-size: 12px; line-height: 0; vertical-align: baseline; top: -0.5em;">th</sup> element is the price of a given stock on day _i_.
