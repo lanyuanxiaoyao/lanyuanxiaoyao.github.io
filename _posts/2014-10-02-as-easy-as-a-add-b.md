@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 1014.As Easy As A+B
+title: 1040.As Easy As A+B
 date: 2014-10-02 19:42
 categories: 杭电HDU
 tags: [杭电HDU]
