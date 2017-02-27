@@ -6,20 +6,20 @@ categories: 杭电HDU
 tags: [杭电HDU]
 ---
 ## Problem
->**Problem Description**
-Hey, welcome to HDOJ(Hangzhou Dianzi University Online Judge).
-In this problem, your task is to calculate SUM(n) = 1 + 2 + 3 + ... + n.
-计算1 + 2 + 3 + …… + n的值
-**Input**
-The input will consist of a series of integers n, one integer per line.
-**Output**
-For each case, output SUM(n) in one line, followed by a blank line. You may assume the result will be in the range of 32-bit signed integer.
-**Sample Input**
-1
-100
-**Sample Output**
-1
-5050
+>**Problem Description**<br>
+Hey, welcome to HDOJ(Hangzhou Dianzi University Online Judge).<br>
+In this problem, your task is to calculate SUM(n) = 1 + 2 + 3 + ... + n.<br>
+计算1 + 2 + 3 + …… + n的值<br>
+**Input**<br>
+The input will consist of a series of integers n, one integer per line.<br>
+**Output**<br>
+For each case, output SUM(n) in one line, followed by a blank line. You may <br>assume the result will be in the range of 32-bit signed integer.<br>
+**Sample Input**<br>
+1<br>
+100<br>
+**Sample Output**<br>
+1<br>
+5050<br>
 
 ## Solution
 　　这个就是按照题意，直接for循环到n就可以解决了
