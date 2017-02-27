@@ -3,7 +3,7 @@ layout: post
 title: 500.Keyboard Row(Easy)
 date: 2017-02-23 11:26
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,搜索,一行实现]
 ---
 
 >Given a List of words, return the words that can be typed using letters of alphabet on only one row's of American keyboard like the image below.
@@ -19,7 +19,7 @@ Output: ["Alaska", "Dad"]
 
 # My Solution
 ### (Java) Version 1  Time: 3ms:
-*　　简单的实现方式，反正每次写了很多重复代码的话我就觉得这样的写法肯定是很low的，flag用到烂了，用来表示各种状态，然后再判断，没有什么技术含量……*
+　　简单的实现方式，反正每次写了很多重复代码的话我就觉得这样的写法肯定是很low的，flag用到烂了，用来表示各种状态，然后再判断，没有什么技术含量……
 ```java
 public class Solution {
     public String[] findWords(String[] words) {
@@ -65,7 +65,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 2  Time: 2ms (By [vineetpalan81](https://discuss.leetcode.com/user/vineetpalan81)):
-*　　这个解法和我的差不多，但是巧妙的地方在于大小写，它直接把小写的字母放进判断的字符串中，而不是把待测字符串全部转为小写，这样的做法从结果上来看，显然是快的，而且它没有立flag*
+　　这个解法和我的差不多，但是巧妙的地方在于大小写，它直接把小写的字母放进判断的字符串中，而不是把待测字符串全部转为小写，这样的做法从结果上来看，显然是快的，而且它没有立flag
 ```java
 public class Solution 
 {
@@ -110,7 +110,7 @@ public class Solution
 }
 ```
 ### (Java) Version 3  Time: 90ms (By [lixx2100](https://discuss.leetcode.com/user/lixx2100)):
-*　　一行解法虽然因为一般都很费时间而没有实际用处，但是这也是对技巧的高度提炼，这个一行解法用到了正则表达式，时间肯定长很多，但是解法很巧妙，只能说瑕不掩瑜*
+　　一行解法虽然因为一般都很费时间而没有实际用处，但是这也是对技巧的高度提炼，这个一行解法用到了正则表达式，时间肯定长很多，但是解法很巧妙，只能说瑕不掩瑜
 ```java
 public class Solution {
     public String[] findWords(String[] words) {

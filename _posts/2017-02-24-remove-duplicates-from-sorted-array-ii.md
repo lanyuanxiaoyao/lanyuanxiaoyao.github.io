@@ -3,7 +3,7 @@ layout: post
 title: 80.Remove Duplicates from Sorted Array II(Medium)
 date: 2017-02-24 11:11
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Medium,计数,数组]
 ---
 
 >Follow up for "Remove Duplicates":
@@ -18,7 +18,7 @@ Your function should return length = 5, with the first five elements of nums bei
 
 # My Solution
 ### (Java) Version 1  Time: 1ms:
-*　　做出的方法还是各种立flag,，没什么多解释的，就是遍历一遍，然后跳过重复多的，然后符合标准的就放到前面去，甚至都不用交换*
+　　做出的方法还是各种立flag,，没什么多解释的，就是遍历一遍，然后跳过重复多的，然后符合标准的就放到前面去，甚至都不用交换
 ```java
 public class Solution {
     public int removeDuplicates(int[] nums) {
@@ -46,7 +46,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 2  Time: 0ms (By [StefanPochmann](https://discuss.leetcode.com/user/stefanpochmann)):
-*　　别人家的姿势水平就是高很多，能如此简单地解答，关键在于题目中给出的是有序数列，所以后面的数一定是比前面的大，或者说不同，就不用考虑后面还会有和前面相同数的情况*
+　　别人家的姿势水平就是高很多，能如此简单地解答，关键在于题目中给出的是有序数列，所以后面的数一定是比前面的大，或者说不同，就不用考虑后面还会有和前面相同数的情况
 ```java
 public int removeDuplicates(int[] nums) {
     int i = 0;
