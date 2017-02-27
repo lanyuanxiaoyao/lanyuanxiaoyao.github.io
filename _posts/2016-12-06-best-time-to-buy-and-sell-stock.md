@@ -109,7 +109,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 5  Time: 3ms (By [anton15](https://discuss.leetcode.com/user/anton15)):
-*　　总有些人就是想搞个大新闻，疯狂使用Java自带函数，来达到尽可能少的代码，这很6*
+　　总有些人就是想搞个大新闻，疯狂使用Java自带函数，来达到尽可能少的代码，这很6
 ```java
 /*
 *Proper Java - 6 lines:
