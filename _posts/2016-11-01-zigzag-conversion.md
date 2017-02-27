@@ -3,7 +3,7 @@ layout: post
 title: 6.ZigZag Conversion(Easy)
 date: 2016-11-01 23:15
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy]
 ---
 
 >The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
@@ -24,7 +24,7 @@ should return "PAHNAPLSIIGYIR".
 
 # My Solution
 ### (Java) Version 1  Time: 71ms:
-*　　确实是慢，我对这类找规律的题目的解法大体都是找到一个类似的规律，然后用if语句来补全*
+　　确实是慢，我对这类找规律的题目的解法大体都是找到一个类似的规律，然后用if语句来补全
 ```java
 public class Solution {
     public String convert(String s, int numRows) {
@@ -56,7 +56,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 2  Time: ms (By [medi](https://discuss.leetcode.com/user/medi)):
-*　　比我慢，纯粹是记一下不同的做法*
+　　比我慢，纯粹是记一下不同的做法
 ```java
 public class Solution {
     public String convert(String s, int numRows) {

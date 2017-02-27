@@ -3,7 +3,7 @@ layout: post
 title: 374.Guess Number Higher or Lower(Easy)
 date: 2017-02-23 10:18
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,二分查找]
 ---
 
 >We are playing the Guess Game. The game is as follows:
@@ -21,7 +21,7 @@ Return 6.
 
 # My Solution
 ### (Java) Version 1  Time: 1ms:
-*　　用两个变量来表示上界和下界，每次都猜测范围1/2位置的数，然后根据返回的大小关系确定新的边界，踩过的坑是，如果直接用(up - down) / 2 + down来确定中间的数，那么将永远不会查找到作为边界的两个数，第二坑是我本来想用0~n+1来把边界的两个数放进范围里，但是果然测试里面有int的最大值，这就意味着n+1之后会溢出，所以只好在一开始单独对边界进行判断。*
+　　用两个变量来表示上界和下界，每次都猜测范围1/2位置的数，然后根据返回的大小关系确定新的边界，踩过的坑是，如果直接用(up - down) / 2 + down来确定中间的数，那么将永远不会查找到作为边界的两个数，第二坑是我本来想用0~n+1来把边界的两个数放进范围里，但是果然测试里面有int的最大值，这就意味着n+1之后会溢出，所以只好在一开始单独对边界进行判断。
 ```java
 /* The guess API is defined in the parent class GuessGame.
    @param num, your guess
@@ -51,9 +51,8 @@ public class Solution extends GuessGame {
 }
 ```
 ### (Java) Version 2  Time: 1ms (By [LeetCode](https://leetcode.com/articles/guess-number-higher-or-lower/)):
-*　　来自官方的解答，二分查找，写法比我的高明得多，起码边界问题在循环中解决了，我第一时间没有想到的是解答中的循环条件……
+　　来自官方的解答，二分查找，写法比我的高明得多，起码边界问题在循环中解决了，我第一时间没有想到的是解答中的循环条件……
 　　时间复杂度为O(log2n)
-*
 ```java
 /* The guess API is defined in the parent class GuessGame.
    @param num, your guess
@@ -79,10 +78,10 @@ public class Solution extends GuessGame {
 }
 ```
 ### (Java) Version 3  Time: 1ms (By [LeetCode](https://leetcode.com/articles/guess-number-higher-or-lower/)):
->*　　来自官方的解答，三分查找
+>　　来自官方的解答，三分查找
 　　In Binary Search, we choose the middle element as the pivot in splitting. In Ternary Search, we choose two pivots (say ***m1*** and ***m2***) such that the given range is divided into three equal parts. If the required number numnum is less than ***m1*** then we apply ternary search on the left segment of ***m1***. If numnum lies between ***m1*** and ***m2***, we apply ternary search between ***m1*** and ***m2***. Otherwise we will search in the segment right to ***m2***.
 　　简单来说就是我们在二分查找的时候把数平均分为两部分，在三分查找中我们把数平均分为三部分
-　　时间复杂度为O(log3n)*
+　　时间复杂度为O(log3n)
 
 ```java
 /* The guess API is defined in the parent class GuessGame.

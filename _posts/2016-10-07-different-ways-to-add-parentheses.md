@@ -3,7 +3,7 @@ layout: post
 title: 241.Different Ways to Add Parentheses(Medium)
 date: 2016-10-07 22:53
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Medium,递归,计数]
 ---
 
 >Given a string of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators. The valid operators are+ ,- and\*.
@@ -28,7 +28,7 @@ Output:[-34, -14, -10, -10, 10]
 
 # My Solution
 ### (Java) Version 1  Time: 7ms:
-*　　思考括号的分组情况确实耗费了很长时间，一开始考虑是从数字开始分组，如果数字有奇数(n)个，那么就可以从第一个到第n/2个，分别加上括号，然后递归这个情况，知道只有两个运算数和一个运算符为止，然而，这个分类的方法实现起来相当麻烦，循环的操作十分复杂。然后从这个解法是从运算符开始分组，按照每一个运算符都是分为前一组和后一组，进行递归，就简单多了*
+　　思考括号的分组情况确实耗费了很长时间，一开始考虑是从数字开始分组，如果数字有奇数(n)个，那么就可以从第一个到第n/2个，分别加上括号，然后递归这个情况，知道只有两个运算数和一个运算符为止，然而，这个分类的方法实现起来相当麻烦，循环的操作十分复杂。然后从这个解法是从运算符开始分组，按照每一个运算符都是分为前一组和后一组，进行递归，就简单多了
 ```java
 public class Solution {
     public List<Integer> diffWaysToCompute(String input) {

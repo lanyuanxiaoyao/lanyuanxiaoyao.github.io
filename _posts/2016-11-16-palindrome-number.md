@@ -3,7 +3,7 @@ layout: post
 title: 9.Palindrome Number(Easy)
 date: 2016-11-16 14:31
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,回文数]
 ---
 
 >Determine whether an integer is a palindrome. Do this without extra space.
@@ -13,7 +13,7 @@ tags: LeetCode
 
 # My Solution
 ### (Java) Version 1  Time: 195ms:
-*　　既然是顺序倒序都一样的话，那就构造倒序的数，如果和前面的数相等的话，那就是回文数咯，从前往后，最高位的变成新数的最低位，以此类推*
+　　既然是顺序倒序都一样的话，那就构造倒序的数，如果和前面的数相等的话，那就是回文数咯，从前往后，最高位的变成新数的最低位，以此类推
 ```java
 public class Solution {
     public boolean isPalindrome(int x) {
@@ -31,7 +31,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 2  Time: 269ms (By [cbmbbz](https://discuss.leetcode.com/user/cbmbbz)):
-*　　和我的做法一致……不过看起来简洁，就是不知道为什么时间会长这么多*
+　　和我的做法一致……不过看起来简洁，就是不知道为什么时间会长这么多
 ```java
 public class Solution {
     public boolean isPalindrome(int x) {
@@ -46,8 +46,8 @@ public class Solution {
 }
 ```
 ### (Java) Version 3  Time: 183ms (By [asser](https://discuss.leetcode.com/user/asser)):
-*　　似乎用了什么黑魔法……*
-*　　作者的解释：
+　　似乎用了什么黑魔法……
+　　作者的解释：
   This solution compares the least significant digit with the most significant digit just like you would do with a string, then get rid of those digits and repeat.
 　　Example:
 　　1.  x = 3428243
@@ -58,7 +58,7 @@ public class Solution {
 　　6.  x/10 = 42824
 　　7.  d/100 = 10000*
 
-*　　Repeat till x = 0 (true) or break if step 3 fails (false)*
+　　Repeat till x = 0 (true) or break if step 3 fails (false)
 ```java
 public class Solution {
     public boolean isPalindrome(int x) {

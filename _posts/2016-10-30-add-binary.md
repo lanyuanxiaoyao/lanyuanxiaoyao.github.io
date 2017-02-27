@@ -3,20 +3,20 @@ layout: post
 title: 67.Add Binary(Easy)
 date: 2016-10-30 23:14
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,大数运算,数组]
 ---
 
 >Given two binary strings, return their sum (also a binary string).
 给两个二进制的字符串，返回它们的和
 
-For example
+**Example**
 >a = "11"
 b = "1"
 Return "100"
 
 # My Solution
 ### (Java) Version 1  Time: 4ms:
-*　　这个其实没有太复杂的原理，基本上只要是字符串表示数都是大数运算的套路，先把字符串逆序，然后高位补0，然后用循环逐位相加，对进位的情况进行处理，然后就得到结果了，复杂的是进位的几种情况的处理*
+　　这个其实没有太复杂的原理，基本上只要是字符串表示数都是大数运算的套路，先把字符串逆序，然后高位补0，然后用循环逐位相加，对进位的情况进行处理，然后就得到结果了，复杂的是进位的几种情况的处理
 ```java
 public class Solution {
     public String addBinary(String a, String b) {
@@ -49,7 +49,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 2  Time: 4ms (By [lianglinMan](https://discuss.leetcode.com/user/lianglinman)):
-*　　这个思路号称是3ms但是实测是5ms，不过思路也是挺有意思的，先加，然后再做进位处理，比我的这种方式显然要简洁多了*
+　　这个思路号称是3ms但是实测是5ms，不过思路也是挺有意思的，先加，然后再做进位处理，比我的这种方式显然要简洁多了
 ```java
 public class Solution {
     public String addBinary(String a, String b) {

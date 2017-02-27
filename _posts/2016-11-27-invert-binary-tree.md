@@ -3,7 +3,7 @@ layout: post
 title: 226.Invert Binary Tree(Easy)
 date: 2016-11-27 14:32
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,二叉树,递归]
 ---
 
 >Invert a binary tree.
@@ -20,7 +20,7 @@ to
 
 # My Solution
 ### (Java) Version 1  Time: 1ms:
-*　　简单地递归然后调换左右子树*
+　　简单地递归然后调换左右子树
 ```java
 /**
  * Definition for a binary tree node.
@@ -47,7 +47,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 2  Time: 0ms (By [anjani_sureshbhat](https://discuss.leetcode.com/user/anjani_sureshbhat)):
-*　　有递归调用自然就有非递归调用，这就是一个迭代的版本，然而我的迭代写得并不好，还要多看，当然还有一个很重要的就是迭代比递归快*
+　　有递归调用自然就有非递归调用，这就是一个迭代的版本，然而我的迭代写得并不好，还要多看，当然还有一个很重要的就是迭代比递归快
 ```java
 /**
  * Definition for a binary tree node.

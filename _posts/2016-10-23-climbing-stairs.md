@@ -3,7 +3,7 @@ layout: post
 title: 70.Climbing Stairs(Easy)
 date: 2016-10-23 12:50
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,递归]
 ---
 
 >You are climbing a stair case. It takes *n* steps to reach to the top.
@@ -14,7 +14,7 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 
 # My Solution
 ### (Java) Version 1  Time: 0ms:
-*　　应该是因为是Easy题，所以测试的样例相当少，求斐波那契数列有很多种方式，可以用迭代也可以用递归，递归的时间应该会增长很快，一般在确定的情况下用迭代会好，比如for循环什么的*
+　　应该是因为是Easy题，所以测试的样例相当少，求斐波那契数列有很多种方式，可以用迭代也可以用递归，递归的时间应该会增长很快，一般在确定的情况下用迭代会好，比如for循环什么的
 ```java
 public class Solution {
     public int climbStairs(int n) {

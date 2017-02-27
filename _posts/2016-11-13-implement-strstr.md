@@ -3,7 +3,7 @@ layout: post
 title: 28.Implement strStr()(Easy)
 date: 2016-11-13 12:24
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,搜索,字符串处理,一行实现]
 ---
 
 >Implement strStr().
@@ -14,7 +14,7 @@ Returns the index of the first occurrence of needle in haystack, or 
 
 # My Solution
 ### (Java) Version 1  Time: 7ms:
-*　　这就是一个典型的朴素的两重循环比较的算法，没有什么好说的*
+　　这就是一个典型的朴素的两重循环比较的算法，没有什么好说的
 ```java
 public class Solution {
     public int strStr(String haystack, String needle) {
@@ -40,7 +40,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 2  Time: 6ms (By [Kexin_Li](https://discuss.leetcode.com/user/kexin_li)):
-*　　讲道理，我内心的想法就是——这TMD也可以？？不是很懂contains的使用范围*
+　　讲道理，我内心的想法就是——这TMD也可以？？不是很懂contains的使用范围
 ```java
 public class Solution {
     public int strStr(String haystack, String needle) {
@@ -49,7 +49,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 3  Time: 6ms (By [Domenickd3](https://discuss.leetcode.com/user/domenickd3)):
-*　　这是用substring切割了字符串，然后做比较，事实上和两个循环并无多大不同，只是第二个循环用了Java自己的方法，也许对比直接用for循环会有优化*
+　　这是用substring切割了字符串，然后做比较，事实上和两个循环并无多大不同，只是第二个循环用了Java自己的方法，也许对比直接用for循环会有优化
 ```java
 public class Solution {
     public int strStr(String haystack, String needle) {

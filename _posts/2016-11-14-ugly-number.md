@@ -3,7 +3,7 @@ layout: post
 title: 263.Ugly Number(Easy)
 date: 2016-11-14 14:29
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy]
 ---
 
 >Write a program to check whether a given number is an ugly number.

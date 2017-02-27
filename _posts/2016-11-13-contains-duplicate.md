@@ -3,7 +3,7 @@ layout: post
 title: 217.Contains Duplicate(Easy)
 date: 2016-11-13 14:14
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,数组,计数,一行实现]
 ---
 
 >Given an array of integers, find if the array contains any duplicates.
@@ -13,7 +13,7 @@ and it should return false if every element is distinct.
 
 # My Solution
 ### (Java) Version 1  Time: 14ms:
-*　　第一次用到了set，好开心，然而并没有什么用，用list来代替也是可以的，不过应该是接近最大时间了，在leetcode上提交经常是一次AC一次超时的*
+　　第一次用到了set，好开心，然而并没有什么用，用list来代替也是可以的，不过应该是接近最大时间了，在leetcode上提交经常是一次AC一次超时的
 ```java
 public class Solution {
     public boolean containsDuplicate(int[] nums) {
@@ -27,7 +27,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 2  Time: 3ms (By [dyvsay](https://discuss.leetcode.com/user/dyvsay)):
-*　　这个套路我还不是很懂……值得研究*
+　　这个套路我还不是很懂……值得研究
 ```java
 public class Solution {
     public boolean containsDuplicate(int[] nums) {
@@ -46,7 +46,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 3  Time: 4ms (By [whspecial](https://discuss.leetcode.com/user/whspecial)):
-*　　这个套路在于先排序，为什么排序会这么快，看来以前觉得先排序会浪费时间这个想法是不对的，不知道Java里面默认的排序是哪种*
+　　这个套路在于先排序，为什么排序会这么快，看来以前觉得先排序会浪费时间这个想法是不对的，不知道Java里面默认的排序是哪种
 ```java
 public class Solution {
     public boolean containsDuplicate(int[] nums) {
@@ -64,7 +64,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 4  Time: 86ms (By [wit](https://discuss.leetcode.com/user/wit)):
-*　　一行KO问题的骚套路总是有很多人追求的！虽然真的慢……*
+　　一行KO问题的骚套路总是有很多人追求的！虽然真的慢……
 ```java
 /*
 *这是一行的套路

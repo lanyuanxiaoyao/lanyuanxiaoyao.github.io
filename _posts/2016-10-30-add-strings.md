@@ -3,7 +3,7 @@ layout: post
 title: 415.Add Strings(Easy)
 date: 2016-10-30 23:39
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,大数运算,数组]
 ---
 
 >Given two non-negative numbers num1
@@ -20,7 +20,7 @@ tags: LeetCode
 
 # My Solution
 ### (Java) Version 1  Time: 26ms:
-*　　不解释了，就是大数相加，逆序补0然后处理进位*
+　　不解释了，就是大数相加，逆序补0然后处理进位
 ```java
 public class Solution {
     public String addStrings(String num1, String num2) {
@@ -58,7 +58,7 @@ public class Solution {
 }
 ```
 ### (Java) Version 2  Time: 24ms (By [ratchapong.t](https://discuss.leetcode.com/user/ratchapong-t)):
-*　　简洁……我就难做到，对一些情况的总结还是不如高手们到位*
+　　简洁……我就难做到，对一些情况的总结还是不如高手们到位
 ```java
 public class Solution {
     public String addStrings(String num1, String num2) {

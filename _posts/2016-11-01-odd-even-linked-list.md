@@ -3,7 +3,7 @@ layout: post
 title: 328.Odd Even Linked List(Medium)
 date: 2016-11-01 23:22
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Medium,链表]
 ---
 
 >Given a singly linked list, group all odd nodes together followed by the even nodes. 
@@ -21,8 +21,8 @@ return 1->3->5->2->4->NULL.
 
 # My Solution
 ### (Java) Version 1  Time: 0ms:
-*　　一开始我以为和很久之前的题一样，Java在单链表会有坑，然后尝试了多用几个变量就会超过空间限制，后来破罐子破摔用回C语言的写法没有想到过了。
-　　思路在于，把单链表分为奇数结点的链表和偶数结点链表两个，然后遍历链表分别把奇数结点和偶数结点提取出来，最后在两条链表一接，完成……*
+　　一开始我以为和很久之前的题一样，Java在单链表会有坑，然后尝试了多用几个变量就会超过空间限制，后来破罐子破摔用回C语言的写法没有想到过了。
+　　思路在于，把单链表分为奇数结点的链表和偶数结点链表两个，然后遍历链表分别把奇数结点和偶数结点提取出来，最后在两条链表一接，完成……
 ```java
 /**
  * Definition for singly-linked list.
@@ -48,4 +48,4 @@ public class Solution {
     }
 }
 ```
-*　　这破题没有别的做法……*
+　　这破题没有别的做法……

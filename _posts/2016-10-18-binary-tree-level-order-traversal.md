@@ -3,7 +3,7 @@ layout: post
 title: 102.Binary Tree Level Order Traversal(Easy)
 date: 2016-10-18 14:46
 categories: LeetCode
-tags: LeetCode
+tags: [LeetCode,Easy,二叉树,队列]
 ---
 
 >Given a binary tree, return the *level order* traversal of its nodes' values. (ie, from left to right, level by level).
@@ -11,7 +11,7 @@ tags: LeetCode
 
 *　　一个对队列的巧妙应用*
 
-For example:
+**For example**
 >Given binary tree [3,9,20,null,null,15,7].
 **  3
  /   \
@@ -23,7 +23,7 @@ return its level order traversal as:
 
 # My Solution
 ### (Java) Version 1  Time: 3ms:
-*　　队列这个结构就巧妙地把二叉树的立体结构变成线性结构了，也是一种巧妙地遍历方式，先遍历每个小树的根结点，然后把所有子节点都放进队列中，然后对队列进行遍历，用size这个变量来保证每次都刚好遍历了一层，知道队列中没有元素了，就表示树没有再发现新的子节点，于是结束遍历*
+　　队列这个结构就巧妙地把二叉树的立体结构变成线性结构了，也是一种巧妙地遍历方式，先遍历每个小树的根结点，然后把所有子节点都放进队列中，然后对队列进行遍历，用size这个变量来保证每次都刚好遍历了一层，知道队列中没有元素了，就表示树没有再发现新的子节点，于是结束遍历
 ```java
 /**
  * Definition for a binary tree node.
