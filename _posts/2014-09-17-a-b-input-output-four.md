@@ -32,7 +32,7 @@ int main()
         i=1; 
         while(i<=n) 
         { 
-                scanf("%d",&m); 
+            scanf("%d",&m); 
             { 
                 sum=sum+m; 
             } 
@@ -40,7 +40,6 @@ int main()
         } 
         printf("%d\n",sum); 
     }
-    
 return 0; 
 } 
 ```
