@@ -3,7 +3,7 @@ layout: post
 title: 1407.测试你是否和LTC水平一样高
 date: 2014-10-04 01:43
 categories: 杭电HDU
-tags: [杭电HDU]
+tags: [杭电HDU,解方程]
 ---
 ## Problem
 >**Problem Description**  
