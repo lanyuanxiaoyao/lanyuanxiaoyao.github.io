@@ -7,39 +7,47 @@ tags: [杭电HDU]
 ---
 ## Problem
 >**Problem Description**  
-Your task is to Calculate the sum of some integers.  
+大家提到LTC都佩服的不行，不过，如果竞赛只有这一个题目，我敢保证你和他绝对在一个水平线上  
+你的任务是：  
+计算方程x^2+y^2+z^2= num的一个正整数解。  
 **Input**  
-Input contains multiple test cases. Each test case contains a integer N, and then N integers follow in the same line. A test case starting with 0 terminates the input and this test case is not to be processed.  
+输入数据包含多个测试实例，每个实例占一行，仅仅包含一个小于等于10000的正整数num。  
 **Output**  
-For each group of input integers you should output their sum in one line, and with one line of output for each line in input.    
+对于每组测试数据，请按照x,y,z递增的顺序输出它的一个最小正整数解，每个实例的输出占一行，题目保证所有测试数据都有解。  
 **Sample Input**  
-4 1 2 3 4  
-5 1 2 3 4 5  
-0  
+3  
 **Sample Output**  
-10  
-15  
+1 1 1  
 
 ## Solution
 ```cpp
-#include<stdio.h> 
-int main() 
-{ 
-    int n,i,m,sum; 
-    while((scanf("%d",&n)!=EOF)&&(n!=0)) 
-    { 
-        sum=0; 
-        i=1; 
-        while(i<=n) 
-        { 
-            scanf("%d",&m); 
-            { 
-                sum=sum+m; 
-            } 
-            i++; 
-        } 
-        printf("%d\n",sum); 
+#include<stdio.h>
+#include<math.h>
+int main(void)
+{
+    int x,i,j,k,sign,num,t;
+    
+    while(scanf("%d",&x)!=EOF){
+        sign=0;
+        for(i=1;i*i<x;i++){
+            for(j=1;j*j<x;j++){
+                for(k=1;k*k<x;k++){
+                    t=i*i+j*j+k*k;
+                    if(t==x){
+                        sign=1;
+                        break;
+                    }
+                }
+                if(sign==1){
+                    break;
+                }
+            }
+            if(sign==1){
+                break;
+            }
+        }
+        printf("%d %d %d\n",i,j,k);
     }
-return 0; 
-} 
+    return 0;
+}
 ```
