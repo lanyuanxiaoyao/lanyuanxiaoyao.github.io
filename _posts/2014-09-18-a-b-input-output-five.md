@@ -30,28 +30,18 @@ int main()
     int a[1000];
     
     scanf("%d",&count);
-    
     for(i=0;i<count;i++){
-                          
-                          scanf("%d",&num);
-                          
-                          zongshu=0;
-                          a[i]=0;
-                          
-                          for(j=0;j<num;j++){
-                                              
-                                              scanf("%d",&c);
-                                              a[i]+=c;
-                                              
-                                              }                 
-                                              
-                          }
+        scanf("%d",&num);
+        zongshu=0;
+        a[i]=0;
+        for(j=0;j<num;j++){
+            scanf("%d",&c);
+            a[i]+=c;
+        }
+    }
     for(i=0;i<count;i++){
-                          
-                          printf("%d\n",a[i]);
-                          
-                          }
+        printf("%d\n",a[i]);
+    }
     return 0;
-    
 }
 ```
