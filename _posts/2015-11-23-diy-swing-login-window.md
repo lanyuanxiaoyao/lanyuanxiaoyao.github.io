@@ -177,5 +177,16 @@ public class LoginFrame extends JFrame implements ActionListener {
     }
 }
 ```
-实际的界面和各类错误提示如下： 
-界面：
+实际的界面和各类错误提示如下：  
+界面：  
+![](http://olwt21mf4.bkt.clouddn.com/17-3-3/36847791-file_1488505476361_17408.png)  
+输入框为空的提示 :  
+![](http://olwt21mf4.bkt.clouddn.com/17-3-3/38650620-file_1488505523958_aa4f.png)  
+用户名输入错误的提示 :  
+![](http://olwt21mf4.bkt.clouddn.com/17-3-3/42830483-file_1488505527148_c768.png)  
+因为不一定只有一个用户，所以就没有说用户名错误，而是没有注册  
+
+密码错误提示 :  
+![](http://olwt21mf4.bkt.clouddn.com/17-3-3/86630498-file_1488505530180_14ba1.png)  
+成功提示 :  
+![](http://olwt21mf4.bkt.clouddn.com/17-3-3/42580537-file_1488505533396_4b93.png)
