@@ -4,9 +4,9 @@ date: 2017-3-7 20:40
 categories: 总结
 tags: [总结,排序]
 ---
-# 简介
+## 简介
 冒泡排序是最经典也是最基本的排序，因为它的实现简单和直观，往往也是初学编程的时候接触得最多的一种算法。
-# 步骤
+## 步骤
 假定有一个数组`[5,  7,  4,  10,  9]`，我们要把这个数组按从小到大排列
 1. 我们从第一个数开始，两个一组进行比较大小，也就是把第一个数和第二个数比较，如果：
 	- 第一个数比第二个数大，那么把这两个数交换
@@ -21,3 +21,47 @@ tags: [总结,排序]
 9. 直到只剩下最后一个数的时候，我们的整个数列都是有序的了。
 
 就好像冒泡泡一样，每一轮，数列里最大(最小)的数都好像泡泡一样浮到最上方，这就是冒泡排序。
+
+## 代码实现
+这是按从小到大排序的Java实现：
+```java
+public static int[] Sort(int num[]) {
+	for (int i = 0; i < num.length - 1; i++) {
+		for (int j = 0; j < num.length - 1 - i; j++) {
+			if (num[j] > num[j + 1]) {
+				int temp = num[j];
+				num[j] = num[j + 1];
+				num[j + 1] = temp;
+			}
+		}
+	}
+	return num;
+}
+```
+冒泡排序的时间复杂度是`!$ O(n^2) $`，空间复杂度是`!$ O(1) $`
+算法的实际时间与输入的数组有关，最好的情况是输入的数组是有序的，时间是`!$ O(1) $`，最坏的情况是输入的数组是逆序的，时间就是`!$ O(n^2) $`
+
+## 实际测试
+数组大小(整数个数) | 运行时间(ms)
+---|---
+100|0
+1000|10
+10000|160
+100000|14706
+可以看到时间是成指数倍增长的，到了100000级别的数据量的时候，冒泡排序就已经出现了肉眼可见的延迟了，效率十分低。
+
+**测试相关代码**
+```java
+public static void main(String[] args) {
+	int[] num = new int[1000000];
+	Random r = new Random();
+	for (int i = 0; i < num.length; i++) {
+		num[i] = r.nextInt(Integer.MAX_VALUE);
+	}
+	int[] result;
+	long start = System.currentTimeMillis();
+	result = Sort(num);
+	long end = System.currentTimeMillis();
+	System.out.println("运行时间： " + (end - start) + "ms");
+}
+```
