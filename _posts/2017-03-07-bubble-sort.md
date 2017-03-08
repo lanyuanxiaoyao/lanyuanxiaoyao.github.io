@@ -27,16 +27,16 @@ tags: [总结,排序]
 这是按从小到大排序的Java实现：
 ```java
 public static int[] Sort(int num[]) {
-	for (int i = 0; i < num.length - 1; i++) {
-		for (int j = 0; j < num.length - 1 - i; j++) {
-			if (num[j] > num[j + 1]) {
-				int temp = num[j];
-				num[j] = num[j + 1];
-				num[j + 1] = temp;
-			}
-		}
-	}
-	return num;
+    for (int i = 0; i < num.length - 1; i++) {
+        for (int j = 0; j < num.length - 1 - i; j++) {
+            if (num[j] > num[j + 1]) {
+                int temp = num[j];
+                num[j] = num[j + 1];
+                num[j + 1] = temp;
+            }
+        }
+    }
+return num;
 }
 ```
 冒泡排序的时间复杂度是$$ O(n^2) $$，空间复杂度是$$ O(1) $$
