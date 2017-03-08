@@ -25,11 +25,12 @@ private static int[] Sort(int[] num) {
             if (num[j] < num[min])
             min = j;
         }
+    }
     if (min != i) {
         int temp = num[min];
         num[min] = num[i];
         num[i] = temp;
     }
+    return num;
 }
-return num;
 ```
