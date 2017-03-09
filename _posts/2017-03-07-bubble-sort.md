@@ -2,7 +2,7 @@
 layout: post
 title: 冒泡排序(Bubble sort)
 date: 2017-03-07 20:40
-categories: 总结
+categories: 排序专题
 tags: [总结,排序]
 ---
 ## 简介

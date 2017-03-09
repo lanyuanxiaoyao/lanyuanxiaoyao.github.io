@@ -2,7 +2,7 @@
 layout: post
 title: 插入排序(Insertion sort)
 date: 2017-03-08 20:31
-categories: 总结
+categories: 排序专题
 tags: [总结,排序]
 ---
 ## 概念

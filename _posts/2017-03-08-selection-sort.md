@@ -2,7 +2,7 @@
 layout: post
 title: 选择排序(Selection sort)
 date: 2017-03-08 12:41
-categories: 总结
+categories: 排序专题
 tags: [总结,排序]
 ---
 ## 简介
