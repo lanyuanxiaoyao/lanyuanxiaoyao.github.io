@@ -91,3 +91,43 @@ protected int[] Sort(int[] num) {
 ### 稳定性
 由于在直接选择排序中存在着不相邻元素之间的互换，因此，直接选择排序是一种**不稳定**的排序方法。  
 *实际上选择排序的稳定性要看具体代码*
+
+## 优化
+选择排序可优化的地方不多,常用的一种优化方案在于,常规选择排序一轮只找一个最小值,那我们可以一轮同时找最大值和最小值,并把它们分别交换到第一位和最后一位,这样我们待排序的剩余序列就会大幅减少.
+```java
+protected int[] Sort(int[] num) {
+  for (int i = 0; i < num.length / 2; i++) {
+    int min = i, max = num.length - 1 - i;
+    for (int j = i; j < num.length - i; j++) {
+      if (num[j] < num[min])
+        min = j;
+      else if (num[j] > num[max])
+        max = j;
+      }
+      if (min != i) {
+        int temp = num[min];
+        num[min] = num[i];
+        num[i] = temp;
+      }
+      if (max == i) { // 由于最大值可能处于最小值的位置上,所以需要做一个判断
+        max = min;
+      }
+      if (max != num.length - 1 - i) {
+        int temp = num[max];
+        num[max] = num[num.length - 1 - i];
+        num[num.length - 1 - i] = temp;
+      }
+    }
+    return num;
+}
+```
+
+## 实际测试
+可以看到优化后的选择排序在数据量小的时候优势并不明显,只有在数据规模较大的情况下才比原始选择排序要快.
+
+数据规模 | 原始选择排序 | 优化方案
+---------|--------------|---------
+1000     |0~16          |0~16     
+10000    |28            |34       
+100000   |2707          |1941     
+1000000  |281315        |210817
