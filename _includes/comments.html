@@ -19,6 +19,23 @@
 <!-- 多说公共JS代码 end -->
 {% endif %}
 
+{% if site.wangyiyun_shortname %}
+<!-- 网易云跟帖评论框 start -->
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<!-- 网易云跟帖评论框 end -->
+<!-- 网易云跟帖JS代码 start -->
+<script>
+  var cloudTieConfig = {
+    url: document.location.href,
+    sourceId: "",
+    productKey: "{{site.wangyiyun_shortname}}",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<!-- 网易云跟帖JS代码 end -->
+{% endif %}
+
 {% if site.disqus_shortname %}
 <div id="disqus_thread"></div>
 <script>
