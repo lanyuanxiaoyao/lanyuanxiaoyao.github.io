@@ -26,24 +26,16 @@ tags: [杭电HDU]
 #include<math.h>
 int main(void)
 {
-    int m,n,i;
-    double sum,sqr;
-    
-    while(scanf("%d %d",&n,&m)!=EOF){
-    
-    sum=sqr=n;
-    
-     for(i=1;i<m;i++){
-      
-      sqr=sqrt(sqr);
-      sum=sum+sqr;
-      
-      }
-    
-     printf("%.2f\n",sum);
-     
-     }
-     return 0;
-     
+	int m,n,i;
+	double sum,sqr;
+	while(scanf("%d %d",&n,&m)!=EOF){
+		sum=sqr=n;
+		for(i=1;i<m;i++){
+			sqr=sqrt(sqr);
+			sum=sum+sqr;
+		}
+		printf("%.2f\n",sum);
+	}
+	return 0;
 }
 ```
