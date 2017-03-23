@@ -26,9 +26,9 @@ tags: [杭电HDU]
 #include<stdio.h>
 int main(void)
 {
-	int count,i,j,k,a[10000];
+    int count,i,j,k,a[10000];
     double sum,sign,num;
-	scanf("%d",&count);
+    scanf("%d",&count);
     for(i=1;i<=count;i++){
         scanf("%d",&a[i]);
     }  
