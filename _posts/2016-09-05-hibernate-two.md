@@ -5,8 +5,10 @@ date: 2016-09-05 23:43
 categories: Hibernate
 tags: Hibernate
 ---
+
 * content
 {:toc}
+
 ## 操作平台
 
 MyEclipse Enterprise Workbench 2015 Stable 2.0
