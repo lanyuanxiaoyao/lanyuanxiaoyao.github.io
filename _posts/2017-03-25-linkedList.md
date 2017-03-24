@@ -166,20 +166,20 @@ LinkedList实际上是通过双向链表去实现的。既然是双向链表，�
 
 |第一个元素（头部）| |最后一个元素（尾部）| |
 | --- | --- | --- | --- |
-|抛出异常|特殊值|抛出异常|特殊值
-|插入|addFirst(e)|offerFirst(e)|addLast(e)|offerLast(e)
-|移除|removeFirst()|pollFirst()|removeLast()|pollLast()
-|检查|getFirst()|peekFirst()|getLast()|peekLast()
+|抛出异常|特殊值|抛出异常|特殊值|
+|插入|addFirst(e)|offerFirst(e)|addLast(e)|offerLast(e)|
+|移除|removeFirst()|pollFirst()|removeLast()|pollLast()|
+|检查|getFirst()|peekFirst()|getLast()|peekLast()|
 6.LinkedList可以作为FIFO(先进先出)的队列，作为FIFO的队列时，下表的方法等价
 
 |队列方法|等效方法|
 | --- | --- |
-|add(e)|addLast(e)
-|offer(e)|offerLast(e)
-|remove()|removeFirst()
-|poll()|pollFirst()
-|element()|getFirst()
-|peek()|peekFirst()
+|add(e)|addLast(e)|
+|offer(e)|offerLast(e)|
+|remove()|removeFirst()|
+|poll()|pollFirst()|
+|element()|getFirst()|
+|peek()|peekFirst()|
 7. LinkedList可以作为LIFO(后进先出)的栈，作为LIFO的栈时，下表的方法等价
 
 |栈方法|等效方法|
