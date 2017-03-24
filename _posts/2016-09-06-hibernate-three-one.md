@@ -5,8 +5,10 @@ date: 2016-09-06 20:50
 categories: Hibernate
 tags: Hibernate
 ---
+
 * content
 {:toc}
+
 　　我们都知道在要从数据库中得到一个对象，通常有两种方式，一种是通过session.get()方法，另一种就是通过session.load()方法，然后其实这两种方法在获得一个实体对象时是有区别的，在查询性能上两者是不同的。
 
 ### load方式
