@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Medium,计数,数组]
 ---
 
+* content
+{:toc}
+
+
 >Follow up for "Remove Duplicates":
 What if duplicates are allowed at most twice?
 给定一个有序的整数数列，每个数最多只能出现两次，然后去除多余的数，把剩下的数排在原数组的前面，并返回新数列的长度
