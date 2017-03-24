@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Medium,搜索,计数]
 ---
 
+* content
+{:toc}
+
+
 >Given an integer n, count the total number of digit 1 appearing in all non-negative integers less than or equal to n.
 给出一个整数n，计算在所有小于或等于n的非负整数中，数字1出现的个数。
 
