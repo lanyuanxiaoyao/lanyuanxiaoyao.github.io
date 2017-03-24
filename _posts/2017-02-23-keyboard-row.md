@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,搜索,一行实现]
 ---
 
+* content
+{:toc}
+
+
 >Given a List of words, return the words that can be typed using letters of alphabet on only one row's of American keyboard like the image below.
 
 ![Keyboard](http://olwt21mf4.bkt.clouddn.com/17-2-26/32288848-file_1488083862684_1335f.png)
