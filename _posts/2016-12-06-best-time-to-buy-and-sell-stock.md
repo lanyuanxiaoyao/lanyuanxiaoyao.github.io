@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,动态规划,一行实现]
 ---
 
+* content
+{:toc}
+
+
 >Say you have an array for which the _i_ element is the price of a given stock on day _i_.
 给定一个数组，其中第i个元素是第i天是这个股票的价格
 
