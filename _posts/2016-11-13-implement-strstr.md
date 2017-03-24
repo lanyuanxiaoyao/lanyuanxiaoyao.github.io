@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,搜索,字符串处理,一行实现]
 ---
 
+* content
+{:toc}
+
+
 >Implement strStr().
 Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 返回needle在haystack中第一次出现的位置的索引值，如果没有找到，就返回-1
