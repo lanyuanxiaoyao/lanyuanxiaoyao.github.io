@@ -5,8 +5,10 @@ date: 2016-09-06 11:04
 categories: Hibernate
 tags: Hibernate
 ---
+
 * content
 {:toc}
+
 　　在项目中搭建好了Hibernate框架之后，就可以直接用Hibernate进行数据库的一些操作了
 ### 搭建数据库
 　　首先先在数据库中搭建一个简单的测试数据库
