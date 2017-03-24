@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,位运算,一行实现,正则表达式]
 ---
 
+* content
+{:toc}
+
+
 >Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
 给定一个32位的整数，判断是否为4次幂
 
