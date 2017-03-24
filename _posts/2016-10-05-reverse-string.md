@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,位运算,字符串处理]
 ---
 
+* content
+{:toc}
+
+
 >Write a function that takes a string as input and returns the string reversed.
 编写一个函数，输入一个字符串，并输出其倒序的字符串。
 
