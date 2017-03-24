@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,递归]
 ---
 
+* content
+{:toc}
+
+
 >You are climbing a stair case. It takes *n* steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 你在爬楼梯，楼梯总共有n个台阶，每次你可爬一级或者两级台阶，问爬完整个楼梯有多少种爬的方式？
