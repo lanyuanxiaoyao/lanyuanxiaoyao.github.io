@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy]
 ---
 
+* content
+{:toc}
+
+
 >The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 ![](http://olwt21mf4.bkt.clouddn.com/17-2-25/69818604-file_1487994663514_628b.png)
 
