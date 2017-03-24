@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Medium,递归,计数]
 ---
 
+* content
+{:toc}
+
+
 >Given a string of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators. The valid operators are+ ,- and\*.
 给定一个数字和运算符的字符串，返回所有不同分组情况下运算的结果。合法的运算符有+，-和\*
 
