@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,数组]
 ---
 
+* content
+{:toc}
+
+
 >Given a sorted array, remove the duplicates in place such that each element appear only *once* and return the new length.
 Do not allocate extra space for another array, you must do this in place with constant memory.
 给定一个已排序的数组，去掉其中重复的元素，使得每个元素只出现一次，并返回新数组的长度。
