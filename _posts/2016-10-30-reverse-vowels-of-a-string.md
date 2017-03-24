@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,字符串处理,堆栈]
 ---
 
+* content
+{:toc}
+
+
 >Write a function that takes a string as input and reverse only the vowels of a string.
 **Note:**The vowels does not include the letter "y".
 写一个函数把字符串中的元音字母的顺序调转，‘Y’不是一个元音字母
