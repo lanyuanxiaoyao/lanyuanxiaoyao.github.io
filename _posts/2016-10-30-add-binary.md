@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,大数运算,数组]
 ---
 
+* content
+{:toc}
+
+
 >Given two binary strings, return their sum (also a binary string).
 给两个二进制的字符串，返回它们的和
 
