@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Easy,溢出]
 ---
 
+* content
+{:toc}
+
+
 >Reverse digits of an integer.
 反转一个整数的数字
 **Example1:** x = 123, return 321
