@@ -6,6 +6,10 @@ categories: LeetCode
 tags: [LeetCode,Medium,二叉树,计数,递归]
 ---
 
+* content
+{:toc}
+
+
 >Given a **complete** binary tree, count the number of nodes.
 给定一个完全二叉树，计算其节点数
 
