@@ -120,5 +120,9 @@ void remove()
 //从迭代器指向的 collection 中移除迭代器返回的最后一个元素（可选操作）。 
 ```
 
+# 参考
+1. [Java 集合系列02之 Collection架构](http://www.cnblogs.com/skywang12345/p/3308513.html)
+2. [Collection (Java Platform SE 7 )](http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html)
+
 [^1x]: 有序的概念不是指里面的元素按照一定的顺序排列好，而是其中元素存放的位置是有顺序的，按照什么顺序放进去，就会按照一定的顺序取出来，比如放进去是`1, 2, 3, 4`那么取出来的时候也是`1, 2, 3, 4`，如果是无序的，那么取出来时候的次序就是随机的，有可能是`2, 4, 1, 3`也有可能是`1, 2, 4, 3`
 [^2x]: 继承关系下相同的API不再重复，只罗列不同的
