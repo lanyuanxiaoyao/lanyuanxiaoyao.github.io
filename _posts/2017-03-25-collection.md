@@ -17,4 +17,10 @@ Java集合工具包框架图如下
 ![](http://olwt21mf4.bkt.clouddn.com/17-3-25/82042258-file_1490420009660_350c.jpg)
 从图中可以看到，集合主要有Collection和Map
 - Collection
-Collection主要有
+Collection主要有两大分类
+    - List **元素有序[^1x]可重复**
+    List的实现类有LinkedList, ArrayList, Vector, Stack
+    - Set **元素无序不可重复**
+    Set的实现类有HastSet和TreeSet。HashSet依赖于HashMap，它实际上是通过HashMap实现的；TreeSet依赖于TreeMap，它实际上是通过TreeMap实现的
+
+[^1x]: 有序的概念不是指里面的元素按照一定的顺序排列好，而是其中元素存放的位置是有顺序的，按照什么顺序放进去，就会按照一定的顺序取出来，比如放进去是`1, 2, 3, 4`那么取出来的时候也是`1, 2, 3, 4`，如果是无序的，那么取出来时候的次序就是随机的，有可能是`2, 4, 1, 3`也有可能是`1, 2, 4, 3`
