@@ -98,6 +98,7 @@ public interface Set<E> extends Collection<E> {
 }
 ```
 Set是一个继承于Collection的接口，即Set也是集合中的一种。**Set是没有重复元素的集合**  
+*特别的，如果在代码中试图通过add()方法加入一个重复元素，那么这个操作将会被忽略（并不会报异常）*
 **Set API**
 *和Collection完全相同，并没有特有的API*
 
