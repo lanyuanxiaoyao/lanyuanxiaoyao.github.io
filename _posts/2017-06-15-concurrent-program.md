@@ -105,6 +105,7 @@ tags: [软件工程,SRP,单一职责原则,作业]
 ![][9]
 
 ![][10]
+*不能用于多处理器，多处理器时要锁总线*
 ### Swap
 ![][11]
 ## 设计“锁”需要考虑的问题
@@ -117,6 +118,7 @@ tags: [软件工程,SRP,单一职责原则,作业]
 ## 可重入性
 - 自旋锁无法重入
 ![][12]
+*递归导致的死锁*
 - 解决办法
 	- 记录这个锁被谁持有
 	- 记录重入的次数
@@ -128,34 +130,41 @@ tags: [软件工程,SRP,单一职责原则,作业]
 ![][14]
 ## join
 ![][15]
+*无条件等待threadA执行完毕才继续后续逻辑*
 ### Join的实现
 ![][16]
-
+*其实就是wait /notify的形式*
 # 线程的状态
 ![][17]
+*Thread.sleep(sleeptime)这个方法是自行发起，不需要等待第三方的操作，自己唤醒自己，所以不需要释放锁再重新获得cpu的过程，直接就进入ready状态*
 # JDK中常用的锁
 ## 可重入互斥锁
 ![][18]
+*推荐使用*
 ## 信号量
 ![][19]
 **在同一时刻，只能有3个线程能够获得锁**
-
+**！！！重点！！！**
 ##  Reader Writer
 ![][20]
 ##  CountDownLatch
 ![][21]
 ##  CyclicBarrier
 ![][22]
-
+*CountDownLatch和CyclicBarrier的区别在于前者是等待各个线程完成后去做一件事，后者是线程互相等待，然后再去做各自的事情  
+CyclicBarrier的一个举例：旅游团旅游，首先集合点A集合→各自游览→集合点B集合→各自游览……*
 # 死锁
 ![][23]
 
 ![][24]
+*死锁的原因主要在于互相等待*
 ## 死锁的预防
 - 每个线程申请锁的时候都按照特定的次序
 ![][25]
+*这种方式等于把线程重新变为串行执行，串行执行是不会产生死锁的*
 - 申请锁的时候加上timeout
 ![][26]
+*高并发的情况难以使用*
 # 例子： 银行转账
 ![][27]
 ![][28]
@@ -172,20 +181,20 @@ tags: [软件工程,SRP,单一职责原则,作业]
   [9]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image11.png "TestAndSet1"
   [10]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image12.png "TestAndSet2"
   [11]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image13.png "Swap"
-  [12]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image14.png "image14"
-  [13]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image15.png "image15"
-  [14]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image16.png "image16"
-  [15]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image17.png "image17"
+  [12]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image14.png "递归导致的死锁"
+  [13]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image15.png "通过共享变量"
+  [14]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image16.png "通过wait /notify"
+  [15]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image17.png "通过join"
   [16]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image18.png "image18"
   [17]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/state-machine-example-java-6-thread-states.png "state-machine-example-java-6-thread-states"
-  [18]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image21.png "image21"
-  [19]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image22.png "image22"
-  [20]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image23.png "image23"
-  [21]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image24.png "image24"
-  [22]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image25.png "image25"
-  [23]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image26.png "image26"
-  [24]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image27.png "image27"
-  [25]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image28.png "image28"
-  [26]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image29.png "image29"
-  [27]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image30.png "image30"
-  [28]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image31.png "image31"
+  [18]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image21.png "可重入互斥锁"
+  [19]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image22.png "信号量"
+  [20]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image23.png "Reader Writer"
+  [21]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image24.png "CountDownLatch"
+  [22]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image25.png "CyclicBarrier"
+  [23]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image26.png "死锁"
+  [24]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image27.png "死锁"
+  [25]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image28.png "串行解决死锁"
+  [26]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image29.png "随机申请锁解决死锁"
+  [27]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image30.png 
+  [28]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image31.png 
