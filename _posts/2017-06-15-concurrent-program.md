@@ -11,10 +11,14 @@ tags: [软件工程,SRP,单一职责原则,作业]
 
 # 回顾一下
 ![][1]
+*并发编程中最重要的两个概念：进程、线程
+这里的栈、堆等概念都是操作系统层面的概念，并不特指某一种语言的设计方式，如Java虚拟机实际上是操作系统的一个进程*
 
 ![][2]
+*操作系统中使用虚拟内存映射的方式扩展每个进程可用的内存，好像每个进程都拥有全部的内存空间，实际上是通过操作系统调度让一个进程空闲的内存释放出来给其他进程使用*
 # 线程和进程
 ![][3]
+*多线程中的代码、数据和文件均是各个线程共享的，每个线程拥有一套独立的寄存器和堆栈（逻辑上独立，实际上是同一个寄存器和堆栈空间的不同片），*
 # 为什么要用线程？
 - 浏览器
 	- 线程1显示图像
@@ -24,6 +28,8 @@ tags: [软件工程,SRP,单一职责原则,作业]
 	- 线程2读取用户键盘输入
 	- 线程3自动定时的保存文档
 
+*进程→资源独立，不方便共享资源
+线程→资源可以方便地在各个线程间共享*
 # 线程的实现：完全在用户层实现
 ![][4]
 > JVM本身就是一个进程，如果用这种方式实现，有什么缺点？
@@ -116,8 +122,8 @@ tags: [软件工程,SRP,单一职责原则,作业]
 ![][28]
 
 
-  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%9B%BE%E7%89%871.png "回顾"
-  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image5.png "回顾"
+  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%9B%BE%E7%89%871.png "操作系统结构"
+  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image5.png "虚拟内存映射"
   [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image6.png "image6"
   [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image7_1.png "image7_1"
   [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image8.png "image8"
