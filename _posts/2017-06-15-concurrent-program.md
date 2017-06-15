@@ -3,7 +3,7 @@ layout: post
 title: 2017编程提高第1.5节课——Java并发编程
 date: 2017-06-15 20:29
 categories: 2017编程提高
-tags: [软件工程,SRP,单一职责原则,作业]
+tags: [Java,多线程]
 ---
 
 * content
