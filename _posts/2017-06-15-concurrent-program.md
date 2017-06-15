@@ -75,20 +75,22 @@ tags: [软件工程,SRP,单一职责原则,作业]
 # 多线程编程的特点
 ![][7]
 - 同一份代码，可以有多个线程执行
-	- 既可以在一个CPU核上并发执行
-	- 也可以在多个CPU核上并行执行
-- 线程的执行默认是乱序的
+	- 既可以在**一个CPU**核上**并发**执行
+	- 也可以在**多个CPU**核上**并行**执行
+- 线程的执行默认是**乱序**的
 	- 程序员不能假定执行次序
 - 线程会共享数据（对象的变量）
 	- 需要互斥
 - 线程之间也需要合作（同步）
 
+*线程的执行并不按照编码的顺序执行，会随机按照哪个线程获得cpu时间就执行哪个*
 # 如何实现互斥 ？
 ## 锁
 - 只有获得了锁的线程，才能够对共享资源做操作， 换句话说：进入临界区
 - 对共享资源做完操作（即使发生异常），一定要释放锁！
 
 ![][8]
+*临界区是放置访问修改共享资源的操作（文件，变量），仅能有一个线程*
 ## 锁到底是个什么东西？
 - “锁”本身如果是软件， 也没法保证原子性！
 	- 多个CPU对“锁”操作的时候也会出错
@@ -97,11 +99,13 @@ tags: [软件工程,SRP,单一职责原则,作业]
 	- Swap
 	- CAS
 
-### 硬件指令：TestAndSet
+*锁只能由操作系统硬件实现，而不能由软件来实现  
+硬件指令都是原语操作（原子操作）*
+### TestAndSet
 ![][9]
 
 ![][10]
-### 硬件指令： Swap
+### Swap
 ![][11]
 ## 设计“锁”需要考虑的问题
 - 线程申请锁的时候， 发现已经被别的线程持有， 线程该怎么办？
@@ -163,11 +167,11 @@ tags: [软件工程,SRP,单一职责原则,作业]
   [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image7_1.png "线程完全在用户层实现"
   [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image8.png "线程在操作系统内核中实现"
   [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image9_1.png "组合实现方式"
-  [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image10.png "image10"
-  [8]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/pic.png "pic"
-  [9]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image11.png "image11"
-  [10]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image12.png "image12"
-  [11]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image13.png "image13"
+  [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image10.png "并行与并发"
+  [8]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/pic.png "锁"
+  [9]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image11.png "TestAndSet1"
+  [10]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image12.png "TestAndSet2"
+  [11]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image13.png "Swap"
   [12]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image14.png "image14"
   [13]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image15.png "image15"
   [14]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image16.png "image16"
