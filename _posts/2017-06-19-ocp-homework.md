@@ -183,4 +183,7 @@ public static void main(String[] args) {
 ## 小结
 开闭原则是复用代码的基石，继承基类然后通过多态来实现`if`的效果，可以达到在调用的时候不需要改原来调用的方法就直接添加新的子类，大大提高了扩展性和可维护性。
 
+# 总结
+略，等老师点评
+
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8819%E6%97%A5_22h32m13s_001_.png "原始代码结构"
