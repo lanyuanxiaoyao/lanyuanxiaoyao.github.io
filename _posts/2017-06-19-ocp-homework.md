@@ -117,7 +117,7 @@ public class HandleMsgWithDate extends BaseMsgTool {
 	}
 }
 ```
-## 判断log需要通过什么方式发送部分的重构
+### 判断log需要通过什么方式发送部分的重构
 和上面一样就不多赘述了  
 一个接口ISendLog.java
 ```java
@@ -154,7 +154,7 @@ public class PrintLog extends BaseLog {
 	}
 }
 ```
-## Logger类变成什么样了？
+### Logger类变成什么样了？
 经过重构之后，Logger类变成了
 ```java
 public class Logger {
