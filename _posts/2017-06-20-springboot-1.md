@@ -60,17 +60,28 @@ spring boot 提供了很多的组件供我们选择，只要通过打勾的方�
 - core
 spring核心库
 - Security
+这是一种基于 Spring AOP 和 Servlet 过滤器的安全框架。它提供全面的安全性解决方案，同时在 Web 请求级和方法调用级处理身份确认和授权
 - AOP
+在应用中使用Spring的AOP特性时所需的类。使用基于AOP的Spring特性，如声明型事务管理（Declarative Transaction Management），就要集成这个组件
 - Atomikos(JTA)
+这是一个事务管理器，Atomikos为Java平台提供增值服务的并且开源类事务管理器
 - Bitronic(JTA)
+这也是一个事务管理器，Bitronic是一个完全正常的XA事务管理器，它提供了JTA API所需的所有服务，同时尽可能简化了代码，以便更好地理解XA语义
 - Narayana(JTA)
+这还是一个事务管理器，Narayana是一个事务管理工具包，为使用广泛的基于标准的交易协议开发的应用程序提供支持
 - Cache
+支持使用缓存
 - DevTools
 - Configuration Processor
+可以通过注解对其他组件进行配置
 - Validation
+校验相关的组件
 - Session
+顾名思义session相关的组件
 - Retry
+提供重试机制的组件
 - Lombok
+提供一套高效的代码模板，帮助在运行时生成代码
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_10h15m24s_001_New%20Project.png "new project"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_10h20m53s_003_New%20Project.png "填写项目信息"
