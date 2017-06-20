@@ -57,45 +57,45 @@ IntelliJ IDEA平台已经提供了很方便的spring boot构建工具，因此�
 ## 选择集成组件
 ![][3]  
 spring boot 提供了很多的组件供我们选择，只要通过打勾的方式就可以简单地集成到项目当中
-- Core
+- Core  
 spring核心库
-	- Security
+	- Security  
 这是一种基于 Spring AOP 和 Servlet 过滤器的安全框架。它提供全面的安全性解决方案，同时在 Web 请求级和方法调用级处理身份确认和授权
-	- AOP
+	- AOP  
 在应用中使用Spring的AOP特性时所需的类。使用基于AOP的Spring特性，如声明型事务管理（Declarative Transaction Management），就要集成这个组件
-	- Atomikos(JTA)
+	- Atomikos(JTA)  
 这是一个事务管理器，Atomikos为Java平台提供增值服务的并且开源类事务管理器
-	- Bitronic(JTA)
+	- Bitronic(JTA)  
 这也是一个事务管理器，Bitronic是一个完全正常的XA事务管理器，它提供了JTA API所需的所有服务，同时尽可能简化了代码，以便更好地理解XA语义
-	- Narayana(JTA)
+	- Narayana(JTA)  
 这还是一个事务管理器，Narayana是一个事务管理工具包，为使用广泛的基于标准的交易协议开发的应用程序提供支持
 	- Cache
 支持使用缓存
 	- DevTools
-	- Configuration Processor
+	- Configuration Processor  
 可以通过注解对其他组件进行配置
-	- Validation
+	- Validation  
 校验相关的组件
-	- Session
+	- Session  
 顾名思义session相关的组件
-	- Retry
+	- Retry  
 提供重试机制的组件
-	- Lombok
+	- Lombok  
 提供一套高效的代码模板，帮助在运行时生成代码
 - Web
 	- Web
 提供spring web相关的组件和类
-	- Reactive Web
+	- Reactive Web  
 即Spring WebFlux，是一个全新的非堵塞的函数式 Reactive Web 框架，可以用来构建异步的、非堵塞的、事件驱动的服务，在伸缩性方面表现非常好
 	- Websocket
 	- Web Service
-	- Jersey(JAX-RS)
+	- Jersey(JAX-RS)  
 Jersey是提供JAX-RS参考实现和更多的REST框架
-	- Apache CXF(JAX-RS)
+	- Apache CXF(JAX-RS)  
 也是一个REST框架
 	- Ratpack
 适合高性能搞吞吐量的微服务型网络开发库
-	- Vaadin
+	- Vaadin  
 Vaadin是一个用于丰富互联网应用程序的开源 Web框架，使用ajax让大部分的服务在服务器上运行
 	- Rest Repositores
 	- HATEOAS
@@ -106,15 +106,15 @@ Vaadin是一个用于丰富互联网应用程序的开源 Web框架，使用ajax
 	- Keycloak
 - Template Engines
 模板引擎
-	- Freemaker
+	- Freemaker  
 FreeMarker是一个基于Java的模板引擎，最初专注于使用MVC软件架构生成动态网页。但是，它是一个通用的模板引擎，不依赖于servlets或HTTP或HTML，因此它通常用于生成源代码
-	- Velocity
+	- Velocity  
 Apache Velocity是一个基于Java的模板引擎，但是已经在spring boot的新版本中被放弃了
 	- Groovy Templates
-	- Thymeleaf
+	- Thymeleaf  
 Thymeleaf是一个开源的Java模板引擎库，其模板文件本身也是一个格式良好的HTML文件，并且可以直接被浏览器打开，也是spring boot官方推荐的模板引擎
 	- Mystache
-- SQL
+- SQL  
 数据库相关组件，就不详细介绍了，用到哪个就点哪个
 	- JPA
 	- JOOQ
@@ -141,12 +141,12 @@ Thymeleaf是一个开源的Java模板引擎库，其模板文件本身也是一�
 	- Gemfire
 	- Solr
 	- Elasticsearch
-- Social
+- Social  
 社交应用相关组件，只有三个，国内用不上
 	- Facebook
 	- LinkedIn
 	- Twitter
-- I/O
+- I/O  
 输入输出相关组件
 	- Batch
 	- Intergration
