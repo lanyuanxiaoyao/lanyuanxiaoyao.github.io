@@ -20,3 +20,15 @@ Spring Boot的目标是：
 # 系统要求
 默认情况下，Spring Boot 1.4.0.BUILD-SNAPSHOT需要Java7环境，Spring框架 4.3.2.BUILD-SNAPSHOT或以上版本。你可以在Java6下使用Spring Boot，不过需 要添加额外配置。明确提供构建支 持的有Maven（3.2+）和Gradle（1.12+）。  
 **注：尽管你可以在Java6或Java7环境下使用Spring Boot，通常建议尽可能使用 Java8**
+
+# Servlet容器
+下列内嵌容器支持开箱即用（out of the	box）：
+|名称|Servlet版本|Java版本
+|---|---|---
+|Tomcat	8|3.1|Java 7+
+|Tomcat	7|3.0|Java 6+
+|Jetty	9.3|3.1|Java 8+
+|Jetty	9.2|3.1|Java 7+
+|Jetty	8|3.0|Java 6+
+|Undertow 1.3|3.1|Java 7+
+你也可以将Spring	Boot应用部署到任何兼容Servlet 3.0+的容器。
