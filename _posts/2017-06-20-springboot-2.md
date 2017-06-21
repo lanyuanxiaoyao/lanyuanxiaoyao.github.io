@@ -30,6 +30,33 @@ spring配置文件
 - **test**
 测试目录，用于测试代码
 
+# 编写测试Demo
+## 建数据库
+先建立测试数据，我们在数据库中建两张表：`student`和`class`（其中有外键关系）：  
 
+![][2]
+
+![][3]
+
+简单的数据库关系，其中学生信息中的班级和班级表构成外键关系，这里在数据库中不使用外键，而是在代码中维护外键关系
+
+## mybatis配置
+由于spring boot的整合非常简洁，mybatis的配置不需要写一大串的xml文件，仅需要在默认的spring配置文件application.properties中配置即可  
+application.properties
+```
+spring.session.store-type=none
+
+# 数据库参数
+spring.datasource.url=jdbc:mysql://localhost:3306/springdemo?characterEncoding=utf-8
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+# mybatis
+mybatis.mapper-locations=classpath*:mapper/*.xml
+mybatis.type-aliases-package=com.example.demo.model
+```
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h47m55s_009_.png "项目结构"
+  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m28s_011_.png "student"
+  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m48s_012_.png "class"
