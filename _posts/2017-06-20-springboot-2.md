@@ -579,6 +579,133 @@ StudentMapper.xml
 	WHERE sid = #{sid}
 </update>
 ```
+## 查
+查询是最重要的，查询不止这么一点点的单向查询，但是这里只是列举了简单的查询，复杂的查询还要另起一篇文档着重写
+
+![][8]  
+select.html
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+    <link rel="stylesheet" href="/css/amazeui.min.css" type="text/css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/amazeui.min.js"></script>
+    <style>
+        #content {
+            width: 500px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <table class="am-table-bordered am-table-radius">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>班别</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="class : ${classList}">
+            <td th:text="${class.cid}">10</td>
+            <td th:text="${class.cname}">十班</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="am-table-bordered am-table-radius">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>班别</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${studentList}">
+            <td th:text="${student.sid}">10</td>
+            <td th:text="${student.sname}">张三</td>
+            <td th:text="${student.clazz.cname}">十班</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+```
+IndexController.java(不要纠结类名不叫SelectController)
+```java
+@Controller
+public class IndexController {
+
+    // 自动装载
+    @Autowired
+    private StudentService studentService;
+    @Autowired
+    private ClassService classService;
+
+    @RequestMapping("/")
+    public String index(){
+        return "index";
+    }
+
+    @RequestMapping("/select")
+    public String ShowAllStudent(ModelMap map){
+        List<Class> classList = classService.getAllClass();
+        map.addAttribute("classList", classList);
+        List<Student> studentList = studentService.getAllStudent();
+        map.addAttribute("studentList",studentList);
+        return "select";
+    }
+}
+```
+ClassService.java
+```java
+public List<Class> getAllClass() {
+	return classMapper.findAll();
+}
+```
+StudentService.java
+```java
+public List<Student> getAllStudent() {
+	return studentMapper.findAll();
+}
+```
+在查询的`Mapper`和前面不同的是，返回值是一个`List`，这需要在`xml`文件中指定`resultMap`为定义好的`resultMap`映射模块
+ClassMapper.java:
+```java
+List<Class> findAll();
+```
+ClassMapper.xml
+```xml
+<resultMap id="BaseResultMap" type="com.example.demo.model.Class">
+	<id column="cid" property="cid" jdbcType="INTEGER"/>
+	<result column="cname" property="cname" jdbcType="VARCHAR"/>
+</resultMap>
+
+<select id="findAll" resultMap="BaseResultMap">
+	SELECT *
+	FROM class
+</select>
+```
+StudentMapper.java
+```java
+List<Student> findAll();
+```
+StudentMapper.xml
+```xml
+<select id="findAll" resultMap="Student">
+	SELECT *
+	FROM student s, class c
+	WHERE s.cid = c.cid
+</select>
+```
+# 小结
 
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h47m55s_009_.png "项目结构"
@@ -588,3 +715,4 @@ StudentMapper.xml
   [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_15h53m52s_002_.png "insert页面"
   [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_16h20m50s_003_.png "delete界面"
   [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_16h29m08s_004_.png "update界面"
+  [8]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_16h34m01s_005_.png "select界面"
