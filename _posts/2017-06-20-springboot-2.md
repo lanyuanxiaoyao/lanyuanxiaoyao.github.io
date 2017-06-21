@@ -706,7 +706,7 @@ StudentMapper.xml
 </select>
 ```
 # 小结
-
+整个整合的过程并没有很困难，首先在配置文件上就简单了不少，这也是spring boot的重要作用就是减少了整合配置里的繁琐的各种配置文件，包括spring mvc和mybatis，即使是不得不设置的一些设置项，也改为了非常直观的配置方式，比如.properties文件，还支持.yml文件作为配置文件，很灵活也很简洁
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h47m55s_009_.png "项目结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m28s_011_.png "student"
