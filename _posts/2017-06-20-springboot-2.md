@@ -708,6 +708,38 @@ StudentMapper.xml
 # 小结
 整个整合的过程并没有很困难，首先在配置文件上就简单了不少，这也是spring boot的重要作用就是减少了整合配置里的繁琐的各种配置文件，包括spring mvc和mybatis，即使是不得不设置的一些设置项，也改为了非常直观的配置方式，比如.properties文件，还支持.yml文件作为配置文件，很灵活也很简洁
 
+# 整合遇到的问题
+## gradle下载maven主仓库速度太慢
+这个问题一度浪费了我将近3个小时的时间，在完成任务创建之后，gradle会自动帮助我们下载需要用到的第三方组件包，这些个包会从maven主仓库下载，但是由于国内连接maven主仓库的速度并不快（不是不能访问，maven主仓库并没有被墙，就是物理距离导致的网速慢），加上要检索G级别的索引文件，导致下载极慢，解决方法有几个：
+1. 自建maven仓库索引文件加快索引速度
+2. 自建maven仓库，把要用的jar包直接放入本地仓库引用
+3. 改用阿里云提供的maven镜像
+
+我使用的是第三个方式，因为最简单，使用方法也很简单：  
+```gradle
+// 添加阿里云的镜像
+allprojects {
+	repositories {
+		maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+	}
+}
+repositories {
+	// 把默认的主仓库注释掉
+	//mavenCentral()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+}
+```
+## Invocation of init method failed;
+```
+Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: No Spring Session store is configured: set the 'spring.session.store-type' property
+```
+遇到了一个错误，这个就很坑了，我在创建项目的时候引入了这个组件，实际上用不上，所以这个错误是因为一个和session有关的设置项没有设置，解决方法是在配置文件里加上这个配置
+```
+# 设置为none是因为我们还用不上
+spring.session.store-type=none
+```
+
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h47m55s_009_.png "项目结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m28s_011_.png "student"
   [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m48s_012_.png "class"
