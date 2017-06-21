@@ -40,22 +40,18 @@ spring配置文件
 
 简单的数据库关系，其中学生信息中的班级和班级表构成外键关系，这里在数据库中不使用外键，而是在代码中维护外键关系
 
-## mybatis配置
+## 配置
 由于spring boot的整合非常简洁，mybatis的配置不需要写一大串的xml文件，仅需要在默认的spring配置文件application.properties中配置即可  
+### 数据库信息配置
 application.properties
 ```
-spring.session.store-type=none
-
 # 数据库参数
 spring.datasource.url=jdbc:mysql://localhost:3306/springdemo?characterEncoding=utf-8
 spring.datasource.username=root
 spring.datasource.password=root
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-
-# mybatis
-mybatis.mapper-locations=classpath*:mapper/*.xml
-mybatis.type-aliases-package=com.example.demo.model
 ```
+非常简单，根据字段故名思义，包括数据库连接，用户名，密码和对应数据库的驱动，这四个属性配置好了就可以基本使用了，如果还有其他要求可以在后面继续补充添加配置信息，包括多个数据源或第三方连接池的配置等。
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h47m55s_009_.png "项目结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m28s_011_.png "student"
