@@ -392,6 +392,194 @@ public void deleteStudent(int sid) {
 	studentMapper.delete(sid);
 }
 ```
+ClassMapper.java:
+```java
+void delete(@Param("cid") int cid);
+```
+ClassMapper.xml
+```xml
+<delete id="delete">
+	DELETE FROM class
+	WHERE cid = #{cid}
+</delete>
+```
+StudentMapper.java
+```java
+void delete(@Param("sid") int sid);
+```
+StudentMapper.xml
+```xml
+<delete id="delete">
+	DELETE FROM student
+	WHERE sid = #{sid}
+</delete>
+```
+## 改
+在四大操作里面删除永远是最简单的，这里不再赘述，直接贴代码作为参考  
+
+![][7]  
+update.html
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+    <link rel="stylesheet" href="/css/amazeui.min.css" type="text/css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/amazeui.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/amazeui.min.css"> -->
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/amazeui.min.js"></script> -->
+    <style>
+        #content {
+            width: 500px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <table class="am-table-bordered am-table-radius">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>班别</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="class : ${classList}">
+            <td class="cid" th:text="${class.cid}">10</td>
+            <td><input class="am-form-field cname" type="text" th:value="${class.cname}" value="十班"></td>
+            <td>
+                <button type="button" class="am-btn am-btn-warning update-class-btn">更新</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="am-table-bordered am-table-radius">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>班别</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${studentList}">
+            <td class="sid" th:text="${student.sid}">10</td>
+            <td><input class="am-form-field sname" type="text" th:value="${student.sname}" value="张三"></td>
+            <td>
+                <select class="cid" data-am-selected>
+                    <option th:each="class : ${classList}" th:value="${class.cid}"
+                            th:attr="selected=(${class.cid} eq ${student.clazz.cid} ? true : false)">
+                        <span th:text="${class.cname}">十班</span>
+                    </option>
+                </select>
+            </td>
+            <td>
+                <button type="button" class="am-btn am-btn-warning update-student-btn">更新</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $(".update-class-btn").click(function () {
+            var row = $(this).parents("tr");
+            var cid = row.find(".cid").text();
+            var cname = row.find(".cname").val();
+            alert("/updateclass?cid=" + cid + "&cname=" + cname);
+            window.location = "/updateclass?cid=" + cid + "&cname=" + cname;
+        });
+        $(".update-student-btn").click(function () {
+            var row = $(this).parents("tr");
+            var sid = row.find(".sid").text();
+            var sname = row.find(".sname").val();
+            var cid = row.find(".cid").val();
+            alert("/updatestudent?sid=" + sid + "&sname=" + sname + "&cid=" + cid);
+            location = "/updatestudent?sid=" + sid + "&sname=" + sname + "&cid=" + cid;
+        });
+    })
+</script>
+</html>
+```
+UpdateController.java
+```java
+@Controller
+public class UpdateController {
+
+    @Autowired
+    private ClassService classService;
+    @Autowired
+    private StudentService studentService;
+
+    @RequestMapping("/update")
+    public String UpdateSomething(ModelMap map) {
+        List<Class> classList = classService.getAllClass();
+        map.addAttribute("classList", classList);
+        List<Student> studentList = studentService.getAllStudent();
+        map.addAttribute("studentList", studentList);
+        return "update";
+    }
+
+    @RequestMapping("/updateclass")
+    public String UpdateClass(@RequestParam("cid") int cid, @RequestParam("cname") String cname) {
+        classService.updateClass(cid, cname);
+        return "redirect:/update";
+    }
+
+    @RequestMapping("/updatestudent")
+    public String UpdateStudent(@RequestParam("sid") int sid, @RequestParam("sname") String sname, @RequestParam("cid") int cid) {
+        studentService.updateStudent(sid, sname, cid);
+        return "redirect:/update";
+    }
+
+}
+
+```
+ClassService.java
+```java
+public void updateClass(int cid, String cname) {
+	classMapper.update(cid, cname);
+}
+```
+StudentService.java
+```java
+public void updateStudent(int sid, String sname, int cid) {
+	studentMapper.update(sid, sname, cid);
+}
+```
+ClassMapper.java:
+```java
+void update(@Param("cid") int cid, @Param("cname") String cname);
+```
+ClassMapper.xml
+```xml
+<insert id="insert">
+	INSERT INTO class
+	SET cname = #{cname}
+</insert>
+```
+StudentMapper.java
+```java
+void update(@Param("sid") int sid, @Param("sname") String sname, @Param("cid") int cid);
+```
+StudentMapper.xml
+```xml
+<update id="update">
+	UPDATE student
+	SET sname = #{sname}, cid = #{cid}
+	WHERE sid = #{sid}
+</update>
+```
+
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h47m55s_009_.png "项目结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m28s_011_.png "student"
@@ -399,3 +587,4 @@ public void deleteStudent(int sid) {
   [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_15h41m15s_001_.png "目录结构"
   [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_15h53m52s_002_.png "insert页面"
   [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_16h20m50s_003_.png "delete界面"
+  [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_16h29m08s_004_.png "update界面"
