@@ -60,7 +60,33 @@ Demo里面关于Mybatis的配置只有两个，一个是指定`mapper`的xml文�
 mybatis.mapper-locations=classpath*:mapper/*.xml
 mybatis.type-aliases-package=com.example.demo.model
 ```
+## 目录结构
+接着是开始编写代码，按照分层，执行步骤为：`Url`→`Controller`→`Service`→`Mapper`，所以目录结构和相应文件位置如下图：  
+
+![][4]  
+
+## 建立model
+这个文件夹叫什么名字都行，比如`pojo`之类的，总之是表示数据库表对应的实体类结构  
+**为了篇幅简洁，以下代码均省略getter/setter/包名/异常，但是这些玩意儿还是要写的**
+Class.java
+```java
+public class Class {
+    private int cid;
+    private String cname;
+}
+
+```
+Student.java
+```java
+public class Student {
+    private int sid;
+    private String sname;
+    private Class clazz;
+}
+
+```
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h47m55s_009_.png "项目结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m28s_011_.png "student"
   [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m48s_012_.png "class"
+  [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_15h41m15s_001_.png "目录结构"
