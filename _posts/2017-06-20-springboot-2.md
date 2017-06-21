@@ -52,8 +52,14 @@ spring.datasource.password=root
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 ```
 非常简单，根据字段故名思义，包括数据库连接，用户名，密码和对应数据库的驱动，这四个属性配置好了就可以基本使用了，如果还有其他要求可以在后面继续补充添加配置信息，包括多个数据源或第三方连接池的配置等。  
-此外`DataSource`类型的`@Bean`可以覆盖默认设置。  
-然后在启动类中（我这里是DemoApplication.java），配置连接池，我使用的是默认的
+此外`DataSource`类型的`@Bean`可以覆盖默认设置
+### Mybatis配置
+Demo里面关于Mybatis的配置只有两个，一个是指定`mapper`的xml文件扫描路径，第二个是给指定包中的类注册别名，这样在`mapper.xml`文件中使用`Type`的时候就不需要全名(带包名)，只需要类名即可
+```
+# mybatis
+mybatis.mapper-locations=classpath*:mapper/*.xml
+mybatis.type-aliases-package=com.example.demo.model
+```
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h47m55s_009_.png "项目结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m28s_011_.png "student"
