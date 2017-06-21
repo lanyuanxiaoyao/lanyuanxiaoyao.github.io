@@ -211,13 +211,13 @@ public class InsertController {
 }
 ```
 在Service层的代码分别为只有一句，毕竟Service层是做业务操作整合的，而增删改查均是一个操作完成，所以一句搞定，就不多贴整个Service的结构了：  
-Class.java
+ClassService.java
 ```java
 public void addClass(String cname) {
 	classMapper.insert(cname);
 }
 ```
-Student.java
+StudentService.java
 ```java
 public void addStudent(Student student) {
 	studentMapper.insert(student);
@@ -260,10 +260,142 @@ Student.xml
 	VALUES (#{sid,jdbcType=INTEGER}, #{sname, jdbcType=VARCHAR}, #{clazz.cid, jdbcType=INTEGER})
 </insert>
 ```
+## 删
+在四大操作里面删除永远是最简单的，这里不再赘述，直接贴代码作为参考  
 
+![][6]  
+delete.html
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+    <link rel="stylesheet" href="/css/amazeui.min.css" type="text/css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/amazeui.min.js"></script>
+    <style>
+        #content {
+            width: 500px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <table class="am-table-bordered am-table-radius">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>班别</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="class : ${classList}">
+            <td class="cid" th:text="${class.cid}">10</td>
+            <td><input class="am-form-field cname" type="text" th:value="${class.cname}" value="十班"></td>
+            <td>
+                <button type="button" class="am-btn am-btn-danger delete-class-btn">删除</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="am-table-bordered am-table-radius">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>班别</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${studentList}">
+            <td class="sid" th:text="${student.sid}">10</td>
+            <td><input class="am-form-field sname" type="text" th:value="${student.sname}" value="张三"></td>
+            <td>
+                <select class="cid" data-am-selected>
+                    <option th:each="class : ${classList}" th:value="${class.cid}"
+                            th:attr="selected=(${class.cid} eq ${student.clazz.cid} ? true : false)">
+                        <span th:text="${class.cname}">十班</span>
+                    </option>
+                </select>
+            </td>
+            <td>
+                <button type="button" class="am-btn am-btn-danger delete-student-btn">删除</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $(".delete-class-btn").click(function () {
+            var row = $(this).parents("tr");
+            var cid = row.find(".cid").text();
+            window.location = "/deleteclass?cid=" + cid;
+        });
+        $(".delete-student-btn").click(function () {
+            var row = $(this).parents("tr");
+            var sid = row.find(".sid").text();
+            location = "/deletestudent?sid=" + sid;
+        });
+    })
+</script>
+</html>
+```
+DeleteController.java
+```java
+@Controller
+public class DeleteController {
+
+    @Autowired
+    private StudentService studentService;
+    @Autowired
+    private ClassService classService;
+
+    @RequestMapping("/delete")
+    public String UpdateSomething(ModelMap map) {
+        List<Class> classList = classService.getAllClass();
+        map.addAttribute("classList", classList);
+        List<Student> studentList = studentService.getAllStudent();
+        map.addAttribute("studentList", studentList);
+        return "delete";
+    }
+
+    @RequestMapping("/deleteclass")
+    public String DeleteClass(@RequestParam("cid") int cid){
+        classService.deleteClass(cid);
+        return "redirect:/delete";
+    }
+
+    @RequestMapping("/deletestudent")
+    public String DeleteStudent(@RequestParam("sid") int sid){
+        studentService.deleteStudent(sid);
+        return "redirect:/delete";
+    }
+}
+```
+ClassService.java
+```java
+public void deleteClass(int cid) {
+	classMapper.delete(cid);
+}
+```
+StudentService.java
+```java
+public void deleteStudent(int sid) {
+	studentMapper.delete(sid);
+}
+```
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h47m55s_009_.png "项目结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m28s_011_.png "student"
   [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8820%E6%97%A5_11h59m48s_012_.png "class"
   [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_15h41m15s_001_.png "目录结构"
   [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_15h53m52s_002_.png "insert页面"
+  [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/Ashampoo_Snap_2017%E5%B9%B46%E6%9C%8821%E6%97%A5_16h20m50s_003_.png "delete界面"
