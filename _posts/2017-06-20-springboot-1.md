@@ -23,7 +23,7 @@ Spring Boot的目标是：
 
 ## Servlet容器
 下列内嵌容器支持开箱即用（out of the	box）：
-|名称|Servlet版本|Java版本
+名称 | Servlet版本 | Java版本
 ---|---|---
 Tomcat	8 | 3.1 | Java 7+
 Tomcat	7 | 3.0 | Java 6+
