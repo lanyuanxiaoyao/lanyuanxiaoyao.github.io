@@ -67,7 +67,7 @@ mybatis.type-aliases-package=com.example.demo.model
 
 ## 建立model
 这个文件夹叫什么名字都行，比如`pojo`之类的，总之是表示数据库表对应的实体类结构  
-**为了篇幅简洁，以下代码均省略getter/setter/包名/异常，但是这些玩意儿还是要写的**
+**为了篇幅简洁，以下代码均省略getter/setter/包名/异常，但是这些玩意儿还是要写的**  
 Class.java
 ```java
 public class Class {
