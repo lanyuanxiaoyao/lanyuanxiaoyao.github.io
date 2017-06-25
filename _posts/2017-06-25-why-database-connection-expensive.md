@@ -24,7 +24,7 @@ tags: [数据库,Issues]
 6. 关闭socket。
 
 我们有一个示意图可以看：
-![](http://incdn1.b0.upaiyun.com/2014/05/214146734bb9c0e575fd2232a6317724.png)
+![][1]
 
 # 开销分析
 ## 连接层面
@@ -51,3 +51,6 @@ tags: [数据库,Issues]
 *这也是一篇翻译文章，原文链接：[When and why are database joins expensive?](https://stackoverflow.com/questions/173726/when-and-why-are-database-joins-expensive?answertab=votes)*
 - [数据库，socket等连接创建关闭开销具体在哪里？](https://www.zhihu.com/question/21924188)
 - [浅谈数据库连接](http://blog.csdn.net/dba_huangzj/article/details/7650348)
+
+
+  [1]: ./images/database.png "数据库连接流程"
