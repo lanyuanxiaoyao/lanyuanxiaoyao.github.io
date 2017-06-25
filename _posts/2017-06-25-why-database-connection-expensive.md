@@ -53,4 +53,4 @@ tags: [数据库,Issues]
 - [浅谈数据库连接](http://blog.csdn.net/dba_huangzj/article/details/7650348)
 
 
-  [1]: ./images/database.png "数据库连接流程"
+  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/database.png "数据库连接流程"
