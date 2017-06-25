@@ -22,7 +22,8 @@ Spring Boot的目标是：
 **注：尽管你可以在Java6或Java7环境下使用Spring Boot，通常建议尽可能使用 Java8**
 
 ## Servlet容器
-下列内嵌容器支持开箱即用（out of the	box）：
+下列内嵌容器支持开箱即用（out of the	box）：  
+
 名称 | Servlet版本 | Java版本
 ---|---|---
 Tomcat	8 | 3.1 | Java 7+
