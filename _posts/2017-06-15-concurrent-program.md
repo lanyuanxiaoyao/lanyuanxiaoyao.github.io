@@ -172,8 +172,7 @@ CyclicBarrier的一个举例：旅游团旅游，首先集合点A集合→各自
 ![][27]
 ![][28]
 
-
-  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%9B%BE%E7%89%871.png "操作系统结构"
+  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/6/26/%E5%9B%BE%E7%89%871.png "操作系统结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image5.png "虚拟内存映射"
   [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image6.png "单线程与多线程"
   [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image7_1.png "线程完全在用户层实现"
@@ -199,5 +198,5 @@ CyclicBarrier的一个举例：旅游团旅游，首先集合点A集合→各自
   [24]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image27.png "死锁"
   [25]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image28.png "串行解决死锁"
   [26]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image29.png "随机申请锁解决死锁"
-  [27]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image30.png 
-  [28]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image31.png 
+  [27]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image30.png
+  [28]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image31.png
