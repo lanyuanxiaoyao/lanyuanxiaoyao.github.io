@@ -172,7 +172,7 @@ CyclicBarrier的一个举例：旅游团旅游，首先集合点A集合→各自
 ![][27]
 ![][28]
 
-  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/6/26/%E5%9B%BE%E7%89%871.png "操作系统结构"
+  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/6/26/2017%E7%BC%96%E7%A8%8B%E6%8F%90%E9%AB%98%E7%AC%AC1.5%E8%8A%82%E8%AF%BE%E2%80%94%E2%80%94Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%9B%BE%E7%89%871.png "操作系统结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image5.png "虚拟内存映射"
   [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image6.png "单线程与多线程"
   [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/image7_1.png "线程完全在用户层实现"
