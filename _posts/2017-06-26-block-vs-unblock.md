@@ -3,7 +3,7 @@ layout: post
 title: 为什么异步IO不能完全取代阻塞IO
 date: 2017-06-26 10:55
 categories: 2017编程提高
-tags: [数据库,Issues]
+tags: [IO,Issues]
 ---
 
 * content
