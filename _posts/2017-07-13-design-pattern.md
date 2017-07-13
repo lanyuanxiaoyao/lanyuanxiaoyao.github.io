@@ -33,9 +33,7 @@ tags: [设计模式]
 6. **合成复用原则（Composite Reuse Principle）**
 合成复用原则是指：尽量使用合成/聚合的方式，而不是使用继承。
 
-# 分类
-***$注^1$：我们常说的设计模式来源于“四人帮”（Gang of Four，GoF）编写的《设计模式：可复用面向对象软件的基础》（Design Patterns: Elements of Reusable Object-Oriented Software）一书，但我们知道，设计模式作为一种经验和最佳实践，肯定不止这本书中描述的20+种，世界上可以称为设计模式的模式千千万万，所以分类里面也加入了由麦克康奈尔（en:Steve McConnell）编写的《代码大全》（Code Complete）中描述的几种模式，当然还有一些被我们常用却没有被收录在书中的***  
-
+# 分类[^1x]
 设计模式当然也有分类，这个分类是根据各个模式的功能来区分的，主要有5类（主要关注前面的3大类）：  
 - 创建型模式（5种）
 这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用新的运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。
@@ -103,3 +101,5 @@ tags: [设计模式]
 1. [设计模式简介](http://www.runoob.com/design-pattern/design-pattern-intro.html)
 2. [设计模式有何不妥，所谓的荼毒体现在哪？](https://www.zhihu.com/question/23757237)
 3. [设计模式-维基百科](https://www.wikiwand.com/zh-hans/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
+
+[^1x]: 我们常说的设计模式来源于“四人帮”（Gang of Four，GoF）编写的《设计模式：可复用面向对象软件的基础》（Design Patterns: Elements of Reusable Object-Oriented Software）一书，但我们知道，设计模式作为一种经验和最佳实践，肯定不止这本书中描述的20+种，世界上可以称为设计模式的模式千千万万，所以分类里面也加入了由麦克康奈尔（en:Steve McConnell）编写的《代码大全》（Code Complete）中描述的几种模式，当然还有一些被我们常用却没有被收录在书中的
