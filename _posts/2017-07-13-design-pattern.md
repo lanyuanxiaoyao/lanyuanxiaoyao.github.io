@@ -34,8 +34,8 @@ tags: [设计模式]
 合成复用原则是指：尽量使用合成/聚合的方式，而不是使用继承。
 
 # 分类[^1x]
-设计模式当然也有分类，这个分类是根据各个模式的功能来区分的，主要有5类（主要关注前面的3大类）：  
-- 创建型模式（9种）
+设计模式当然也有分类，这个分类是根据各个模式的功能来区分的，主要有5类[^2x]（主要关注前面的3大类）：  
+1. 创建型模式（9种）
 这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用新的运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。
 	1. **工厂模式（Factory Pattern）**
 定义一个接口用于创建对象，但是让子类决定初始化哪个类。工厂方法把一个类的初始化下放到子类。
@@ -51,7 +51,7 @@ tags: [设计模式]
 	7. *[对象池模式 ](https://www.wikiwand.com/zh-hans/%E5%AF%B9%E8%B1%A1%E6%B1%A0%E6%A8%A1%E5%BC%8F)*
 	8. *[RAII模式](https://www.wikiwand.com/zh-hans/RAII)*
 	9. *[多例模式](https://www.wikiwand.com/en/Multiton_pattern)*
-- 结构型模式（8种）
+2. 结构型模式（8种）
 这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。
 	1. **适配器模式（Adapter Pattern）**
 将某个类的接口转换成客户端期望的另一个接口表示。适配器模式可以消除由于接口不匹配所造成的类兼容性问题。
@@ -68,7 +68,7 @@ tags: [设计模式]
 通过共享以便有效的支持大量小颗粒对象。
 	8. **代理模式（Proxy Pattern）**
 为其他对象提供一个代理以控制对这个对象的访问。
-- 行为型模式（13种）
+3. 行为型模式（13种）
 这些设计模式特别关注对象之间的通信。
 	1. **责任链模式（Chain of Responsibility Pattern）**
 为解除请求的发送者和接收者之间耦合，而使多个对象都有机会处理这个请求。将这些对象连成一条链，并沿着这条链传递该请求，直到有一个对象处理它。
@@ -95,7 +95,7 @@ tags: [设计模式]
 	12. **访问者模式（Visitor Pattern）**
 封装一些施加于某种数据结构元素之上的操作。一旦这些操作需要修改，接受这个操作的数据结构可以保持不变。访问者模式适用于数据结构相对未定的系统，它把数据结构和作用于结构上的操作之间的耦合解脱开，使得操作集合可以相对自由的演化。
 	13. *[黑板模式](https://www.wikiwand.com/en/Blackboard_(design_pattern))*
-- 并发型模式（11种）
+4. 并发型模式（11种）
 	1. *主动对象*
 	2. *阻碍*
 	3. *双重检查锁定*
@@ -107,16 +107,16 @@ tags: [设计模式]
 	9. *线程池模式*
 	10. *线程特定存储*
 	11. *反应器*
-- J2EE模式（8种）
+5. J2EE模式（8种）
 这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。
-	1. MVC模式（MVC Pattern）
-	2. 业务代表模式（Business Delegate Pattern）
-	3. 组合实体模式（Composite Entity Pattern）
-	4. 数据访问对象模式（Data Access Object Pattern）
-	5. 前端控制器模式（Front Controller Pattern）
-	6. 拦截过滤器模式（Intercepting Filter Pattern）
-	7. 服务定位器模式（Service Locator Pattern）
-	8. 传输对象模式（Transfer Object Pattern）
+	1. *MVC模式（MVC Pattern）*
+	2. *业务代表模式（Business Delegate Pattern）*
+	3. *组合实体模式（Composite Entity Pattern）*
+	4. *数据访问对象模式（Data Access Object Pattern）*
+	5. *前端控制器模式（Front Controller Pattern）*
+	6. *拦截过滤器模式（Intercepting Filter Pattern）*
+	7. *服务定位器模式（Service Locator Pattern）*
+	8. *传输对象模式（Transfer Object Pattern）*
 
 我们主要关注前面3类共25种设计模式，它们的关系可以用一张图来表示：
 
@@ -137,3 +137,4 @@ tags: [设计模式]
 
 # 注释
 [^1x]: 我们常说的设计模式来源于“四人帮”（Gang of Four，GoF）编写的《设计模式：可复用面向对象软件的基础》（Design Patterns: Elements of Reusable Object-Oriented Software）一书，但我们知道，设计模式作为一种经验和最佳实践，肯定不止这本书中描述的20+种，世界上可以称为设计模式的模式千千万万，所以分类里面也加入了由麦克康奈尔（en:Steve McConnell）编写的《代码大全》（Code Complete）中描述的几种模式，当然还有一些被我们常用却没有被收录在书中的
+[^2x]: 市面上流传的设计模式只有23种，其余补充的模式来源于维基百科和其他一些资料，显然不是每一种奇奇怪怪的模式我们都需要花时间去研究，所以我们只探讨主要的23种加一些我认为值得探讨的模式，不在流行模式里面的已经用斜体标明出来，可自行研究
