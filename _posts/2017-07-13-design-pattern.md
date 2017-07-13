@@ -47,16 +47,27 @@ tags: [设计模式]
 将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。
 	5. 原型模式（Prototype Pattern）
 用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。
+	6. *[惰性初始模式](https://www.wikiwand.com/zh-hans/%E6%83%B0%E6%80%A7%E5%88%9D%E5%A7%8B%E6%A8%A1%E5%BC%8F)*
+	7. *[对象池模式 ](https://www.wikiwand.com/zh-hans/%E5%AF%B9%E8%B1%A1%E6%B1%A0%E6%A8%A1%E5%BC%8F)*
+	8. *[RAII模式](https://www.wikiwand.com/zh-hans/RAII)*
+	9. *[多例模式](https://www.wikiwand.com/en/Multiton_pattern)*
 - 结构型模式（8种）
 这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。
 	1. 适配器模式（Adapter Pattern）
+将某个类的接口转换成客户端期望的另一个接口表示。适配器模式可以消除由于接口不匹配所造成的类兼容性问题。
 	2. 桥接模式（Bridge Pattern）
+将一个抽象与实现解耦，以便两者可以独立的变化。
 	3. 过滤器模式（Filter、Criteria Pattern）
 	4. 组合模式（Composite Pattern）
-	5. 装饰器模式（Decorator Pattern）
+把多个对象组成树状结构来表示局部与整体，这样用户可以一样的对待单个对象和对象的组合。
+	5. 装饰模式（Decorator Pattern）
+向某个对象动态地添加更多的功能。修饰模式是除类继承外另一种扩展功能的方法。
 	6. 外观模式（Facade Pattern）
+为子系统中的一组接口提供一个一致的界面， 外观模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。
 	7. 享元模式（Flyweight Pattern）
+通过共享以便有效的支持大量小颗粒对象。
 	8. 代理模式（Proxy Pattern）
+为其他对象提供一个代理以控制对这个对象的访问。
 - 行为型模式（12种）
 这些设计模式特别关注对象之间的通信。
 	1. 责任链模式（Chain of Responsibility Pattern）
