@@ -255,6 +255,7 @@ public class MultiTenantIdentifierResolver implements CurrentTenantIdentifierRes
 }
 ```
 
+
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_12h27m50s_001_.png "目录结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h40m46s_002_.png "数据库结构"
   [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h41m52s_005_.png "cloud_config"
