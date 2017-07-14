@@ -114,8 +114,32 @@ Service层，只有一个StudentService是因为我嫌麻烦就不多创建一�
 
 ![][7]
 
+## 代码
+实际上需要设置的代码非常简单，但是网上的资料极其稀少，很多Demo项目都没有注释和说明，让我走了很多弯路，也是促使我写一个博客来说明这个多租户配置和使用的主要动力
 
+### application.properties
+怎么配置开启Hibernate的多租户功能，网上各种配置形式都有，有两种形式，一种是写配置类，一种就是在`application.properties`文件直接配置，显然直接配置要比配置类简单太多了
+```
+# Database
+spring.datasource.url=jdbc:postgresql://localhost:5432/cloud_config
+spring.datasource.username=lanyuanxiaoyao
+spring.datasource.password=
+spring.datasource.driver-class-name=org.postgresql.Driver
 
+# Hibernate
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.multiTenancy=SCHEMA
+spring.jpa.properties.hibernate.tenant_identifier_resolver=cloud.tenant.MultiTenantIdentifierResolver
+spring.jpa.properties.hibernate.multi_tenant_connection_provider=cloud.tenant.MultiTenantConnectionProviderImpl
+```
+这就是所需要的所有相关配置（如果你有别的配置就另外加上就是了），其中Database配置一定要有，就是一定要有一个默认的配置才能启动Spring boot，这个不能省……这是一个坑。  
+- 关于Hibernate的几个配置项的说明
+	- show-sql
+这个也无关多租户的设置，只是在控制台显示Hibernate执行的sql语句，方便调试
+	- hibernate.multiTenancy
+选择多租户的模式，有四个参数：NONE，DATABASE，SCHEMA，DISCRIMINATOR，其中NONE就是默认没有模式，DISCRIMINATOR会在Hibernate5支持，所以我们根据模式选择是独立数据库还是不独立数据库就可以了，我这里选择SCHEMA，因为只有一台物理机器
+	- hibernate.tenant_identifier_resolver
+	- hibernate.multi_tenant_connection_provider
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_12h27m50s_001_.png "目录结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h40m46s_002_.png "数据库结构"
