@@ -47,23 +47,23 @@ tags: [Spring,Spring Boot,Hibernate]
 ## 主要目录及文件说明
 - config  
 一些设置文件，一开始我有一些设置文件的，但是后来去掉了，所以你可以忽略这个设置文件夹
-	- ConstId
+	- ConstId  
 用来暂存租户ID`TenantId`的一个文件，没有特别的作用，通常情况下，这个租户ID是登陆的时候存在session里面的，然后读取也是从session里面读取，这里显然是我为了方便就随便用一个文件来存了
 - controller  
 顾名思义……
-	- HelloController
+	- HelloController  
 - dao
 这个也不解释了，dao层
-	- StudentDao
+	- StudentDao  
 	- TenantInfoDao  
 - entity  
 实体类……
 	- Student
-	- TenantInfo
+	- TenantInfo  
 这个是租户信息的实体类
 - service  
 Service层，只有一个StudentService是因为我嫌麻烦就不多创建一个TenantInfoService了
-	- StudentService
+	- StudentService  
 - tenant  
 多租户相关的文件都在这里了，这个文件夹下的文件是**重点**！这些类的作用会在下面详细分析，这里就先不赘述了
 	- MultiTenantConnectionProviderImpl
@@ -71,13 +71,13 @@ Service层，只有一个StudentService是因为我嫌麻烦就不多创建一�
 	- TenantDataSourceProvider
 - util  
 一些辅助的工具，方便操作用的（各个web项目都可以通用，大家可以参考）
-	- JsonUtil
+	- JsonUtil  
 给Gson整了一个单例，不同到处new Gson()
-	- Result
+	- Result  
 统一的返回结果格式，满足REST架构
-	- ResultCode
+	- ResultCode  
 统一的返回码，参照HTTP响应码
-	- ResultGenerator
+	- ResultGenerator  
 构造返回Result结果的工具类
 - CloudApplication.java
 
