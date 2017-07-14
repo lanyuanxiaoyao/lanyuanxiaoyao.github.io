@@ -42,9 +42,11 @@ tags: [Spring,Spring Boot,Hibernate]
 虽然最后我选择了Hibernate进行多租户的设计，但是这里也记录下Mybatis的设计思路，实现起来就简单了。
 
 ## 项目结构
+可能与Github（地址在文章末尾）实际编码有点出入，因为我可能会修改，但大体相同。
+
 ![][1]
 
-## 主要目录及文件说明
+### 主要目录及文件说明
 - config  
 一些设置文件，一开始我有一些设置文件的，但是后来去掉了，所以你可以忽略这个设置文件夹
 	- ConstId  
@@ -81,5 +83,44 @@ Service层，只有一个StudentService是因为我嫌麻烦就不多创建一�
 构造返回Result结果的工具类
 - CloudApplication.java
 
+### 数据库结构和说明
+首先在数据库里有三个Schema，其中`cloud_config`是存储租户信息的，`class_1`和`class_2`分别为我们预设的两个租户
+
+![][2]
+
+#### `cloud_config`的`tenant_info`表结构
+![][3]
+
+![][4]
+
+- 字段说明
+	- id  
+主键
+	- tenant_type  
+数据库类型，用于识别连接不同的数据库的时候设置驱动的字段，在我这个小Demo中没有用上
+	- url  
+数据库连接URL
+	- username  
+数据库连接用户名
+	- password  
+数据库连接密码
+	- tenant_id  
+租户ID
+
+#### `class_1`和`class_2`的`student`表结构
+![][5]
+
+![][6]
+
+![][7]
+
+
+
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_12h27m50s_001_.png "目录结构"
+  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h40m46s_002_.png "数据库结构"
+  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h41m52s_005_.png "cloud_config"
+  [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h46m34s_006_.png "cloud_config表结构"
+  [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h41m27s_003_.png "class_1"
+  [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h41m39s_004_.png "class_2"
+  [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h58m44s_007_.png "student表结构"
