@@ -254,6 +254,47 @@ public class MultiTenantIdentifierResolver implements CurrentTenantIdentifierRes
     }
 }
 ```
+## Hibernate 多租户实现原理
+真如前面所说，Hibernate实现多租户的原理实际上就是在调用具体sql语句之前先调用一句`user database`来切换数据库，实现切换租户空间的功能，所以Hibernate提供了两个类来帮助我们在框架层面拦截我们要执行的sql语句，并注入切换数据库的操作，操作流程见下图：
+
+![][8]
+
+## 测试
+因为Demo实在是简单，所以有一些细节没有处理，包括从session中取tenantId也没有写进去，所以测试流程就先写下来，免得无法测试实际项目效果
+
+### 初始化`datasourceMap`
+访问`http://localhost:8080/`  
+
+![][9]
+
+可以看到我们从`cloud_config`schema的`tenant_info`获取到所有租户的信息
+
+### 登陆
+访问`http://localhost:8080/login?t=class_1`
+
+![][10]
+
+看到返回成功，即后台已经设置好了`tenantId`为`class_1`
+
+### 查询
+访问`http://localhost:8080/select?t=class_1`
+
+![][11]
+
+可以看到我们在不改动实际数据库连接的情况下获取到了`class_1`schema的`student`的数据，到这里我们已经可以访问租户的信息了
+
+### 切换租户
+我们重复登录和查询的步骤  
+访问`http://localhost:8080/login?t=class_2`和`http://localhost:8080/select?t=class_2`
+
+![][12]
+
+我们成功获取到了另一个租户的信息，到这里我们多租户的实现已经成功了。
+
+# 总结
+多租户架构这个看起来好像还挺新的，也许是应用范围不够广泛，网上的资料相当少，也让我走了很多的弯路，在此总结这篇文档，希望能够帮助到大家。  
+Demo的GIthub地址：[https://github.com/lanyuanxiaoyao/multi-tenant](https://github.com/lanyuanxiaoyao/multi-tenant)
+
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_12h27m50s_001_.png "目录结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h40m46s_002_.png "数据库结构"
@@ -262,3 +303,8 @@ public class MultiTenantIdentifierResolver implements CurrentTenantIdentifierRes
   [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h41m27s_003_.png "class_1"
   [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h41m39s_004_.png "class_2"
   [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h58m44s_007_.png "student表结构"
+  [8]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/multi-tenant.png "multi-tenant"
+  [9]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_18h40m27s_001_.png "初始化datasourceMap"
+  [10]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_18h43m21s_002_.png "登陆"
+  [11]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_18h45m28s_003_.png "查询"
+  [12]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_18h51m40s_004_.png "查询"
