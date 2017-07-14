@@ -134,12 +134,16 @@ spring.jpa.properties.hibernate.multi_tenant_connection_provider=cloud.tenant.Mu
 ```
 这就是所需要的所有相关配置（如果你有别的配置就另外加上就是了），其中Database配置一定要有，就是一定要有一个默认的配置才能启动Spring boot，这个不能省……这是一个坑。  
 - 关于Hibernate的几个配置项的说明
-	- show-sql
+	- show-sql  
 这个也无关多租户的设置，只是在控制台显示Hibernate执行的sql语句，方便调试
-	- hibernate.multiTenancy
-选择多租户的模式，有四个参数：NONE，DATABASE，SCHEMA，DISCRIMINATOR，其中NONE就是默认没有模式，DISCRIMINATOR会在Hibernate5支持，所以我们根据模式选择是独立数据库还是不独立数据库就可以了，我这里选择SCHEMA，因为只有一台物理机器
-	- hibernate.tenant_identifier_resolver
-	- hibernate.multi_tenant_connection_provider
+	- hibernate.multiTenancy  
+选择多租户的模式，有四个参数：`NONE`，`DATABASE`，`SCHEMA`，`DISCRIMINATOR`，其中`NONE`就是默认没有模式，`DISCRIMINATOR`会在Hibernate5支持，所以我们根据模式选择是独立数据库还是不独立数据库就可以了，我这里选择SCHEMA，因为只有一台物理机器
+	- hibernate.tenant_identifier_resolver  
+租户ID解析器，简单来说就是这个设置指定的类负责每次执行sql语句的时候获取租户ID
+	- hibernate.multi_tenant_connection_provider  
+这个设置指定的类负责按照租户ID来提供相应的数据源
+
+**配置后三个设置项的时候会没有自动提示，直接复制就行了，只要名字没错就ok，因为没有自动提示搞到我以为设置在这里是不行的**
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_12h27m50s_001_.png "目录结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h40m46s_002_.png "数据库结构"
