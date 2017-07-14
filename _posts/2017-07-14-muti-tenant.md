@@ -134,16 +134,98 @@ spring.jpa.properties.hibernate.multi_tenant_connection_provider=cloud.tenant.Mu
 ```
 这就是所需要的所有相关配置（如果你有别的配置就另外加上就是了），其中Database配置一定要有，就是一定要有一个默认的配置才能启动Spring boot，这个不能省……这是一个坑。  
 - 关于Hibernate的几个配置项的说明
-	- show-sql  
+	- **show-sql**  
 这个也无关多租户的设置，只是在控制台显示Hibernate执行的sql语句，方便调试
-	- hibernate.multiTenancy  
+	- **hibernate.multiTenancy**  
 选择多租户的模式，有四个参数：`NONE`，`DATABASE`，`SCHEMA`，`DISCRIMINATOR`，其中`NONE`就是默认没有模式，`DISCRIMINATOR`会在Hibernate5支持，所以我们根据模式选择是独立数据库还是不独立数据库就可以了，我这里选择SCHEMA，因为只有一台物理机器
-	- hibernate.tenant_identifier_resolver  
+	- **hibernate.tenant_identifier_resolver**  
 租户ID解析器，简单来说就是这个设置指定的类负责每次执行sql语句的时候获取租户ID
-	- hibernate.multi_tenant_connection_provider  
+	- **hibernate.multi_tenant_connection_provider**  
 这个设置指定的类负责按照租户ID来提供相应的数据源
 
 **配置后三个设置项的时候会没有自动提示，直接复制就行了，只要名字没错就ok，因为没有自动提示搞到我以为设置在这里是不行的**
+
+### tenant包
+这里的三个类是全部和多租户相关的类，这里我连同导包的信息也一并贴上了，希望大家不要导错包，同名的包有不少
+#### TenantDataSourceProvider
+```java
+import cloud.entity.TenantInfo;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
+
+import javax.sql.DataSource;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * @author lanyuanxiaoyao
+ */
+public class TenantDataSourceProvider {
+
+    // 使用一个map来存储我们租户和对应的数据源，租户和数据源的信息就是从我们的tenant_info表中读出来
+    private static Map<String, DataSource> dataSourceMap = new HashMap<>();
+
+    /**
+     * 静态建立一个数据源，也就是我们的默认数据源，假如我们的访问信息里面没有指定tenantId，就使用默认数据源。
+     * 在我这里默认数据源是cloud_config，实际上你可以指向你们的公共信息的库，或者拦截这个操作返回错误。
+     */
+    static {
+        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
+        dataSourceBuilder.url("jdbc:postgresql://localhost:5432/cloud_config");
+        dataSourceBuilder.username("lanyuanxiaoyao");
+        dataSourceBuilder.password("");
+        dataSourceBuilder.driverClassName("org.postgresql.Driver");
+        dataSourceMap.put("Default", dataSourceBuilder.build());
+    }
+
+    // 根据传进来的tenantId决定返回的数据源
+    public static DataSource getTenantDataSource(String tenantId) {
+        if (dataSourceMap.containsKey(tenantId)) {
+            System.out.println("GetDataSource:" + tenantId);
+            return dataSourceMap.get(tenantId);
+        } else {
+            System.out.println("GetDataSource:" + "Default");
+            return dataSourceMap.get("Default");
+        }
+    }
+
+    // 初始化的时候用于添加数据源的方法
+    public static void addDataSource(TenantInfo tenantInfo) {
+        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
+        dataSourceBuilder.url(tenantInfo.getUrl());
+        dataSourceBuilder.username(tenantInfo.getUsername());
+        dataSourceBuilder.password(tenantInfo.getPassword());
+        dataSourceBuilder.driverClassName("org.postgresql.Driver");
+        dataSourceMap.put(tenantInfo.getTenantId(), dataSourceBuilder.build());
+    }
+
+}
+```
+#### MultiTenantConnectionProviderImpl
+```java
+import org.hibernate.engine.jdbc.connections.spi.AbstractDataSourceBasedMultiTenantConnectionProviderImpl;
+import javax.sql.DataSource;
+
+/**
+ * 这个类是Hibernate框架拦截sql语句并在执行sql语句之前更换数据源提供的类
+ * @author lanyuanxiaoyao
+ * @version 1.0
+ */
+public class MultiTenantConnectionProviderImpl extends AbstractDataSourceBasedMultiTenantConnectionProviderImpl {
+
+    // 在没有提供tenantId的情况下返回默认数据源
+    @Override
+    protected DataSource selectAnyDataSource() {
+        return TenantDataSourceProvider.getTenantDataSource("Default");
+    }
+
+    // 提供了tenantId的话就根据ID来返回数据源
+    @Override
+    protected DataSource selectDataSource(String tenantIdentifier) {
+        System.out.println("selectDataSource:" + tenantIdentifier);
+        return TenantDataSourceProvider.getTenantDataSource(tenantIdentifier);
+    }
+}
+```
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_12h27m50s_001_.png "目录结构"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/14/Spring%20Boot%EF%BC%88%E4%B8%89%EF%BC%89%20Spring%20boot%20+%20Hibernate%20%E5%A4%9A%E7%A7%9F%E6%88%B7%E7%9A%84%E4%BD%BF%E7%94%A8/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8814%E6%97%A5_13h40m46s_002_.png "数据库结构"
