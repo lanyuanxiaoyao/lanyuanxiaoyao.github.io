@@ -2,7 +2,7 @@
 layout: post
 title: 设计模式
 date: 2017-07-13 08:19
-categories: 设计模式
+categories: 设计模式（持续更新）
 tags: [设计模式]
 ---
 
