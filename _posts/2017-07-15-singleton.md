@@ -197,3 +197,67 @@ public enum SingletonEnum {
 
 }
 ```
+
+# 测试
+## 实例一致性测试
+单例模式的基本功能就是我们每次调用单例模式的时候都可以获取到一个唯一的对象，如果这个对象不唯一的话，那么单例模式就没有起到什么作用了，所以我们做一个简答的测试
+```java
+package singleton.test;
+
+import singleton.*;
+
+/**
+ * 测试各个单例模式获得单例对象是否唯一
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-15 21:35
+ */
+
+public class SingletonObjectUniqueTest {
+
+    public static void main(String[] args) {
+        /**
+         * 饿汉式单例模式
+         */
+        SingletonHungry singletonHungry_1 = SingletonHungry.getInstance();
+        SingletonHungry singletonHungry_2 = SingletonHungry.getInstance();
+        System.out.println("饿汉式单例模式：" + (singletonHungry_1 == singletonHungry_2));
+
+        /**
+         * 懒汉式单例模式
+         */
+        SingletonLazy singletonLazy_1 = SingletonLazy.getInstance();
+        SingletonLazy singletonLazy_2 = SingletonLazy.getInstance();
+        System.out.println("懒汉式单例模式：" + (singletonLazy_1 == singletonLazy_2));
+
+        /**
+         * 双重检测锁式单例模式
+         */
+        SingletonLockCheck singletonLockCheck_1 = SingletonLockCheck.getInstance();
+        SingletonLockCheck singletonLockCheck_2 = SingletonLockCheck.getInstance();
+        System.out.println("双重检测锁式单例模式：" + (singletonLockCheck_1 == singletonLockCheck_2));
+
+        /**
+         * 静态内部类式单例模式
+         */
+        SingletonStaticInnerClass singletonStaticInnerClass_1 = SingletonStaticInnerClass.getInstance();
+        SingletonStaticInnerClass singletonStaticInnerClass_2 = SingletonStaticInnerClass.getInstance();
+        System.out.println("静态内部类式单例模式：" + (singletonStaticInnerClass_1 == singletonStaticInnerClass_2));
+
+        /**
+         * 枚举式单例模式
+         */
+        SingletonEnum singletonEnum_1 = SingletonEnum.INSTANCE;
+        SingletonEnum singletonEnum_2 = SingletonEnum.INSTANCE;
+        System.out.println("枚举式单例模式：" + (singletonEnum_1 == singletonEnum_2));
+        System.out.println(singletonEnum_1.getClass());
+    }
+
+}
+```
+结果也是当然是可以的咯，不然就不叫单例模式了
+
+![实例一致性测试][1]
+
+
+  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
