@@ -80,5 +80,35 @@ public class SingletonHungry {
     }
 
 }
+```
 
+## 懒汉式
+懒汉式单例模式就是我的那种实现方式，我们又想象一个很懒的人，等到要做事的时候才开始做事，从来不会提前准备，这就是懒汉式，等到了要使用这个实例的时候才开始构建实例，果然是很懒。  
+这个方式也有两个特点：
+- **实现了延迟加载**
+这里的延迟，就是由饿汉式的一开始就加载好实例延迟到要用的时候才构建实例
+- **线程安全但是系统开销大**
+很好想象，我们在多线程环境下使用了`synchronized`关键字，如果没有这个关键字的话，那么在并发的情况下，后面的线程构建的实例就会覆盖前面的那个，造成线程不安全。除此之外，每次调用都要判断实例是否存在，在大量并发的情况下，会造成性能的降低。
+```java
+package singleton;
+
+/**
+ * 懒汉式单例模式
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-14 23:15
+ */
+
+public class SingletonLazy {
+
+    private static SingletonLazy instance = null;
+
+    public static synchronized SingletonLazy getInstance() {
+        if (instance == null) {
+            instance = new SingletonLazy();
+        }
+        return instance;
+    }
+
+}
 ```
