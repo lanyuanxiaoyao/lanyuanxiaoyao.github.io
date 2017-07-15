@@ -112,3 +112,88 @@ public class SingletonLazy {
 
 }
 ```
+
+## 双重检测锁式
+```java
+package singleton;
+
+/**
+ * 双重检测锁式单例模式
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-14 23:20
+ */
+
+public class SingletonLockCheck extends BaseSingleton {
+
+    private static SingletonLockCheck instance = null;
+
+    /**
+     * @return hello
+     */
+    public static SingletonLockCheck getInstance() {
+        if (instance == null) {
+            SingletonLockCheck tempInstance;
+            synchronized (SingletonLockCheck.class) {
+                tempInstance = instance;
+                if (tempInstance == null) {
+                    synchronized (SingletonLockCheck.class) {
+                        if (tempInstance == null) {
+                            tempInstance = new SingletonLockCheck();
+                        }
+                    }
+                    instance = tempInstance;
+                }
+            }
+        }
+        return instance;
+    }
+
+}
+```
+
+## 静态内部类式
+```java
+package singleton;
+
+/**
+ * 静态内部类式单例模式
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-15 21:22
+ */
+
+public class SingletonStaticInnerClass extends BaseSingleton {
+
+    private SingletonStaticInnerClass instance = null;
+
+    /**
+     * 外部类初始化的时候不会初始化内部类，只有当调用getInstance方法的时候才会初始化内部类
+     */
+    public static class inner {
+        public static final SingletonStaticInnerClass instance = new SingletonStaticInnerClass();
+    }
+
+    public static SingletonStaticInnerClass getInstance() {
+        return inner.instance;
+    }
+}
+```
+
+## 枚举式
+```java
+package singleton;
+
+/**
+ * 枚举式单例模式
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-15 21:30
+ */
+
+public enum SingletonEnum {
+
+    INSTANCE;
+
+}
+```
