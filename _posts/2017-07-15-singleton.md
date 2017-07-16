@@ -351,7 +351,7 @@ import java.lang.reflect.InvocationTargetException;
  * @create 2017-07-16 11:29
  */
 
-public class SingletonReflactionCrackTest {
+public class SingletonReflectionCrackTest {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<SingletonHungry> hungryClass = (Class<SingletonHungry>) Class.forName("singleton.SingletonHungry");
@@ -381,23 +381,23 @@ package singleton;
  * 通过抛出异常来防止反射破解单例模式
  *
  * @author lanyuanxiaoyao
- * @create 2017-07-16 11:46
+ * @create 2017-07-16 13:36
  */
 
-public class SingletonHungryException {
+public class SingletonLazyException {
 
-    private static SingletonHungry instance = new SingletonHungry();
+    private static SingletonLazyException instance = null;
 
-    /**
-     * 一旦发现已经存在了实例，再次调用构造方法就会抛出异常
-     */
-    private SingletonHungryException() {
+    private SingletonLazyException() {
         if (instance != null) {
             throw new RuntimeException();
         }
     }
 
-    public static SingletonHungry getInstance() {
+    public static synchronized SingletonLazyException getInstance() {
+        if (instance == null) {
+            instance = new SingletonLazyException();
+        }
         return instance;
     }
 
@@ -419,7 +419,7 @@ import java.lang.reflect.InvocationTargetException;
  * @create 2017-07-16 11:50
  */
 
-public class SingletonReflactionCrackTestException {
+public class SingletonReflectionCrackTestExceptionAfter {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         SingletonHungryException singletonHungryException_1 = SingletonHungryException.getInstance();
@@ -442,15 +442,59 @@ public class SingletonReflactionCrackTestException {
         System.out.println(singletonHungryException_3 == singletonHungryException_4);
     }
 }
-
 ```
 运行结果：
 
 ![运行结果][3]
 
-可以看到当我们再次尝试用反射调用单例的构造方法的时候，已经被异常中断了。
+可以看到当我们再次尝试用反射调用单例的构造方法的时候，已经被异常中断了。  
+但是很遗憾，这只能是反射发生在初始化之后的情况下起作用，如果反射发生在初始化之前，这就没有作用了，下面是测试，可以对比一下两种发射时机的区别
+```java
+package singleton.test;
+
+import singleton.SingletonLazyException;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
+/**
+ * 反射发生在单例初始化之前，就无法通过抛异常来阻止了
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-16 11:50
+ */
+
+public class SingletonReflectionCrackTestExceptionBefore {
+
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<SingletonLazyException> hungryClass = (Class<SingletonLazyException>) Class.forName("singleton.SingletonLazyException");
+
+        Constructor<SingletonLazyException> constructor = hungryClass.getDeclaredConstructor(null);
+        constructor.setAccessible(true);
+
+        SingletonLazyException singletonLazyException_3 = constructor.newInstance();
+        SingletonLazyException singletonLazyException_4 = constructor.newInstance();
+
+        System.out.println(singletonLazyException_3);
+        System.out.println(singletonLazyException_4);
+        System.out.println(singletonLazyException_3 == singletonLazyException_4);
+
+        SingletonLazyException singletonLazyException_1 = SingletonLazyException.getInstance();
+        SingletonLazyException singletonLazyException_2 = SingletonLazyException.getInstance();
+
+        System.out.println(singletonLazyException_1);
+        System.out.println(singletonLazyException_2);
+        System.out.println(singletonLazyException_1 == singletonLazyException_2);
+    }
+}
+
+```
+运行结果：
+
+![运行结果][4]
 
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_12h09m16s_003_.png "运行结果"
-  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_12h10m46s_004_.png "运行结果"
+  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_13h43m24s_005_.png "运行结果"
+  [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_13h46m43s_006_.png "运行结果"
