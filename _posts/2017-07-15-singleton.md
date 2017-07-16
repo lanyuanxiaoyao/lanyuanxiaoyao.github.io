@@ -362,6 +362,8 @@ public class SingletonReflactionCrackTest {
         SingletonHungry singletonHungry_1 = constructor.newInstance();
         SingletonHungry singletonHungry_2 = constructor.newInstance();
 
+        System.out.println(singletonHungry_1);
+        System.out.println(singletonHungry_2);
         System.out.println(singletonHungry_1 == singletonHungry_2);
     }
 
@@ -434,11 +436,8 @@ public class SingletonReflactionCrackTestException {
 ```
 运行结果：
 
-![运行结果][3]
-
 可以看到当我们再次尝试用反射调用单例的构造方法的时候，已经被异常中断了。
 
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
-  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_11h38m21s_001_.png "运行结果"
-  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_11h53m42s_002_.png "运行结果"
+  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_12h09m16s_003_.png "运行结果"
