@@ -221,6 +221,9 @@ public class SingletonDoubleLockCheck_2 extends BaseSingleton {
 ```
 
 ## 静态内部类式
+这是《Effective Java》中提倡的一种写法（我其实也是第一次接触这种写法），这种写法使用JVM本身`classloder`的机制保证了线程安全问题；由于 `inner` 是私有的，除了 `getInstance()` 之外没有办法访问它，因此它是**懒汉式**的；同时读取实例的时候不会进行同步，**没有性能缺陷**；也**不依赖 JDK 版本**  
+为什么要这么在意延迟加载这个问题，其实我们可以想象一下，如果我们这个单例的实例化非常消耗系统资源，而我们要用的时机在系统的生命周期里面属于比较迟的时候，那么我们显然是需要延迟这个单例的实例化来保证系统的正常启动，往往系统初始化的时候加载的东西可不少。
+
 ```java
 package singleton;
 
@@ -249,6 +252,7 @@ public class SingletonStaticInnerClass extends BaseSingleton {
 ```
 
 ## 枚举式
+简单，这实在是太简单了……而且安全程度很高，枚举类型是默认线程安全的，也能防止反序列化
 ```java
 package singleton;
 
