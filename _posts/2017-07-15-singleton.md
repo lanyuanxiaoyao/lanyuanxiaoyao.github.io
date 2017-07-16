@@ -495,11 +495,105 @@ public class SingletonReflectionCrackExceptionBeforeTest {
 
 可以看到仍然可以通过反射获取到不同的实例。
 
-### 序列化破解
+### 反序列化破解
+当然啦，首先我们要使用反序列化来破解单例模式，需要我们的目标类实现了可序列化接口，所以首先我们先来建立一个实现了序列化接口的单例类
+```java
+package singleton;
 
+import java.io.Serializable;
+
+/**
+ * 实现了序列化接口的饿汉式单例模式
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-14 23:10
+ */
+public class SingletonHungrySerialization implements Serializable {
+
+    private static SingletonHungrySerialization instance = new SingletonHungrySerialization();
+
+    public static synchronized SingletonHungrySerialization getInstance() {
+        return instance;
+    }
+
+}
+```
+然后开始我们的测试：
+```java
+package singleton.test;
+
+import singleton.SingletonHungrySerialization;
+
+import java.io.*;
+
+/**
+ * 反序列化破解单例模式
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-16 13:55
+ */
+
+public class SingletonSerializationCrackTest {
+
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        SingletonHungrySerialization singletonHungrySerialization_1 = SingletonHungrySerialization.getInstance();
+
+        FileOutputStream fileOutputStream = new FileOutputStream("d:/singleton.txt");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        objectOutputStream.writeObject(singletonHungrySerialization_1);
+        objectOutputStream.close();
+        fileOutputStream.close();
+
+        ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("d:/singleton.txt"));
+        SingletonHungrySerialization singletonHungrySerialization_2 = (SingletonHungrySerialization) objectInputStream.readObject();
+
+        System.out.println(singletonHungrySerialization_1);
+        System.out.println(singletonHungrySerialization_2);
+        System.out.println(singletonHungrySerialization_1 == singletonHungrySerialization_2);
+    }
+
+}
+```
+运行结果：
+
+![运行结果][5]
+
+好了我们也成功得到了不同的实例……  
+当然啦，我们仍然可以防范这一破解方式，既然我们可以序列化和反序列化，那么我们只要重写反序列的接口就可以防范这一操作了
+```java
+package singleton;
+
+import java.io.ObjectStreamException;
+import java.io.Serializable;
+
+/**
+ * 实现了序列化接口的饿汉式单例模式
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-14 23:10
+ */
+public class SingletonHungrySerialization implements Serializable {
+
+    private static SingletonHungrySerialization instance = new SingletonHungrySerialization();
+
+    public static synchronized SingletonHungrySerialization getInstance() {
+        return instance;
+    }
+
+    // 反序列化中指定了这个方法，就会覆盖反序列化的操作，直接返回实例
+    private Object readResolve() throws ObjectStreamException {
+        return instance;
+    }
+}
+```
+运行结果：
+
+![运行结果][6]
 
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_12h09m16s_003_.png "运行结果"
   [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_13h43m24s_005_.png "运行结果"
   [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_13h46m43s_006_.png "运行结果"
+  [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_19h51m40s_001_.png "运行结果"
+  [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_19h59m18s_002_.png "运行结果"
