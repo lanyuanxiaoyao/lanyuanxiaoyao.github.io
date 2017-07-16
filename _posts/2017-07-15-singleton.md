@@ -419,7 +419,7 @@ import java.lang.reflect.InvocationTargetException;
  * @create 2017-07-16 11:50
  */
 
-public class SingletonReflectionCrackTestExceptionAfter {
+public class SingletonReflectionCrackExceptionAfterTest {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         SingletonHungryException singletonHungryException_1 = SingletonHungryException.getInstance();
@@ -464,7 +464,7 @@ import java.lang.reflect.InvocationTargetException;
  * @create 2017-07-16 11:50
  */
 
-public class SingletonReflectionCrackTestExceptionBefore {
+public class SingletonReflectionCrackExceptionBeforeTest {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<SingletonLazyException> hungryClass = (Class<SingletonLazyException>) Class.forName("singleton.SingletonLazyException");
@@ -492,6 +492,8 @@ public class SingletonReflectionCrackTestExceptionBefore {
 运行结果：
 
 ![运行结果][4]
+
+可以看到仍然可以通过反射获取到不同的实例。
 
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
