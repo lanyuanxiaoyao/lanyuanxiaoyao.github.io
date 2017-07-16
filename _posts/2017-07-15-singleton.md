@@ -252,7 +252,8 @@ public class SingletonStaticInnerClass extends BaseSingleton {
 ```
 
 ## 枚举式
-简单，这实在是太简单了……而且安全程度很高，枚举类型是默认线程安全的，也能防止反序列化
+简单，这实在是太简单了……而且安全程度很高，这种方式也是 Effective Java 作者 Josh Bloch 提倡的方式。  
+枚举类型是默认线程安全的，它不仅能避免多线程同步问题，而且还自动支持序列化机制，防止反序列化重新创建新的对象，绝对防止多次实例化
 ```java
 package singleton;
 
