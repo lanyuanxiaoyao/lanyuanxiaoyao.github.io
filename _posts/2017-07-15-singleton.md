@@ -155,42 +155,30 @@ public class SingletonDoubleLockCheck extends BaseSingleton {
 但是在JVM的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时`instance`已经是非`null`了（但却没有初始化），所以线程二会直接返回`instance`，然后使用，然后顺理成章地报错。
 
 所以我们需要将`instance`变量声明成`volatile`。
-
 ```java
 package singleton;
 
 /**
- * 双重检测锁式单例模式
+ * 双重检验锁式单例模式改版1
  *
  * @author lanyuanxiaoyao
- * @create 2017-07-14 23:20
+ * @create 2017-07-16 10:28
  */
 
-public class SingletonLockCheck extends BaseSingleton {
+public class SingletonDoubleLockCheck_1 {
 
-    private static SingletonLockCheck instance = null;
+    private volatile static SingletonDoubleLockCheck_1 instance = null;
 
-    /**
-     * @return hello
-     */
-    public static SingletonLockCheck getInstance() {
+    public static SingletonDoubleLockCheck_1 getInstance() {
         if (instance == null) {
-            SingletonLockCheck tempInstance;
-            synchronized (SingletonLockCheck.class) {
-                tempInstance = instance;
-                if (tempInstance == null) {
-                    synchronized (SingletonLockCheck.class) {
-                        if (tempInstance == null) {
-                            tempInstance = new SingletonLockCheck();
-                        }
-                    }
-                    instance = tempInstance;
+            synchronized (SingletonDoubleLockCheck_1.class) {
+                if (instance == null) {
+                    instance = new SingletonDoubleLockCheck_1();
                 }
             }
         }
         return instance;
     }
-
 }
 ```
 
