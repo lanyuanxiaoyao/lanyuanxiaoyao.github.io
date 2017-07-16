@@ -114,6 +114,48 @@ public class SingletonLazy {
 ```
 
 ## 双重检测锁式
+双重检验锁式单例模式的写法主要也是实现两个目的
+- **延迟加载**
+- **线程安全**
+
+至于双重检验这个说法，是因为我们在判断单例是否为`null`的时候，进行了两次检验，一次是在同步块外面，一次是在同步块中，因为在多线程的环境下，可能会同时有多个线程访问到同步块外面的`if`判断语句，这样就会造成后面的线程创建的实例覆盖前面线程的实例，所以我们需要在同步块中再判断一次。  
+我们通常会有这样的写法：
+```java
+package singleton;
+
+/**
+ * 双重检验锁式单例模式
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-16 10:25
+ */
+
+public class SingletonDoubleLockCheck extends BaseSingleton {
+
+    private static SingletonDoubleLockCheck instance = null;
+
+    public static SingletonDoubleLockCheck getInstance() {
+        if (instance == null) {
+            synchronized (SingletonDoubleLockCheck.class) {
+                if (instance == null) {
+                    instance = new SingletonDoubleLockCheck();
+                }
+            }
+        }
+        return instance;
+    }
+}
+```
+很可惜，这种写法是有问题的。  
+主要在于`instance = new SingletonDoubleLockCheck()`这句，这并非是一个**原子操作**，事实上在 JVM 中这句话大概做了下面 3 件事情：
+1. 给`instance`分配内存
+2. 调用构造函数来初始化成员变量
+3. 将`instance`对象指向分配的内存空间（执行完这步`instance`就为非`null`了）
+
+但是在JVM的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时`instance`已经是非`null`了（但却没有初始化），所以线程二会直接返回`instance`，然后使用，然后顺理成章地报错。
+
+所以我们需要将`instance`变量声明成`volatile`。
+
 ```java
 package singleton;
 
