@@ -332,5 +332,76 @@ public class SingletonObjectUniqueTest {
 
 ![实例一致性测试][1]
 
+## 破解测试
+虽然对于一般的项目我们无需考虑会有人特地来破解自己的系统，但是如果有朝一日需要接触到高安全性的需求，也能有所准备，这里也简单记录一下。
+### 反射破解
+反射是Java里面非常强大的一个功能，甚至可以拿到类的私有方法，所以即使构造器私有也不能阻止通过反射拿到对象，例如在饿汉式单例模式中：
+```java
+package singleton.test;
+
+import singleton.SingletonHungry;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
+/**
+ * 使用反射破解带构造器的单例模式，这里以饿汉式单例模式为例
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-16 11:29
+ */
+
+public class SingletonReflactionCrackTest {
+
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<SingletonHungry> hungryClass = (Class<SingletonHungry>) Class.forName("singleton.SingletonHungry");
+
+        Constructor<SingletonHungry> constructor = hungryClass.getConstructor(null);
+        constructor.setAccessible(true);
+
+        SingletonHungry singletonHungry_1 = constructor.newInstance();
+        SingletonHungry singletonHungry_2 = constructor.newInstance();
+
+        System.out.println(singletonHungry_1 == singletonHungry_2);
+    }
+
+}
+```
+运行结果：
+
+![运行结果][2]
+
+很明显，我们通过反射构造了两个不同的实例，单例模式告破……而且所有带有构造方法的单例模式都不可避免地被反射破解，umm……虽然我不知道拿到单例的多个实例会出现什么问题，不过看起来这样是很不好的，因为这种方式可以破坏我们使用单例模式的逻辑，上面的各个单例模式除了枚举式没有构造方法，其他的方式都存在被反射破解的隐患，对于这个问题，我们可以通过抛出异常来防止反射进入构造方法。
+```java
+package singleton;
+
+/**
+ * 通过抛出异常来防止反射破解单例模式
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-16 11:46
+ */
+
+public class SingletonHungryException {
+
+    private static SingletonHungry instance = new SingletonHungry();
+
+    /**
+     * 一旦发现已经存在了实例，再次调用构造方法就会抛出异常
+     */
+    private SingletonHungryException() {
+        if (instance != null) {
+            throw new RuntimeException();
+        }
+    }
+
+    public static SingletonHungry getInstance() {
+        return instance;
+    }
+
+}
+```
+
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
+  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_11h38m21s_001_.png "运行结果"
