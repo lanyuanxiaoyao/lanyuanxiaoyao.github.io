@@ -146,8 +146,8 @@ public class SingletonDoubleLockCheck extends BaseSingleton {
     }
 }
 ```
-很可惜，这种写法是有问题的。  
-主要在于`instance = new SingletonDoubleLockCheck()`这句，这并非是一个**原子操作**，事实上在 JVM 中这句话大概做了下面 3 件事情：
+这种写法是有问题的。  
+主要在于`instance = new SingletonDoubleLockCheck()`这句，这不是一个**原子操作**，事实上在 JVM 中这句话大概做了下面 3 件事情：
 1. 给`instance`分配内存
 2. 调用构造函数来初始化成员变量
 3. 将`instance`对象指向分配的内存空间（执行完这步`instance`就为非`null`了）
@@ -179,6 +179,41 @@ public class SingletonDoubleLockCheck_1 {
         }
         return instance;
     }
+}
+```
+当然我也看到了另一种写法，不加`volatile`，然后使用两个同步块，当然这种写法不如上面那个简洁，仅作记录
+```java
+package singleton;
+
+/**
+ * 双重检测锁式单例模式改版2
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-14 23:20
+ */
+
+public class SingletonDoubleLockCheck_2 extends BaseSingleton {
+
+    private static SingletonDoubleLockCheck_2 instance = null;
+
+    public static SingletonDoubleLockCheck_2 getInstance() {
+        if (instance == null) {
+            SingletonDoubleLockCheck_2 tempInstance;
+            synchronized (SingletonDoubleLockCheck_2.class) {
+                tempInstance = instance;
+                if (tempInstance == null) {
+                    synchronized (SingletonDoubleLockCheck_2.class) {
+                        if (tempInstance == null) {
+                            tempInstance = new SingletonDoubleLockCheck_2();
+                        }
+                    }
+                    instance = tempInstance;
+                }
+            }
+        }
+        return instance;
+    }
+
 }
 ```
 
