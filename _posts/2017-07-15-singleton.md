@@ -407,7 +407,7 @@ public class SingletonHungryException {
 ```java
 package singleton.test;
 
-import singleton.SingletonHungry;
+import singleton.SingletonHungryException;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -422,22 +422,35 @@ import java.lang.reflect.InvocationTargetException;
 public class SingletonReflactionCrackTestException {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<SingletonHungry> hungryClass = (Class<SingletonHungry>) Class.forName("singleton.SingletonHungryException");
+        SingletonHungryException singletonHungryException_1 = SingletonHungryException.getInstance();
+        SingletonHungryException singletonHungryException_2 = SingletonHungryException.getInstance();
 
-        Constructor<SingletonHungry> constructor = hungryClass.getConstructor(null);
+        System.out.println(singletonHungryException_1);
+        System.out.println(singletonHungryException_2);
+        System.out.println(singletonHungryException_1 == singletonHungryException_2);
+
+        Class<SingletonHungryException> hungryClass = (Class<SingletonHungryException>) Class.forName("singleton.SingletonHungryException");
+
+        Constructor<SingletonHungryException> constructor = hungryClass.getConstructor(null);
         constructor.setAccessible(true);
 
-        SingletonHungry singletonHungry_1 = constructor.newInstance();
-        SingletonHungry singletonHungry_2 = constructor.newInstance();
+        SingletonHungryException singletonHungryException_3 = constructor.newInstance();
+        SingletonHungryException singletonHungryException_4 = constructor.newInstance();
 
-        System.out.println(singletonHungry_1 == singletonHungry_2);
+        System.out.println(singletonHungryException_3);
+        System.out.println(singletonHungryException_4);
+        System.out.println(singletonHungryException_3 == singletonHungryException_4);
     }
 }
+
 ```
 运行结果：
+
+![运行结果][3]
 
 可以看到当我们再次尝试用反射调用单例的构造方法的时候，已经被异常中断了。
 
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_12h09m16s_003_.png "运行结果"
+  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_12h10m46s_004_.png "运行结果"
