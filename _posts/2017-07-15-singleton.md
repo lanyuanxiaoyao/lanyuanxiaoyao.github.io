@@ -644,9 +644,18 @@ public class SingletonConcurrentTest {
 
 单例模式 | 耗时
 --- | ---
-饿汉式 | 1351ms
+饿汉式 | 351ms
 懒汉式 | 438ms
+双重校验锁式 | 54ms
+静态内部类式 | 15ms
+枚举式 | 12ms
 
+*根据电脑性能不同，数值仅供参考*
+
+# 总结
+回到最初的问题，umm……就我们项目的实际使用规模，老大的饿汉式单例模式写法显然是更合适的，因为项目规模并不大，Gson本身构建实例消耗的资源也不多，所以饿汉式单例模式完全可以胜任，根据各种方面的比较，比较新颖的枚举式单例模式显然是最好的，不过这个方式也只能针对自己实现的单例模式，如果像Gson这样的第三方类用起来还是有点局限性。  
+此外关于我关心的**在系统初始化的时候可能会构建失败或者在使用过程中被gc回收**这个问题，其实已经不存在了，在《Head First : Design Pattern》书里是这么说的：
+> 在Java1.2之前，垃圾收集器有个bug，会造成单例在没有全局引用的时候被当成垃圾回收掉，但是在Java1.2之后这个bug已经被修复了
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_12h09m16s_003_.png "运行结果"
