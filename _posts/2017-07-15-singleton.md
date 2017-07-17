@@ -43,7 +43,7 @@ public class Mygson {
 > 然后老大说他的写法比较好，我的写法没有必要了，我愣了一下，难道单例模式也还有区别？
 
 其实单例模式也是我接触地最多和最早的设计模式之一，而且我隐约记得单例模式还是无师自通的，因为应该是在哪一次项目中，觉得某个类到处new对象实在是太麻烦了，直觉到处new对象可能会造成资源的浪费，如果我可以new一个对象然后到处可以用就方便了，这就是我的单例模式的由来。  
-关于我和老大的两种单例模式，我想了当时并没有反映过来，因为我的单例模式的写法用了很久，也没有深入去研究，我在回家的路上思考了一下，我关于这两种写法的想法初步是这样认为的：
+关于我和老大的两种单例模式，我想了当时并没有反应过来，因为我的单例模式的写法用了很久，也没有深入去研究，我在回家的路上思考了一下，我关于这两种写法的想法初步是这样认为的：
 - 老大的单例模式是在系统初始化的时候就构建了Gson的实例，然后每次调用都调用这个实例，那么会不会在系统初始化的时候因为某些原因构建失败导致实例为null，然后调用的时候整个系统每个调用的地方都会异常，导致系统有隐患？系统在使用的过程中如果出现了某些情况导致这个单例的实例被gc回收掉，那么单例无法重新创建，是不是也会造成隐患？因为这种单例的写法只构建一次Gson实例，**如果构建失败或者使用中被更改，那么这个实例不会再次被构建**。
 - 我的单例的写法就没有上面的那个隐患，因为每次都会判断Gson实例是否存在，如果不存在就会重新new一个实例，但是，这样每次调用单例都会做一次判断，那么在大量**并发调用的时候会不会让系统的性能出现大幅度下降**？
 
@@ -650,12 +650,20 @@ public class SingletonConcurrentTest {
 静态内部类式 | 15ms
 枚举式 | 12ms
 
-*根据电脑性能不同，数值仅供参考*
+*注：根据电脑性能不同，数值仅供参考*
 
 # 总结
 回到最初的问题，umm……就我们项目的实际使用规模，老大的饿汉式单例模式写法显然是更合适的，因为项目规模并不大，Gson本身构建实例消耗的资源也不多，所以饿汉式单例模式完全可以胜任，根据各种方面的比较，比较新颖的枚举式单例模式显然是最好的，不过这个方式也只能针对自己实现的单例模式，如果像Gson这样的第三方类用起来还是有点局限性。  
 此外关于我关心的**在系统初始化的时候可能会构建失败或者在使用过程中被gc回收**这个问题，其实已经不存在了，在《Head First : Design Pattern》书里是这么说的：
 > 在Java1.2之前，垃圾收集器有个bug，会造成单例在没有全局引用的时候被当成垃圾回收掉，但是在Java1.2之后这个bug已经被修复了
+
+# 参考
+感谢所有分享知识的朋友和文章  
+1. [菜鸟教程-单例模式](http://www.runoob.com/design-pattern/singleton-pattern.html)
+2. [如何正确地写出单例模式](http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/)
+3. [设计模式第一部分-单例模式](https://www.ibm.com/developerworks/cn/java/j-lo-Singleton/index.html)
+4. [图说设计模式-单例模式](http://design-patterns.readthedocs.io/zh_CN/latest/creational_patterns/singleton.html)
+5. [了了在小-关于几种常见的单例模式的学习总结](http://www.cnblogs.com/UYGHYTYH/p/5912548.html)
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_12h09m16s_003_.png "运行结果"
