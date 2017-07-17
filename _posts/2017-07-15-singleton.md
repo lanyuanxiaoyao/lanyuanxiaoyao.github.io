@@ -595,7 +595,56 @@ public class SingletonHungrySerialization implements Serializable {
 ![运行结果][6]
 
 ## 并发性能测试
+开多点线程来获取，获取个十几万次吧，然后我们就知道了
+```java
+package singleton.test;
 
+import singleton.SingletonHungry;
+
+import java.util.concurrent.CountDownLatch;
+
+/**
+ * 单例模式获取并发性能测试
+ *
+ * @author lanyuanxiaoyao
+ * @create 2017-07-17 8:31
+ */
+
+public class SingletonConcurrentTest {
+
+    public static void main(String[] args) throws InterruptedException {
+        long start = System.currentTimeMillis();
+
+        int threadNum = 20;
+
+        final CountDownLatch countDownLatch = new CountDownLatch(threadNum);
+
+        for (int i = 0; i < threadNum; i++) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    for (int j = 0; j < 500000; j++) {
+						// 更换不同的单例获取方法
+                        Object object = SingletonHungry.getInstance();
+                    }
+                    countDownLatch.countDown();
+                }
+            }).start();
+        }
+
+        countDownLatch.await();
+
+        long end = System.currentTimeMillis();
+        System.out.println("耗时：" + (end - start));
+    }
+
+}
+```
+测试结果：
+
+单例模式 | 耗时
+--- | ---
+饿汉式 | 121ms
 
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
