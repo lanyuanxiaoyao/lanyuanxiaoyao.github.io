@@ -45,7 +45,7 @@ tags: [设计模式]
 为一个产品族提供了统一的创建接口。当需要这个产品族的某一系列的时候，可以从抽象工厂中选出相应的系列创建一个具体的工厂类。
 	3. **[单例模式（Singleton Pattern）](http://lanyuanxiaoyao.com/2017/07/15/singleton/)**  
 确保一个类只有一个实例，并提供对该实例的全局访问。
-	4. **建造者模式（Builder Pattern）**  
+	4. **[建造者模式（Builder Pattern）](http://lanyuanxiaoyao.com/2017/07/22/builder/)**  
 将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。
 	5. **原型模式（Prototype Pattern）**  
 用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。
