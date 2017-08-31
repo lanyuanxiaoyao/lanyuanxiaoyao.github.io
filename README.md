@@ -19,6 +19,6 @@
 　　**[LeetCode](https://leetcode.com/lanyuanxiaoyao/)**<br>
 
 ## 关于博客
-　　本博客基于Jekyll+Github Pages搭建，博客主题来自**[HyG](https://github.com/Gaohaoyang)**大神，这次我就不自己造轮子了，事实上少数的几个人是知道我一年前就已经在Github搭建了另一个博客，那次花了不少时间，隔了这么久一些Jekyll的语法也已经忘得差不多了，就不重新自己搭建了，毕竟我更愿意把时间花在写内容上，于是就直接用了这个成熟的主题，在此感谢大神**[HyG](https://github.com/Gaohaoyang)**的分享，大家可以前往他的Github fork此主题使用。
+　　本博客基于Jekyll+Github Pages搭建，博客主题来自 **[HyG](https://github.com/Gaohaoyang)** 大神，这次我就不自己造轮子了，事实上少数的几个人是知道我一年前就已经在Github搭建了另一个博客，那次花了不少时间，隔了这么久一些Jekyll的语法也已经忘得差不多了，就不重新自己搭建了，毕竟我更愿意把时间花在写内容上，于是就直接用了这个成熟的主题，在此感谢大神 **[HyG](https://github.com/Gaohaoyang)** 的分享，大家可以前往他的Github fork此主题使用。
 
 　　这个博客记录我Coding上遇到的问题以及一些笔记，因为之前记的内容在简书和Evernote还有CSDN都有，干脆统一搬运到这里好了，近段时间还是LeetCode为主。 
