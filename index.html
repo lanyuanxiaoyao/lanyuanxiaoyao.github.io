@@ -41,6 +41,7 @@ layout: default
             {% endfor %}
             {% endif %}
             {% for post in paginator.posts %}
+            {% if post.top != true %}
               <li>
                 <h2>
                   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -73,6 +74,7 @@ layout: default
                 </div>
                 <hr>
               </li>
+            {% endif %}
             {% endfor %}
         </ul>
 
