@@ -2,7 +2,7 @@
 layout: post
 title: 位运算
 date: 2017-03-26 01:21
-categories: Java基础
+categories: Java
 tags: [Java,位运算]
 ---
 # 简介
