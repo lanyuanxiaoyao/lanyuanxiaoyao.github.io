@@ -460,4 +460,5 @@ WHERE NOT EXISTS(
 ```
 
 # 数据库备份文件
+省得你们自己再一个个insert语句输入了……贴心吧！！  
 [Oracle练习数据库四表备份sql文件](https://github.com/lanyuanxiaoyao/OracleHomework/blob/master/Oracle%E7%BB%83%E4%B9%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9B%9B%E8%A1%A8%E5%A4%87%E4%BB%BD.sql)
