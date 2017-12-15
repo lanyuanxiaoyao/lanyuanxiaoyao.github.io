@@ -107,6 +107,14 @@ SELECT
   "class"
 FROM "Student";
 ```
+| sname | sex | class |
+| --- | --- | --- |
+| 曾华 | 男 | 95033 |
+| 匡明 | 男 | 95031 |
+| 王丽 | 女 | 95033 |
+| 李军 | 男 | 95033 |
+| 王芳 | 女 | 95031 |
+| 陆军 | 男 | 95031 |
 2. 显示教师所有的单位即不重复的`depart`列
 ```sql
 SELECT DISTINCT "depart"
