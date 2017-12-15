@@ -59,7 +59,7 @@ Score 成绩表
 | 107 | 6-166 | 79     |
 | 108 | 6-166 | 81     |
 
-*文末会附上由数据库导出的sql文件*
+*文末会附上由数据库导出的数据和结构备份sql文件*
 
 # 问题
 **这里是问题，下面会有答案，最好就是先自己做一遍吧**
@@ -458,3 +458,6 @@ WHERE NOT EXISTS(
     )
 );
 ```
+
+# 数据库备份文件
+[Oracle练习数据库四表备份sql文件](https://github.com/lanyuanxiaoyao/OracleHomework/blob/master/Oracle%E7%BB%83%E4%B9%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9B%9B%E8%A1%A8%E5%A4%87%E4%BB%BD.sql)
