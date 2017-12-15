@@ -117,19 +117,19 @@ FROM "Teacher";
 SELECT *
 FROM "Student";
 ```
-4. 显示`Score`表中成绩在60到80之间的所有记录
+4. 显示`Score`表中成绩在`60`到`80`之间的所有记录
 ```sql
 SELECT *
 FROM "Score"
 WHERE "degree" BETWEEN 60 AND 80;
 ```
-5. 显示`Score`表中成绩为85,86或88的记录
+5. 显示`Score`表中成绩为`85`,`86`或`88`的记录
 ```sql
 SELECT *
 FROM "Score"
 WHERE "degree" IN (85, 86, 88);
 ```
-6. 显示`Student`表中"95031"班或性别为"女"的同学记录
+6. 显示`Student`表中`95031`班或性别为`女`的同学记录
 ```sql
 SELECT *
 FROM "Student"
@@ -147,7 +147,7 @@ SELECT *
 FROM "Score"
 ORDER BY "cno" ASC, "degree" DESC;
 ```
-9. 显示"98031"班的学生人数
+9. 显示`98031`班的学生人数
 ```sql
 SELECT COUNT(*) AS "人数"
 FROM "Student";
@@ -164,13 +164,13 @@ WHERE "degree" = (
   FROM "Score"
 );
 ```
-11. 显示"3-105"号课程的平均分
+11. 显示`3-105`号课程的平均分
 ```sql
 SELECT AVG("degree") AS "平均分"
 FROM "Score"
 WHERE "cno" = '3-105';
 ```
-12. 显示`Score`表中至少有5名学生选修的并以3开头的课程号的平均分数
+12. 显示`Score`表中至少有5名学生选修的并以`3`开头的课程号的平均分数
 ```sql
 SELECT
   "cno",
@@ -180,7 +180,7 @@ WHERE "cno" LIKE '3%'
 GROUP BY "cno"
 HAVING COUNT(*) >= 5;
 ```
-13. 显示最低分大于70,最高分小于90 的sno列
+13. 显示最低分大于`70`,最高分小于`90` 的`sno`列
 ```sql
 SELECT "sno"
 FROM "Score"
@@ -205,7 +205,7 @@ SELECT
 FROM "Score", "Student", "Course"
 WHERE "Student"."sno" = "Score"."sno" AND "Score"."cno" = "Course"."cno";
 ```
-16. 列出"95033"班所选课程的平均分  
+16. 列出`95033`班所选课程的平均分  
 ```sql
 -- 解法1
 SELECT
@@ -226,7 +226,7 @@ WHERE "sno" IN (
 )
 GROUP BY "cno";
 ```
-17. 显示选修"3-105"课程的成绩高于"109"号同学成绩的所有同学的记录
+17. 显示选修`3-105`课程的成绩高于`109`号同学成绩的所有同学的记录
 ```sql
 -- 解法1
 SELECT
@@ -256,7 +256,7 @@ SELECT
 FROM "Score" s1, "Score" s2
 WHERE s1."sno" = s2."sno" AND s1."degree" < s2."degree";
 ```
-19. 显示成绩高于学号为"109"、课程号为"3-105"的成绩的所有记录
+19. 显示成绩高于学号为`109`、课程号为`3-105`的成绩的所有记录
 ```sql
 -- 解法1
 SELECT
@@ -277,7 +277,7 @@ WHERE "degree" > (
   WHERE "sno" = 109 AND "cno" = '3-105'
 );
 ```
-20. 显示出和学号为"108"的同学同年出生的所有学生的sno、`sname`和 birthday列
+20. 显示出和学号为`108`的同学同年出生的所有学生的`sno`、`sname`和`birthday`列
 ```sql
 SELECT
   "sno",
@@ -290,7 +290,7 @@ WHERE TO_CHAR("birthday", 'yyyy') = (
   WHERE "sno" = 108
 );
 ```
-21. 显示"李旭"老师任课的学生成绩
+21. 显示`李旭`老师任课的学生成绩
 ```sql
 SELECT
   "cno",
@@ -306,13 +306,13 @@ WHERE "cno" = (
 22. 显示选修某课程的同学人数多于5人的老师姓名
 ```sql
 ```
-23. 显示"95033"班和"95031"班全体学生的记录
+23. 显示`95033`班和`95031`班全体学生的记录
 ```sql
 SELECT *
 FROM "Student"
 WHERE "class" IN ('95033', '95031');
 ```
-24. 显示存在有85分以上成绩的课程`cno`
+24. 显示存在有`85`分以上成绩的课程`cno`
 ```sql
 -- 解法1
 SELECT DISTINCT "cno"
@@ -332,7 +332,7 @@ FROM "Score"
 GROUP BY "cno"
 HAVING MAX("degree") > 85;
 ```
-25. 显示"计算机系"老师所教课程的成绩表
+25. 显示`计算机系`老师所教课程的成绩表
 ```sql
 SELECT
   "sno",
@@ -344,7 +344,7 @@ WHERE "cno" IN (
   WHERE "Course"."tno" = "Teacher"."tno" AND "depart" = '计算机系'
 );
 ```
-26. 显示"计算机系"和"电子工程系"不同职称的老师的tname和prof
+26. 显示`计算机系`和`电子工程系`不同职称的老师的`tname`和`prof`
 ```sql
 SELECT
   "tname",
@@ -356,7 +356,7 @@ WHERE "depart" = '计算机系' AND "prof" NOT IN (
   WHERE "depart" = '电子工程系'
 );
 ```
-27. 显示选修编号为"3-105"课程且成绩至少高于"3-245"课程的同学的`cno`、sno和`degree`,并按`degree`从高到低次序排列
+27. 显示选修编号为`3-105`课程且成绩至少高于`3-245`课程的同学的`cno`、`sno`和`degree`,并按`degree`从高到低次序排列
 ```sql
 SELECT
   "cno",
@@ -370,7 +370,7 @@ WHERE "cno" = '3-105' AND "degree" > ANY (
 )
 ORDER BY "degree" DESC;
 ```
-28. 显示选修编号为"3-105"课程且成绩高于"3-245"课程的同学的`cno`、sno和``degree``
+28. 显示选修编号为`3-105`课程且成绩高于`3-245`课程的同学的`cno`、`sno`和``degree``
 ```sql
 SELECT
   "cno",
@@ -383,7 +383,7 @@ WHERE "cno" = '3-105' AND "degree" > ALL (
   WHERE "cno" = '3-245'
 );
 ```
-29. 列出所有任课老师的tname和`depart`
+29. 列出所有任课老师的`tname`和`depart`
 ```sql
 -- 解法1
 SELECT
@@ -405,7 +405,7 @@ WHERE "tno" IN (
   FROM "Course"
 );
 ```
-30. 列出所有未讲课老师的tname和`depart`
+30. 列出所有未讲课老师的`tname`和`depart`
 ```sql
 SELECT
   "tname",
@@ -430,7 +430,7 @@ UNION SELECT
         "birthday"
       FROM "Student";
 ```
-32. 检索所学课程包含学生"103"所学课程的学生学号
+32. 检索所学课程包含学生`103`所学课程的学生学号
 ```sql
 SELECT DISTINCT "sno"
 FROM "Score" s1
