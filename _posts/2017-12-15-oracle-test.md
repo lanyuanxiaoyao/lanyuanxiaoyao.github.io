@@ -107,6 +107,7 @@ SELECT
   "class"
 FROM "Student";
 ```
+
 | sname | sex | class |
 | --- | --- | --- |
 | 曾华 | 男 | 95033 |
