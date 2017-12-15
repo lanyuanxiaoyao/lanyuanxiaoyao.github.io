@@ -214,7 +214,8 @@ SELECT
 FROM "Student", "Score"
 WHERE "Student"."sno" = "Score"."sno" AND "class" = '95033'
 GROUP BY "cno";
-解法2
+
+--解法2
 SELECT
   "cno",
   AVG("degree")
