@@ -205,18 +205,16 @@ SELECT
 FROM "Score", "Student", "Course"
 WHERE "Student"."sno" = "Score"."sno" AND "Score"."cno" = "Course"."cno";
 ```
-
 16. 列出"95033"班所选课程的平均分  
 ```sql
--- 解法1
+解法1
 SELECT
   "cno",
   AVG("degree")
 FROM "Student", "Score"
 WHERE "Student"."sno" = "Score"."sno" AND "class" = '95033'
 GROUP BY "cno";
-
--- 解法2
+解法2
 SELECT
   "cno",
   AVG("degree")
