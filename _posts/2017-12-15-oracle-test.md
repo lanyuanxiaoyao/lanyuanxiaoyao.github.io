@@ -207,15 +207,14 @@ WHERE "Student"."sno" = "Score"."sno" AND "Score"."cno" = "Course"."cno";
 ```
 16. 列出"95033"班所选课程的平均分  
 ```sql
---解法1
+-- 解法1
 SELECT
   "cno",
   AVG("degree")
 FROM "Student", "Score"
 WHERE "Student"."sno" = "Score"."sno" AND "class" = '95033'
 GROUP BY "cno";
-
---解法2
+-- 解法2
 SELECT
   "cno",
   AVG("degree")
@@ -236,7 +235,6 @@ SELECT
   s1."degree"
 FROM "Score" s1, "Score" s2
 WHERE s1."cno" = '3-105' AND s1."degree" > s2."degree" AND s2."sno" = 109 AND s2."cno" = '3-105';
-
 -- 解法2
 SELECT
   "cno",
@@ -267,7 +265,6 @@ SELECT
   s1."degree"
 FROM "Score" s1, "Score" s2
 WHERE s1."degree" > s2."degree" AND s2."sno" = 109 AND s2."cno" = '3-105';
-
 -- 解法2
 SELECT
   "cno",
@@ -321,7 +318,6 @@ WHERE "class" IN ('95033', '95031');
 SELECT DISTINCT "cno"
 FROM "Score"
 WHERE "degree" > 85;
-
 -- 解法2
 SELECT DISTINCT "cno"
 FROM "Score"
@@ -330,7 +326,6 @@ WHERE "degree" IN (
   FROM "Score"
   WHERE "degree" > 85
 );
-
 -- 解法3
 SELECT "cno"
 FROM "Score"
@@ -400,7 +395,6 @@ WHERE EXISTS(
     FROM "Course"
     WHERE "Teacher"."tno" = "Course"."tno"
 );
-
 --解法2
 SELECT
   "tname",
