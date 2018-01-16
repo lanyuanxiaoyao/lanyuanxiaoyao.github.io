@@ -1,3 +1,14 @@
+---
+layout: post
+title: 正则表达式学习(一)
+date: 2018-01-16 17:13
+categories: 正则表达式
+tags: [正则表达式]
+---
+
+* content
+{:toc}
+
 # 定义
 **正则表达式(Regular Expression)**
 用某种模式去匹配一类字符串的公式，主要用来描述字符串匹配的工具。
