@@ -33,53 +33,76 @@ tags: [正则表达式]
 | \b  | 匹配单词的开始或结束 不支持中文 |
 
 ### 测试
-*markdown格式限制，所有表达式匹配到的部分使用代码框标注(下同)* 
 
-| 表达式          | 结果                                                                | 说明              |
-|--------------|-------------------------------------------------------------------|-----------------|
-| `^a`         | `a`a<br>`a`b<br>bb<br>cc                                          | 匹配第一个字母为`a`的一行  |
-| `a$`         | a`a`<br>ab<br>bb<br>c`a`                                          | 匹配最后一个字母为`a`的一行 |
-| `^a$`        | `a`<br>aa<br>ab<br>cc                                             | 匹配只有一个字母`a`的一行  |
-| `\bStr`      | `Str`ing is a word<br>I love `Str`ing<br>`Str`ingString           | 匹配以`Str`为开头的单词  |
-| `ing\b`      | Str`ing` is a word<br>I love Str`in`g<br>StringStr`ing`           | 匹配以`Str`为结尾的单词  |
-| `\bString\b` | `String` is a word<br>I love `String`<br>StringString<br>`String` | 仅匹配`String`这个单词 |
+- `^a`  
+匹配第一个字母为`a`的一行  
+![][1]
+- `a$`  
+匹配最后一个字母为`a`的一行  
+![][2]
+-  `^a$`  
+匹配只有一个字母`a`的一行   
+![][3]
+-  `\bStr`
+匹配以`Str`为开头的单词  
+![][4]
+-  `ing\b`
+匹配以`ing`为结尾的单词  
+![][5]
+-  `\bString\b`
+仅匹配`String`这个单词  
+![][6]
 
 **`\b`字符如何识别哪个是单词呢？**  
-以标点符号或空格分隔的字符串将被识别为单词，而且**`\b`只能用于英文，不能用于中文**
+以标点符号或空格分隔的字符串将被识别为单词，而且 **`\b`只能用于英文，不能用于中文**
 
 ## 匹配字符的元字符
 **元字符都是按照单个字符进行匹配**  
 
 | 字符    | 说明                          |
 |-------|-----------------------------|
-| .(点号) | 匹配除换行符之外的任意字符               |
-| \w    | 匹配任意单词字符(字母，数字，下划线)         |
-| \W    | 匹配任意非单词字符                   |
-| \s    | 匹配任意空白字符(空格，制表符，换行符，中文全角空格) |
-| \S    | 匹配任意非空白字符                   |
-| \d    | 匹配任意数字 0~9的任意一个数字           |
-| \D    | 匹配任意非数字                     |
+| `.` (点号) | 匹配除换行符之外的任意字符               |
+| `\w`    | 匹配任意单词字符(字母，数字，下划线)         |
+| `\W`    | 匹配任意非单词字符                   |
+| `\s`    | 匹配任意空白字符(空格，制表符，换行符，中文全角空格) |
+| `\S`    | 匹配任意非空白字符                   |
+| `\d`    | 匹配任意数字 0~9的任意一个数字           |
+| `\D`    | 匹配任意非数字                     |
 
 ### 测试
-*注意：这里的匹配结果均是每一个字符单独匹配了元字符，而不是整个字符串匹配，因为markdown格式限制，无法表达单个匹配的意思*  
 
-| 表达式  | 结果                                                                                                                                                                                                                                                                                                                      | 说明                                                                   |
-|------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| `.`  | `I` ` ` `l` `o` `v` `e` ` ` `y` `o` `u` `!`<br>`我` `爱` `你` `！`<br>`5` `2` `0` `1` `3` `1` `4` `!`<br>`l` `a` `n` `y` `u` `a` `n` `x` `i` `a` `o` `y` `a` `o` ` ` `@` `中` `国` `.` `c` `o` `m`<br>`~` `!` `@` `#` `$` `%` `^` `&` `\` `*` `(` `)` `_` `+` `-` `=` `{` `}` `[` `]` `"` `:` `'` `;` `?` `>` `<` `,` `.` `/` | 全部字符匹配                                                               |
-| `\w` | `I` ` ` `l` `o` `v` `e` ` ` `y` `o` `u`!<br>我爱你！<br>`5` `2` `0` `1` `3` `1` `4`!<br>`l` `a` `n` `y` `u` `a` `n` `x` `i` `a` `o` `y` `a` `o` @中国.`c` `o` `m`<br>~!@#$%^&\*()`_`+-={}[]":';?><,./                                                                                                                         | 匹配了全部的单词字符，除了下划线之外的标点符号和汉字都被排除在外                                     |
-| `\W` | I love you `!`<br>`我` `爱` `你` `！`<br>5201314 `!`<br>lanyuanxiaoyao `@中国.`com<br>`~` `!` `@` `#` `$` `%` `^` `&` `\` `*` `(` `)`_`+` `-` `=` `{` `}` `[` `]` `"` `:` `'` `;` `?` `>` `<` `,` `.` `/`                                                                                                                     | 匹配结果和`\w`刚好相反。<br>*注意！这里的匹配中还包括字符串中的空格！markdown格式限制无法表达空格被匹配的意思(下同)* |
-| `\s` | I` `love` `you!<br>我爱你！<br>5201314!<br>lanyuanxiaoyao` `@中国.com<br>~!@#$%^&*()_+-={}[]":';?><,./                                                                                                                                                                                                                        | 只有三个空格被匹配                                                            |
-| `\S` | `I` `love` `you!`<br>`我` `爱` `你` `！`<br>`5` `2` `0` `1` `3` `1` `4` `!`<br>`l` `a` `n` `y` `u` `a` `n` `x` `i` `a` `o` `y` `a` `o` ` ` `@` `中` `国` `.` `c` `o` `m`<br>`~` `!` `@` `#` `$` `%` `^` `&` `*` `(` `)` `_` `+` `-` `=` `{` `}` `[` `]` `"` `:` `'` `;` `?` `>` `<` `,` `.` `/`                               | 除了三个空格，其余字符全部匹配                                                      |
-| `\d` | I love you!<br>我爱你！<br>`5` `2` `0` `1` `3` `1` `4`!<br>lanyuanxiaoyao @中国.com<br>~!@#$%^&*()_+-={}[]":';?><,./                                                                                                                                                                                                          | 匹配所有的数字                                                              |
-| `\D` | `I` ` ` `l` `o` `v` `e` ` ` `y` `o` `u` `!`<br>`我` `爱` `你` `！`<br>5201314 `!`<br>`l` `a` `n` `y` `u` `a` `n` `x` `i` `a` `o` `y` `a` `o` ` ` `@` `中` `国` `.` `c` `o` `m`<br>`~` `!` `@` `#` `$` `%` `^` `&` `*` `(` `)` `_` `+` `-` `=` `{` `}` `[` `]` `"` `:` `'` `;` `?` `>` `<` `,` `.` `/`                         | 匹配所有数字之外的字符                                                          |
+- `.`  
+全部字符匹配  
+![][7]
+- `\w`  
+匹配了全部的单词字符，除了下划线之外的标点符号和汉字都被排除在外  
+![][8]
+- `\W`  
+匹配结果和\w刚好相反，注意那个**下划线是属于单词字符的**  
+![][9]
+- `\s`  
+有2个空格被匹配，**注意！这里总共有6个符号被匹配了，除了两个空格还有1~4行末的换行符**  
+![][10]
+- `\S`  
+除了2个空格和4个换行符，其余字符全部匹配  
+![][11]
+- `\d`  
+匹配所有的数字  
+![][12]
+- `\D`  
+匹配所有数字之外的字符  
+![][13]
 
 ## 元字符组合
 仅仅是元字符就可以自由组合来实现不同的匹配效果  
 
-| 表达式    | 结果                                                                                                                              | 说明                                                     | 表达式结构示意图                                                                                                               |
-|--------|---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| `\w\w` | I `lo` `ve` `yo`u!<br>我爱你！<br>`52` `01` `31`4!<br>`la` `ny` `ua` `nx` `ia` `oy` `ao` @中国.`co`m<br>~!@#$%^&*()_+-={}[]":';?><,./ | 匹配连续的两个单词字符                                            | ![][1] |
-| `\w\s` | `I `lov`e `you!<br>我爱你！<br>5201314!<br>lanyuanxiaoya`o `@中国.co`m`<br>~!@#$%^&*()_+-={}[]":';?><,./                              | 匹配一个单词字符+空白字符的组合，注意，第四行匹配的`m`后面搭配着一个换行符，并不是只匹配了`m`一个字符 |  |
+- `\w\w`  
+匹配连续的两个单词字符  
+![][14]  
+![][15]
+- `\w\s`
+![][16]  
+![][17]
 
 # 字符类
 [] 写在中括号之间的是字符类 意为匹配中括号中的任意一个字符
@@ -138,4 +161,22 @@ a.+b  aaaabaaaababaaacaccb -> aaaabaaaababaaacaccb   贪婪
 | (?\<\!expression)     | 匹配前面不是字符串expression的位置                               |
 | (?>expression)        | 只匹配字符串expression一次                                   |
 
-  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/ww.svg
+
+  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h14m07s_002_.png
+  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h16m46s_003_.png
+  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h20m44s_004_.png
+  [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h24m14s_005_.png
+  [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h26m53s_006_.png
+  [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h27m47s_007_.png
+  [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h32m27s_008_.png
+  [8]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h33m33s_009_.png
+  [9]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h34m25s_010_.png
+  [10]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h35m30s_011_.png
+  [11]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h36m12s_012_.png
+  [12]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h37m01s_013_.png
+  [13]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h38m49s_014_.png
+  [14]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/ww.png
+  [15]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h42m07s_015_.png
+  [16]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/ws.png
+  [17]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h43m42s_016_.png
+  [18]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/ww.png
