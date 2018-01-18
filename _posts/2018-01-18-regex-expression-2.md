@@ -60,3 +60,8 @@ tags: [正则表达式]
 | `|` | “或”运算     |
 
 # 递归匹配
+
+# 参考
+1. 王蕾. 神奇的匹配 正则表达式求精之旅[M]. 北京:电子工业出版社, 2014.
+2. 文中使用的正则表达式测试工具：[正则表达式测试工具在线调试与分享-Zjmainstay](http://regex.zjmainstay.cn/)
+3. 文中使用的正则表达式可视化生成工具：[Regulex JavaScript Regular Expression Visualizer.](https://jex.im/regulex/)
