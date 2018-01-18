@@ -234,9 +234,11 @@ tags: [正则表达式]
 `|`表示“或”的意思，这个符号和代码中的“逻辑或”相同，比较好理解  
 **匹配是根据左边优先的原则，即从左往右，当左边的表达式不满足的时候，才会去尝试右边的表达式**
 
-
-
-[jJ]ack和jack|Jack表示同样的意思
+## 测试
+- `a|b`  
+可以看到不管是字符`a`还是`b`都可以匹配这个表达式，它等同于`[ab]`
+![][29]  
+![][30]
 
 ## 分组
 使用 () 来表示一组子表达式 括号里面的内容是一个整体
@@ -288,3 +290,5 @@ tags: [正则表达式]
   [26]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_11h59m50s_012_.png
   [27]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_13h52m45s_013_.png
   [28]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_13h55m20s_014_.png
+  [29]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_14h03m09s_015_.png
+  [30]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_14h05m15s_016_.png
