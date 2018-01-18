@@ -215,13 +215,26 @@ tags: [正则表达式]
 - `ab*?`  
 ![][26]
 
-a.+?b aaaabaaaababaaacaccb -> aaaab aaaabab aaacaccb 懒惰
-a.+b  aaaabaaaababaaacaccb -> aaaabaaaababaaacaccb   贪婪
+### 贪婪模式与懒惰模式
+如果在限定符`*`、`+`、`?`、`{n}`、`{n,}`和`{n,m}`之后再添加一个字符 **`?`** ，则表示 **尽可能少地重复字符`?`之前的限定符号的重复次数**，这种匹配方式称为**懒惰匹配**，与之相对的，如果没有字符 **`?`** ，仅仅使用单个限定符`*`、`+`、`?`、`{n}`、`{n,}`和`{n,m}`的匹配，就称为**贪婪匹配**。  
+看起来好像很复杂，但是理解历来并不难，即懒惰匹配模式只匹配最短符合表达式的字符串，贪婪匹配模式只匹配最长符合表达式的字符串。  
+*这里的贪婪模式和懒惰模式在不同的教程或者说明里面都有不同的叫法，所以可以理解意思就行了，大同小异*
+
+#### 测试
+- 贪婪模式 `a.*b`  
+可以看到这里只有一个匹配，就是整个字符串，因为这是最长的匹配  
+![][27]  
+- 懒惰模式 `a.?b`  
+这里一旦发现一个匹配立刻就完成当前的匹配，然后从下一个字符开始新的匹配，所以这里会有4个匹配  
+![][28]
 
 # 字符的运算
 ## 替换
-| 表示“或”的意思
-匹配是根据左边优先的原则 即从左往右
+**替换**使用字符`|`来表示，表示如果某一个字符串匹配了表达式中字符`|`左边或者右边的规则，那么这个字符串就匹配了这个表达式  
+`|`表示“或”的意思，这个符号和代码中的“逻辑或”相同，比较好理解  
+**匹配是根据左边优先的原则，即从左往右，当左边的表达式不满足的时候，才会去尝试右边的表达式**
+
+
 
 [jJ]ack和jack|Jack表示同样的意思
 
@@ -273,3 +286,5 @@ a.+b  aaaabaaaababaaacaccb -> aaaabaaaababaaacaccb   贪婪
   [24]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_11h58m24s_010_.png
   [25]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_11h59m16s_011_.png
   [26]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_11h59m50s_012_.png
+  [27]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_13h52m45s_013_.png
+  [28]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_13h55m20s_014_.png
