@@ -283,6 +283,10 @@ tags: [正则表达式]
 - `(?>a)b`  
 ![][38]
 
+# 参考
+1. 王蕾. 神奇的匹配 正则表达式求精之旅[M]. 北京市:电子工业出版社, 2014.
+2. 文中使用的正则表达式测试工具：[正则表达式测试工具在线调试与分享-Zjmainstay](http://regex.zjmainstay.cn/)
+
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h14m07s_002_.png
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h16m46s_003_.png
