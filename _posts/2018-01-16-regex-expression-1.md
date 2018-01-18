@@ -267,8 +267,10 @@ tags: [正则表达式]
 
 #### 测试
 - `(ab)`  
+`ab`就是一个整体看待，和单独的字符串`ab`没有区别  
 ![][31]
 - `(?<word>ab)\k<word>`  
+把`ab`这个组命名为`word`，然后在后面调用前面命名的这个组匹配的字符，即这个表达式相当于`(ab)ab`
 ![][32]
 - `(?:a)(b)\1`  
 ![][33]
@@ -286,6 +288,7 @@ tags: [正则表达式]
 # 参考
 1. 王蕾. 神奇的匹配 正则表达式求精之旅[M]. 北京市:电子工业出版社, 2014.
 2. 文中使用的正则表达式测试工具：[正则表达式测试工具在线调试与分享-Zjmainstay](http://regex.zjmainstay.cn/)
+3. 文中使用的正则表达式可视化生成工具：[Regulex JavaScript Regular Expression Visualizer.](https://jex.im/regulex/)
 
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h14m07s_002_.png
