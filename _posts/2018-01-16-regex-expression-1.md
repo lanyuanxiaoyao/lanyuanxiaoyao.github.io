@@ -257,13 +257,31 @@ tags: [正则表达式]
 | 字符                    | 说明                                                   |
 |-----------------------|------------------------------------------------------|
 | `(expression)`          | 匹配字符串`expression`，并将匹配到的文本保存到自动命名的分组里                  |
-| `(?\<name\>expression)` | 匹配字符串`expression`，并将匹配的文本以name进行命名。该名称不能包含标点符号，不能以数字开头 |
+| `(?<name>expression)` | 匹配字符串`expression`，并将匹配的文本以name进行命名。该名称不能包含标点符号，不能以数字开头 |
 | `(?:expression)`        | 匹配字符串`expression`，不保存匹配的文明，也不给此组分配组号                   |
 | `(?=expression)`        | 匹配字符串`expression`前面的位置                                 |
 | `(?!expression)`        | 匹配后面不是字符串`expression`的位置                               |
 | `(?<=expression)`       | 匹配字符串`expression`后面的位置                                 |
-| `(?\<\!expression)`     | 匹配前面不是字符串`expression`的位置                               |
+| `(?<!expression)`     | 匹配前面不是字符串`expression`的位置                               |
 | `(?>expression)`        | 只匹配字符串`expression`一次                                   |
+
+### 测试
+- `(ab)`  
+![][31]
+- `(?<word>ab)\k<word>`  
+![][32]
+- `(?:a)(b)\1`  
+![][33]
+- `b(?=a)`  
+![][34]
+- `b(?!a)`  
+![][35]
+- `(?<=a)b`  
+![][36]
+- `(?<!a)b`  
+![][37]
+- `(?>a)b`  
+![][38]
 
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/16/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018%E5%B9%B41%E6%9C%8816%E6%97%A5_20h14m07s_002_.png
@@ -296,3 +314,11 @@ tags: [正则表达式]
   [28]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_13h55m20s_014_.png
   [29]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_14h03m09s_015_.png
   [30]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_14h05m15s_016_.png
+  [31]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_17h22m38s_002_.png
+  [32]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_17h23m49s_003_.png
+  [33]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_17h25m39s_004_.png
+  [34]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_17h32m02s_005_.png
+  [35]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_17h33m01s_006_.png
+  [36]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_17h34m48s_007_.png
+  [37]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_17h36m14s_008_.png
+  [38]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%B8%80%29/Ashampoo_Snap_2018.01.18_17h39m03s_009_.png
