@@ -33,20 +33,26 @@ tags: [正则表达式]
 匹配每一行的行首，注意测试工具中用*紫色虚线*表示的地方  
 ![][1]
 - `$`  
-匹配每一行的行尾
+匹配每一行的行尾  
 ![][2]
 - `\A`  
-整个测试文本都被视为一个字符串，把换行符也包括在内了
+整个测试文本都被视为一个字符串，把换行符也包括在内了  
 ![][3]
 - `\Z`  
 - `\z`  
 - `\G\`  
 - `\b`  
-匹配一个单词的开始或结束位置，不再赘述
+匹配一个单词的开始或结束位置，不再赘述  
 ![][4]
 - `\B`  
-与`\b`相对，匹配不是一个dancing开始或结束位置
+与`\b`相对，匹配不是一个dancing开始或结束位置  
 ![][5]
+- `lo(?=ve)`  
+匹配字符`lo`，并且`lo`的后面紧跟着字符`ve`，换成人话就是，匹配一个在字符`ve`前面的字符`lo`，在这个表达式中，字符串`ve`是不算在匹配里面的，只是作为条件判断  
+![][6]
+- `(?<=ve)lo`  
+匹配字符`lo`，并且`lo`的前面紧跟着字符`ve`，换成人话就是，匹配一个在字符`ve`后面的字符`lo`，在这个表达式中，字符串`ve`是不算在匹配里面的，只是作为条件判断  
+![][7]
 
 # 负向零宽度断言
 与零宽度断言相对的是**负向零宽度断言**，它能够指定或匹配不止一个位置，特别是匹配字符串中不包含指定的字符时特别好用  
@@ -91,3 +97,5 @@ tags: [正则表达式]
   [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h42m09s_003_.png
   [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h51m25s_004_.png
   [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h54m59s_005_.png
+  [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h58m07s_006_.png
+  [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_09h03m45s_007_.png
