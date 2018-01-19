@@ -79,6 +79,8 @@ tags: [正则表达式]
 注释的格式表示为`(?#注释内容)`  
 *嘿嘿，没想到正则表达式也可以写注释吧*
 
+![][10]
+
 # 优先级
 和所有的运算语言一样，正则表达式的符号之间也存在优先级关系
 
@@ -109,3 +111,4 @@ tags: [正则表达式]
   [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_09h03m45s_007_.png
   [8]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_09h08m11s_008_.png
   [9]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_09h09m21s_009_.png
+  [10]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_09h17m18s_010_.png
