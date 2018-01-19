@@ -62,6 +62,14 @@ tags: [正则表达式]
 `(?!expression)`被称为**负向零宽度断言**或**零宽度负预测先行断言**，它断言自身位置的后面不能匹配表达式`expression`  
 `(?<!expression)`被称为**零宽度负回顾后发断言**，它断言自身位置的前面不能匹配表达式`expression`  
 
+## 测试
+- `lo(?!ve)`  
+匹配一个后面不是字符`ve`的字符`lo`，显然，这里没有匹配的字符  
+![][8]
+- `(?<!ve)lo`  
+匹配一个前面不是字符`ve`的字符`lo`  
+![][9]
+
 # 匹配选项
 **匹配选项**可以指定正则表达式匹配中的行为，如忽略大小写、处理多行、处理单行等
 
@@ -99,3 +107,5 @@ tags: [正则表达式]
   [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h54m59s_005_.png
   [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h58m07s_006_.png
   [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_09h03m45s_007_.png
+  [8]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_09h08m11s_008_.png
+  [9]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_09h09m21s_009_.png
