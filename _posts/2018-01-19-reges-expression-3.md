@@ -62,18 +62,52 @@ Java中和正则表达式有关的类有三个
 `Pattern`类的构造方法是私有的，着意味着我们只能通过它的工厂方法来构造一个新的`Pattern`对象  
 先来认识一下`Pattern`类中的方法  
 
-| 返回值 | 方法体 |
-| --- | --- |
-| static Pattern | compile(String regex) 将给定的正则表达式编译到模式中。 |
-| static Pattern | compile(String regex, int flags) 将给定的正则表达式编译到具有给定标志的模式中。 |
- | int | flags() 返回此模式的匹配标志。 |
- | Matcher | matcher(CharSequence input) 创建匹配给定输入与此模式的匹配器。 |
-| static boolean | matches(String regex, CharSequence input) 编译给定正则表达式并尝试将给定输入与其匹配。 |
-| String | pattern() 返回在其中编译过此模式的正则表达式。 |
-| static String | quote(String s) 返回指定 String 的字面值模式 String。 |
-| String[] | split(CharSequence input) 围绕此模式的匹配拆分给定输入序列。 |
-| String[] | split(CharSequence input, int limit) 围绕此模式的匹配拆分给定输入序列。 |
-| String | toString() 返回此模式的字符串表示形式。 |
+| 返回值              | 方法体                                                                |
+|------------------|--------------------------------------------------------------------|
+| `static Pattern` | `compile(String regex)` 将给定的正则表达式编译到模式中。                           |
+| `static Pattern` | `compile(String regex, int flags)` 将给定的正则表达式编译到具有给定标志的模式中。         |
+| `int`            | `flags()` 返回此模式的匹配标志。                                              |
+| `Matcher`        | `matcher(CharSequence input)` 创建匹配给定输入与此模式的匹配器。                    |
+| `static boolean` | `matches(String regex, CharSequence input)` 编译给定正则表达式并尝试将给定输入与其匹配。 |
+| `String`         | `pattern()` 返回在其中编译过此模式的正则表达式。                                     |
+| `static String`  | `quote(String s)` 返回指定 String 的字面值模式 String。                       |
+| `String[]`       | `split(CharSequence input)` 围绕此模式的匹配拆分给定输入序列。                      |
+| `String[]`       | `split(CharSequence input, int limit)` 围绕此模式的匹配拆分给定输入序列。           |
+| `String`         | `toString()` 返回此模式的字符串表示形式。                                        |
+
+| 返回值             | 方法体                                                                    |
+|-----------------|------------------------------------------------------------------------|
+| `Matcher`       | `appendReplacement(StringBuffer sb, String replacement)` 实现非终端添加和替换步骤。 |
+| `StringBuffer`  | `appendTail(StringBuffer sb)` 实现终端添加和替换步骤。                             |
+| `int`           | `end()` 返回最后匹配字符之后的偏移量。                                                |
+| `int`           | `end(int group)` 返回在以前的匹配操作期间，由给定组所捕获子序列的最后字符之后的偏移量。                   |
+| `boolean`       | `find()` 尝试查找与该模式匹配的输入序列的下一个子序列。                                       |
+| `boolean`       | `find(int start)` 重置此匹配器，然后尝试查找匹配该模式、从指定索引开始的输入序列的下一个子序列。              |
+| `String`        | `group()` 返回由以前匹配操作所匹配的输入子序列。                                          |
+| `String`        | `group(int group)` 返回在以前匹配操作期间由给定组捕获的输入子序列。                            |
+| `int`           | `groupCount()` 返回此匹配器模式中的捕获组数。                                         |
+| `boolean`       | `hasAnchoringBounds()` 查询此匹配器区域界限的定位。                                  |
+| `boolean`       | `hasTransparentBounds()` 查询此匹配器区域边界的透明度。                               |
+| `boolean`       | `hitEnd()` 如果匹配器执行的最后匹配操作中搜索引擎遇到输入结尾，则返回 `true`。                         |
+| `boolean`       | `lookingAt()` 尝试将从区域开头开始的输入序列与该模式匹配。                                   |
+| `boolean`       | `matches()` 尝试将整个区域与模式匹配。                                              |
+| `Pattern`       | `pattern()` 返回由此匹配器解释的模式。                                              |
+| `static String` | `quoteReplacement(String s)` 返回指定 `String` 的字面值替换 `String`。                |
+| `Matcher`       | `region(int start, int end)` 设置此匹配器的区域限制。                              |
+| `int`           | `regionEnd()` 报告此匹配器区域的结束索引（不包括）。                                      |
+| `int`           | `regionStart()` 报告此匹配器区域的开始索引。                                         |
+| `String`        | `replaceAll(String replacement)` 替换模式与给定替换字符串相匹配的输入序列的每个子序列。           |
+| `String`        | `replaceFirst(String replacement)` 替换模式与给定替换字符串匹配的输入序列的第一个子序列。         |
+| `boolean`       | `requireEnd()` 如果很多输入都可以将正匹配更改为负匹配，则返回 true。                           |
+| `Matcher`       | `reset()` 重置匹配器。                                                       |
+| `Matcher`       | `reset(CharSequence input)` 重置此具有新输入序列的匹配器。                            |
+| `int`           | `start()` 返回以前匹配的初始索引。                                                 |
+| `int`           | `start(int group)` 返回在以前的匹配操作期间，由给定组所捕获的子序列的初始索引。                      |
+| `MatchResult`   | `toMatchResult()` 作为 `MatchResult` 返回此匹配器的匹配状态。                          |
+| `String`        | `toString()` 返回匹配器的字符串表示形式。                                            |
+| `Matcher`       | `useAnchoringBounds(boolean b)` 设置匹配器区域界限的定位。                          |
+| `Matcher`       | `usePattern(Pattern newPattern)` 更改此 `Matcher` 用于查找匹配项的 `Pattern`。         |
+| `Matcher`       | `useTransparentBounds(boolean b)` 设置此匹配器区域边界的透明度。                      |
 
 # 参考
 1. [Java 正则表达式\| 菜鸟教程](http://www.runoob.com/java/java-regular-expressions.html)
