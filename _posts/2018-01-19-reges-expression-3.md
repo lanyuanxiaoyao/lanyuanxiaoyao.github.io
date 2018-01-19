@@ -68,7 +68,7 @@ Java中和正则表达式有关的类有三个
 ```java
 Pattern pattern = Pattern.compile(".*love.*");
 ```
-**`Pattern	compile(String regex, int flags)`**  
+**`Pattern compile(String regex, int flags)`**  
 这个方法用于在创建`Pattern` 实例的时候指定匹配的模式，如大小写忽略、多行匹配等  
 匹配模式共有8种，作为`Pattern` 类的静态字段存在，分别是：
 - 	`CANON_EQ` 启用规范等价
@@ -83,12 +83,12 @@ Pattern pattern = Pattern.compile(".*love.*");
 ```java
 Pattern pattern = Pattern.compile(".*love.*", Pattern.MULTILINE);
 ```
-**`Matcher	matcher(CharSequence input)`**  
+**`Matcher matcher(CharSequence input)`**  
 这个方法用于根据输入的字符序列和当前`Pattern`实例构建匹配器，值得注意的是，调用了这个方法的时候，并没有开始匹配，只是构建了匹配器而已  
 ```java
 Matcher matcher = pattern.matcher("I love you!");
 ```
-**`boolean	matches(String regex, CharSequence input)`**  
+**`boolean matches(String regex, CharSequence input)`**  
 快速对一个输入的字符序列进行匹配尝试，并返回结果。用人话说就是直接对一个字符串和一个正则表达式进行匹配，看这个字符串是否符合这个正则表达式，注意这里使用的都是默认的`Pattern`配置，比如没有办法设置多行匹配，容易出错
 ```java
 boolean result = Pattern.matches(".*love.*", "I love you!");
@@ -113,11 +113,64 @@ boolean result = Pattern.matches(".*love.*", "I love you!");
 `Matcher`类应该被翻译为匹配器，因为在获得这个实例的时候其实并没有开始匹配，只有在调用到具体方法的时候才会开始匹配，所以把`Matcher`类理解为是正则表达式的匹配结果是不正确的，应该是匹配器可以计算出匹配的结果
 
 ### 主要方法
-**`Matcher	appendReplacement(StringBuffer sb, String replacement)`**
-**`StringBuffer	appendTail(StringBuffer sb)`**
-**`boolean	find()`**
-**`String	group(int group)`**
-**`boolean	matches()`**
+**`Matcher	appendReplacement(StringBuffer sb, String replacement)`**  
+**`StringBuffer	appendTail(StringBuffer sb)`**  
+这两个方法是一对好基友，一般是配合使用。`appendReplacement`方法是把匹配到的字符替换为`replacement`，然后把到匹配位置为止之前的所有文本都追加到`sb`后面，注意！是追加，也就是说`sb`原来有的文本并不会被清除  
+`appendTail`与`appendReplacement`相对的，`appendTail`就是把剩下的文本追加到`sb`的末尾  
+```java
+Pattern pattern = Pattern.compile("a");
+Matcher matcher = pattern.matcher("abababbaaabbb");
+StringBuffer stringBuffer = new StringBuffer("hhh");
+while (matcher.find()) {
+	matcher.appendReplacement(stringBuffer, "c");
+}
+// 没有执行appendTail方法
+System.out.println(stringBuffer);
+matcher.appendTail(stringBuffer);
+// 执行appendTail方法
+System.out.println(stringBuffer);
+```
+以上这段代码执行的结果为：  
+![][1]  
+可以清楚地看到这两个方法的功能，把上面代码的`while`循环改为`if`语句，就可以达到只替换一个的效果。  
+有人说这和`replaceAll()`方法有什么区别，其实这两个方法当然不是为了全部替换，它们的作用是为了控制替换的过程，比如中间的某些字符虽然满足表达式，但是却不需要替换，或是要只需替换第5个匹配之类的需求  
+**`boolean find()`**  
+解释这个方法首先就要理解`Matcher`匹配器是如何进行匹配这个过程的。在`Matcher`中的字符串并不是一次就被全部匹配完毕，因为我们匹配的文本可能会非常大，所以`Matcher`采取了一边读取一边匹配的“流式匹配”的方式，而在这其中就有一个相当于“游标”的东西，“游标”指示的是当前匹配到的位置，读取到第一个匹配的时候，“游标”就移动到第一个匹配的位置，`find()`方法就是向`Matcher`发出“匹配下一个”的命令的方法，当执行`find()`方法，`Matcher`就会进行匹配，直到出现了一个匹配就停下来，等待下一个`find()`方法被调用才继续匹配。也正是由于这个原因，所以`Matcher`没有方法可以返回文本里到底有多少个匹配  
+我们需要在正则匹配取结果的时候使用while循环来读取所有的匹配也是由于这个原因  
+```java
+Pattern pattern = Pattern.compile("a");
+Matcher matcher = pattern.matcher("abababbaaabbb");
+while (matcher.find()) {
+	System.out.println(matcher.group());
+}
+```
+**`String group()`**  
+等于`group(0)`，可以在源码中看到  
+`Matcher.java`  
+```java
+...
+public String group() {
+	return group(0);
+}
+...
+```
+**`String group(int group)`**  
+*如果你不知道正则表达式中“组”的概念，那么可以去看我之前的文章，这里就默认你对正则表达式完全了解*  
+一个正则表达式可能会有很多个组，那么Java里面提供了可以让我们操作组的方法，在一个`find()`循环中，每一次匹配都可以使用`group(index)`方法访问指定的组，返回的是该组匹配的字符串，如果组有名字的话，那么也可以通过`group(name)`访问  
+特别的，`group(0)`是整个正则表达式，同时不计入`groupCount()`中
+```java
+Pattern pattern = Pattern.compile("(a|b)(?<group>c|b)a");
+Matcher matcher = pattern.matcher("ababdddabbaaccabbb");
+System.out.println("groupCount: " + matcher.groupCount());
+while (matcher.find()) {
+	System.out.println("group(0): " + matcher.group(0));
+	System.out.println("group(1): " + matcher.group(1));
+	System.out.println("group(2): " + matcher.group(2));
+	System.out.println("group(\"group\"): " + matcher.group("group"));
+}
+```
+以上这段代码执行的结果为：  
+![][2]
 
 ### 全部方法
 
@@ -157,3 +210,7 @@ boolean result = Pattern.matches(".*love.*", "I love you!");
 
 # 参考
 1. [Java 正则表达式\| 菜鸟教程](http://www.runoob.com/java/java-regular-expressions.html)
+
+
+  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%28%E4%B8%89%29%20Java%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_16h02m35s_001_.png
+  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%28%E4%B8%89%29%20Java%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_17h19m56s_003_.png
