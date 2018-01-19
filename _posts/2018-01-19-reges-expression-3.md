@@ -62,6 +62,40 @@ Java中和正则表达式有关的类有三个
 `Pattern`类的构造方法是私有的，着意味着我们只能通过它的工厂方法来构造一个新的`Pattern`对象  
 先来认识一下`Pattern`类中的方法  
 
+### 主要方法
+**`Pattern compile(String regex)`**  
+这个工厂方法用于创建一个`Pattern` 实例，一个`Pattern` 实例就是一条正则表达式，可以把`Pattern` 实例理解为正则表达式实例，然后这条正则表达式就可以被Java中的各个方法所使用了    
+```
+Pattern pattern = Pattern.compile(".*love.*");
+```
+**`Pattern	compile(String regex, int flags)`**  
+这个方法用于在创建`Pattern` 实例的时候指定匹配的模式，如大小写忽略、多行匹配等  
+匹配模式共有8种，作为`Pattern` 类的静态字段存在，分别是：
+- 	`CANON_EQ` 启用规范等价
+- 	`CASE_INSENSITIVE` 启用不区分大小写的匹配
+- 	`COMMENTS` 模式中允许空白和注释
+- 	`DOTALL` 启用 dotall 模式
+- 	`LITERAL` 启用模式的字面值解析
+- 	`MULTILINE` 启用多行模式
+- 	`UNICODE_CASE` 启用 Unicode 感知的大小写折叠
+- 	`UNIX_LINES` 启用 Unix 行模式
+
+```java
+Pattern pattern = Pattern.compile(".*love.*", Pattern.MULTILINE);
+```
+**`Matcher	matcher(CharSequence input)`**  
+这个方法用于根据输入的字符序列和当前`Pattern`实例构建匹配器，值得注意的是，调用了这个方法的时候，并没有开始匹配，只是构建了匹配器而已  
+```java
+Matcher matcher = pattern.matcher("I love you!");
+```
+**`boolean	matches(String regex, CharSequence input)`**  
+快速对一个输入的字符序列进行匹配尝试，并返回结果。用人话说就是直接对一个字符串和一个正则表达式进行匹配，看这个字符串是否符合这个正则表达式，注意这里使用的都是默认的`Pattern`配置，比如没有办法设置多行匹配，容易出错
+```java
+boolean result = Pattern.matches(".*love.*", "I love you!");
+```
+
+### 全部方法
+
 | 返回值              | 方法体                                                                |
 |------------------|--------------------------------------------------------------------|
 | `static Pattern` | `compile(String regex)` 将给定的正则表达式编译到模式中。                           |
@@ -74,7 +108,12 @@ Java中和正则表达式有关的类有三个
 | `String[]`       | `split(CharSequence input)` 围绕此模式的匹配拆分给定输入序列。                      |
 | `String[]`       | `split(CharSequence input, int limit)` 围绕此模式的匹配拆分给定输入序列。           |
 | `String`         | `toString()` 返回此模式的字符串表示形式。                                        |
+## `Matcher`
+`Matcher`类应该被翻译为匹配器，因为在获得这个实例的时候其实并没有开始匹配，只有在调用到具体方法的时候才会开始匹配，所以把`Matcher`类理解为是正则表达式的匹配结果是不正确的，应该是匹配器可以计算出匹配的结果
 
+### 主要方法
+
+### 全部方法
 | 返回值             | 方法体                                                                    |
 |-----------------|------------------------------------------------------------------------|
 | `Matcher`       | `appendReplacement(StringBuffer sb, String replacement)` 实现非终端添加和替换步骤。 |
@@ -98,7 +137,7 @@ Java中和正则表达式有关的类有三个
 | `int`           | `regionStart()` 报告此匹配器区域的开始索引。                                         |
 | `String`        | `replaceAll(String replacement)` 替换模式与给定替换字符串相匹配的输入序列的每个子序列。           |
 | `String`        | `replaceFirst(String replacement)` 替换模式与给定替换字符串匹配的输入序列的第一个子序列。         |
-| `boolean`       | `requireEnd()` 如果很多输入都可以将正匹配更改为负匹配，则返回 true。                           |
+| `boolean`       | `requireEnd()` 如果很多输入都可以将正匹配更改为负匹配，则返回 `true`。                           |
 | `Matcher`       | `reset()` 重置匹配器。                                                       |
 | `Matcher`       | `reset(CharSequence input)` 重置此具有新输入序列的匹配器。                            |
 | `int`           | `start()` 返回以前匹配的初始索引。                                                 |
