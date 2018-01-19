@@ -29,6 +29,25 @@ tags: [正则表达式]
 
 ## 测试
 
+- `^`  
+匹配每一行的行首，注意测试工具中用*紫色虚线*表示的地方  
+![][1]
+- `$`  
+匹配每一行的行尾
+![][2]
+- `\A`  
+整个测试文本都被视为一个字符串，把换行符也包括在内了
+![][3]
+- `\Z`  
+- `\z`  
+- `\G\`  
+- `\b`  
+匹配一个单词的开始或结束位置，不再赘述
+![][4]
+- `\B`  
+与`\b`相对，匹配不是一个dancing开始或结束位置
+![][5]
+
 # 负向零宽度断言
 与零宽度断言相对的是**负向零宽度断言**，它能够指定或匹配不止一个位置，特别是匹配字符串中不包含指定的字符时特别好用  
 *其实这个负向零宽度断言就是零宽度断言的反义*
@@ -65,3 +84,10 @@ tags: [正则表达式]
 1. 王蕾. 神奇的匹配 正则表达式求精之旅[M]. 北京:电子工业出版社, 2014.
 2. 文中使用的正则表达式测试工具：[正则表达式测试工具在线调试与分享-Zjmainstay](http://regex.zjmainstay.cn/)
 3. 文中使用的正则表达式可视化生成工具：[Regulex JavaScript Regular Expression Visualizer.](https://jex.im/regulex/)
+
+
+  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h35m27s_001_.png
+  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h38m52s_002_.png
+  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h42m09s_003_.png
+  [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h51m25s_004_.png
+  [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/1/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0%28%E4%BA%8C%29%20%E5%85%B6%E4%BB%96%E8%A1%A8%E8%BE%BE%E5%BC%8F/Ashampoo_Snap_2018.01.19_08h54m59s_005_.png
