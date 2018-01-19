@@ -65,7 +65,7 @@ Java中和正则表达式有关的类有三个
 ### 主要方法
 **`Pattern compile(String regex)`**  
 这个工厂方法用于创建一个`Pattern` 实例，一个`Pattern` 实例就是一条正则表达式，可以把`Pattern` 实例理解为正则表达式实例，然后这条正则表达式就可以被Java中的各个方法所使用了    
-```
+```java
 Pattern pattern = Pattern.compile(".*love.*");
 ```
 **`Pattern	compile(String regex, int flags)`**  
@@ -114,6 +114,7 @@ boolean result = Pattern.matches(".*love.*", "I love you!");
 ### 主要方法
 
 ### 全部方法
+
 | 返回值             | 方法体                                                                    |
 |-----------------|------------------------------------------------------------------------|
 | `Matcher`       | `appendReplacement(StringBuffer sb, String replacement)` 实现非终端添加和替换步骤。 |
