@@ -104,7 +104,7 @@ boolean result = Pattern.matches(".*love.*", "I love you!");
 | `Matcher`        | `matcher(CharSequence input)` 创建匹配给定输入与此模式的匹配器。                    |
 | `static boolean` | `matches(String regex, CharSequence input)` 编译给定正则表达式并尝试将给定输入与其匹配。 |
 | `String`         | `pattern()` 返回在其中编译过此模式的正则表达式。                                     |
-| `static String`  | `quote(String s)` 返回指定 String 的字面值模式 String。                       |
+| `static String`  | `quote(String s)` 返回指定 `String` 的字面值模式 `String`。                       |
 | `String[]`       | `split(CharSequence input)` 围绕此模式的匹配拆分给定输入序列。                      |
 | `String[]`       | `split(CharSequence input, int limit)` 围绕此模式的匹配拆分给定输入序列。           |
 | `String`         | `toString()` 返回此模式的字符串表示形式。                                        |
