@@ -108,6 +108,7 @@ boolean result = Pattern.matches(".*love.*", "I love you!");
 | `String[]`       | `split(CharSequence input)` 围绕此模式的匹配拆分给定输入序列。                      |
 | `String[]`       | `split(CharSequence input, int limit)` 围绕此模式的匹配拆分给定输入序列。           |
 | `String`         | `toString()` 返回此模式的字符串表示形式。                                        |
+
 ## `Matcher`
 `Matcher`类应该被翻译为匹配器，因为在获得这个实例的时候其实并没有开始匹配，只有在调用到具体方法的时候才会开始匹配，所以把`Matcher`类理解为是正则表达式的匹配结果是不正确的，应该是匹配器可以计算出匹配的结果
 
