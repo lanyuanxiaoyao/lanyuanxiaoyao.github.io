@@ -6,4 +6,4 @@ icon: rocket
 type: page
 ---
 
-hello
+hello world
