@@ -23,6 +23,9 @@ type: page
 [计算机书籍控](http://bestcbooks.com/)
 : 给程序员找书用的
 
+[光剑免费图书馆](https://universsky.github.io/)
+: 偶尔能找到很多很难收集的书
+
 ## 种子
 [BTSOW](https://btso.pw/)
 : 非常老牌的搜索网站了
