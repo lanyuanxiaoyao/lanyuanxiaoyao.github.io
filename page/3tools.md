@@ -37,22 +37,6 @@ type: page
 [TinyPNG](https://tinypng.com/)
 : 一张图片在无损的情况下能压缩到多小？只有TinyPNG知道
 
-## 代码
-[MVNrepository](https://mvnrepository.com/)
-: Maven中心仓库
-
-[Sonatype Nexus](http://maven.aliyun.com/nexus/)
-: 阿里云建立的Maven中心仓库镜像，有助于提高国内的开发速度
-
-[淘宝 NPM 镜像](https://npm.taobao.org/)
-: 淘宝建立的NPM镜像，帮助国内快速下载NPM仓库上的资源
-
-[RubyGems - Ruby China](http://gems.ruby-china.org/)
-: 原来由淘宝维护，后转为Ruby China维护的RubyGems镜像，同样是为了提高国内访问Ruby仓库的速度
-
-[AndroidDevTools](http://www.androiddevtools.cn/)
-: 一个收集Android官方开发工具的网站，众所周知，谷歌的Android开发官网被屏蔽了，导致很多的官方工具无法下载，这里给出了解决方案
-
 # 软件
 [QTTabBar](http://qttabbar.wikidot.com/)
 : 绝无仅有的Windows资源管理器(用人话来说就是文件夹)增强插件，用了就离不开了
@@ -75,15 +59,22 @@ type: page
 [小书匠](http://soft.xiaoshujiang.com/)
 : 当之无愧的最强markdown编辑器，不仅支持几乎全部的markdown语法(包括很多第三方的增强语法)，还可以直接链接到各大图床，如Github，新浪微博，七牛等，也可以直接链接到Github，为知笔记，印象笔记等各个笔记系统，非常方便，可以说没有短板
 
-# 学习
+[鱼の后花园](http://www.fishlee.net/)
+: 12306抢票助手……抢票的事情你懂的，当然还有其他的一些软件也非常好用
 
-## 博客
+[12306Bypass-分流抢票](http://www.12306bypass.com/index.html)
+: 抢票这种事情，只有更强悍没有最强悍，我现在在用的是这个
+
+# 学习
 
 [与羡辙聊天中](http://zhangwenli.com/)
 : 只能说……妈蛋！同样是Jekyll搭建的博客，差距怎么就这么大呢？
 
 [技术胖-胜洪宇关注web前端技术](http://jspang.com/)
 : 胖哥的前端教程非常详细，感谢他带我入门Vue，更多的还有React，Weex等，而且均有免费的视频教程，非常用心
+
+[ChionLab | 一个萌豚开发者的窝](https://blog.chionlab.moe/)
+: 听说大神都是死宅？这是一个捣鼓路由器以及嵌入式硬件的死宅
 
 [逗比根据地](https://doub.io/)
 : 一个专注于分享翻墙技术的博客站点，如果你还没能翻墙，那么就访问这个网址：[doub.ws](https://doub.ws/)
@@ -92,4 +83,32 @@ type: page
 : 学习高并发必备网站，内容非常全面而且精良
 
 [鱼C工作室](http://www.fishc.com/)
-: 小甲鱼的视频非常棒，我是跟着小甲鱼学习的算法和Python，喜欢小甲鱼的风格，希望他能越做越好。PS：这个可能已经不算博客了，不过因为小甲鱼一开始就是一个人做的，近年来才开始发展为团队
+: 小甲鱼的视频非常棒，我是跟着小甲鱼学习的算法和Python，喜欢小甲鱼的风格，希望他能越做越好。
+
+[数据结构自考网站首页](http://student.zjzk.cn/course_ware/data_structure/web/main.htm)
+: 号称极难的数据结构，反正往死里学吧
+
+# 开发
+
+## Maven
+[MVNrepository](https://mvnrepository.com/)
+: Maven中心仓库
+
+[Sonatype Nexus](http://maven.aliyun.com/nexus/)
+: 阿里云建立的Maven中心仓库镜像，有助于提高国内的开发速度
+
+## Android
+
+[AndroidDevTools](http://www.androiddevtools.cn/)
+: 一个收集Android官方开发工具的网站，众所周知，谷歌的Android开发官网被屏蔽了，导致很多的官方工具无法下载，这里给出了解决方案
+
+[LiteSuits](https://litesuits.com/)
+: 一个非常好用的Android第三方库
+
+## Node
+[淘宝 NPM 镜像](https://npm.taobao.org/)
+: 淘宝建立的NPM镜像，帮助国内快速下载NPM仓库上的资源
+
+## Ruby
+[RubyGems - Ruby China](http://gems.ruby-china.org/)
+: 原来由淘宝维护，后转为Ruby China维护的RubyGems镜像，同样是为了提高国内访问Ruby仓库的速度
