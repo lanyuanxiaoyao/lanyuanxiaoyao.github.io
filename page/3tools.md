@@ -9,7 +9,7 @@ type: page
 * content
 {:toc}
 
-这个页面里将会收集我用过的一些工具和网站，分享的同时也方便自己查找
+这个页面里将会收集我用过的一些工具和网站，一般以小众的网站和工具为主，一些大家基本上耳熟能详的工具和网站我就不多说了，分享的同时也方便自己查找
 
 # 网站
 
@@ -29,7 +29,13 @@ type: page
 : Maven中心仓库
 
 [Sonatype Nexus](http://maven.aliyun.com/nexus/)
-: 淘宝建立的Maven中心仓库镜像
+: 阿里云建立的Maven中心仓库镜像，有助于提高国内的开发速度
+
+[淘宝 NPM 镜像](https://npm.taobao.org/)
+: 淘宝建立的NPM镜像，帮助国内快速下载NPM仓库上的资源
+
+[RubyGems - Ruby China](http://gems.ruby-china.org/)
+: 原来由淘宝维护，后转为Ruby China维护的RubyGems镜像，同样是为了提高国内访问Ruby仓库的速度
 
 # 软件
 [QTTabBar](http://qttabbar.wikidot.com/)
