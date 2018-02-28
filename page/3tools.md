@@ -17,12 +17,25 @@ type: page
 [MSDN, 我告诉你](https://msdn.itellyou.cn/)
 : 一个收集Windows正版镜像的网站，再也不用到处去寻找各种“纯净版”的Windows系统了，这里一应俱全，不仅是Windows，Office镜像以及各类开发工具也都在这里有
 
+[65,400 免费图标-最大的图标包](https://icons8.cn/)
+: 找图标的网站有很多，我喜欢用这个，不仅图标多，而且还可以方便地切换风格和分辨率
+
+[计算机书籍控](http://bestcbooks.com/)
+: 给程序员找书用的
+
+## 种子
+[BTSOW](https://btso.pw/)
+: 非常老牌的搜索网站了
+
 ## 工具
 [正则表达式测试工具在线调试与分享](http://regex.zjmainstay.cn/)
 : 一个非常棒的正则表达式调试工具，不仅语法全面，文字高亮做得棒，还可以 直接生成PHP，Java等语言的正则表达式测试语句。我最喜欢里面的正则表达式匹配步骤翻译，对正则表达式的学习非常有帮助
 
 [Regulex](https://jex.im/regulex/)
 : 一个将正则表达式转换为可视化图片的网站，可以直观地展现正则表达式地语法，生成的效果非常棒
+
+[TinyPNG](https://tinypng.com/)
+: 一张图片在无损的情况下能压缩到多小？只有TinyPNG知道
 
 ## 代码
 [MVNrepository](https://mvnrepository.com/)
@@ -62,7 +75,9 @@ type: page
 [小书匠](http://soft.xiaoshujiang.com/)
 : 当之无愧的最强markdown编辑器，不仅支持几乎全部的markdown语法(包括很多第三方的增强语法)，还可以直接链接到各大图床，如Github，新浪微博，七牛等，也可以直接链接到Github，为知笔记，印象笔记等各个笔记系统，非常方便，可以说没有短板
 
-# 博客
+# 学习
+
+## 博客
 
 [与羡辙聊天中](http://zhangwenli.com/)
 : 只能说……妈蛋！同样是Jekyll搭建的博客，差距怎么就这么大呢？
@@ -72,3 +87,9 @@ type: page
 
 [逗比根据地](https://doub.io/)
 : 一个专注于分享翻墙技术的博客站点，如果你还没能翻墙，那么就访问这个网址：[doub.ws](https://doub.ws/)
+
+[并发编程网](http://ifeve.com/)
+: 学习高并发必备网站，内容非常全面而且精良
+
+[鱼C工作室](http://www.fishc.com/)
+: 小甲鱼的视频非常棒，我是跟着小甲鱼学习的算法和Python，喜欢小甲鱼的风格，希望他能越做越好。PS：这个可能已经不算博客了，不过因为小甲鱼一开始就是一个人做的，近年来才开始发展为团队
