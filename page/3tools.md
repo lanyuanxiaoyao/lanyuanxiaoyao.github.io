@@ -26,6 +26,9 @@ type: page
 [光剑免费图书馆](https://universsky.github.io/)
 : 偶尔能找到很多很难收集的书
 
+[小森林导航](http://hao.xsldh.com/)
+: 一个网站满足你们所有关于电影的幻想
+
 ## 种子
 [BTSOW](https://btso.pw/)
 : 非常老牌的搜索网站了
@@ -107,6 +110,14 @@ type: page
 
 [LiteSuits](https://litesuits.com/)
 : 一个非常好用的Android第三方库
+
+## Java
+[深入理解Java集合框架](https://github.com/CarpenterLee/JCFInternals)
+: 这是似乎是一个面试必备考题
+
+## Vue
+[Vue相关开源项目库汇总](https://github.com/opendigg/awesome-github-vue)
+: Vue才刚刚开始起步，很多资源都不多，恰好全在这里
 
 ## Node
 [淘宝 NPM 镜像](https://npm.taobao.org/)
