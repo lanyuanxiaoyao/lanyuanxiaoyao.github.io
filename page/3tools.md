@@ -30,5 +30,17 @@ type: page
 : 淘宝建立的Maven中心仓库镜像
 
 # 软件
+[QTTabBar](http://qttabbar.wikidot.com/)
+: 绝无仅有的Windows资源管理器(用人话来说就是文件夹)增强插件，用了就离不开了
+
+[Ditto clipboard manager](http://ditto-cp.sourceforge.net/)
+: 绝无仅有的Windows剪贴板增强工具，再也不用切换页面来回复制黏贴了，再也不同担心之前复制的东西突然要用却找不到了，用了就离不开了
+
+[Wox](http://www.wox.one/)
+: 一款非常小巧的仿Mac Alfred的启动器，再也不用在开始菜单艰难地一个个软件来找了，只需要简单地输入，就可以启动电脑上的任意应用，还有丰富的插件配合使用
+
+[Everything](https://www.voidtools.com/)
+: 绝对的神器，Windows上的搜索增强工具，想要搜索什么东西都是秒搜的感觉实在是太棒了
+
 [Office Tool Plus](https://otp.landian.la/index.html)
 : 一个非常全面的Office全家桶安装工具，省去了到处找Office离线包的烦恼，不仅安装做得非常好，卸载工具也做得很棒
