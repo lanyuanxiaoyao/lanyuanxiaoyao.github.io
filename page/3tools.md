@@ -46,3 +46,9 @@ type: page
 
 [Office Tool Plus](https://otp.landian.la/index.html)
 : 一个非常全面的Office全家桶安装工具，省去了到处找Office离线包的烦恼，不仅安装做得非常好，卸载工具也做得很棒
+
+[MyChrome](https://bbs.kafan.cn/thread-1725205-1-1.html)
+: 可以方便地免翻墙下载谷歌浏览器并制作称为绿色版，方便更换系统的时候携带，还可以方便地指定启动参数。另贴上源码仓库地址：[http://code.taobao.org/p/mychrome/src/trunk/release/](http://code.taobao.org/p/mychrome/src/trunk/release/)
+
+[小书匠](http://soft.xiaoshujiang.com/)
+: 当之无愧的最强markdown编辑器，不仅支持几乎全部的markdown语法(包括很多第三方的增强语法)，还可以直接链接到各大图床，如Github，新浪微博，七牛等，也可以直接链接到Github，为知笔记，印象笔记等各个笔记系统，非常方便，可以说没有短板
