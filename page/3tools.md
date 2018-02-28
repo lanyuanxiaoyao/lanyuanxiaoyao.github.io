@@ -10,6 +10,7 @@ type: page
 {:toc}
 
 # 网站
+
 ## 资源
 [MSDN, 我告诉你](https://msdn.itellyou.cn/)
 : 一个收集Windows正版镜像的网站，再也不用到处去寻找各种“纯净版”的Windows系统了，这里一应俱全，不仅是Windows，Office镜像以及各类开发工具也都在这里有
@@ -20,6 +21,13 @@ type: page
 
 [Regulex](https://jex.im/regulex/)
 : 一个将正则表达式转换为可视化图片的网站，可以直观地展现正则表达式地语法，生成的效果非常棒
+
+## 代码
+[MVNrepository](https://mvnrepository.com/)
+: Maven中心仓库
+
+[Sonatype Nexus](http://maven.aliyun.com/nexus/)
+: 淘宝建立的Maven中心仓库镜像
 
 # 软件
 [Office Tool Plus](https://otp.landian.la/index.html)
