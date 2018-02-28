@@ -37,6 +37,9 @@ type: page
 [RubyGems - Ruby China](http://gems.ruby-china.org/)
 : 原来由淘宝维护，后转为Ruby China维护的RubyGems镜像，同样是为了提高国内访问Ruby仓库的速度
 
+[AndroidDevTools](http://www.androiddevtools.cn/)
+: 一个收集Android官方开发工具的网站，众所周知，谷歌的Android开发官网被屏蔽了，导致很多的官方工具无法下载，这里给出了解决方案
+
 # 软件
 [QTTabBar](http://qttabbar.wikidot.com/)
 : 绝无仅有的Windows资源管理器(用人话来说就是文件夹)增强插件，用了就离不开了
