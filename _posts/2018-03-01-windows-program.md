@@ -46,7 +46,78 @@ tags: [软件推荐,杂谈]
 
 ![][6]
 
-进入主界面之后我们就可以看到
+进入主界面之后我们就可以看到非常显眼的**Language**，然后我们选择**Download Language File**
+
+![][7]
+
+在弹出的窗口中可以看到有很多人为QTTabBar进行了翻译，其中就有我们熟悉的中文，我们可以通过过滤选项找到所有的简体中文
+
+![][8]
+
+这个软件的粉丝也是很多的，中文翻译非常多
+
+![][9]
+
+这些翻译版本其实都是大同小异，已经非常完善的了，选择一个你喜欢的，看着顺眼的，双击即可下载，随便找个地方保存起来，然后重新回到设置界面
+
+![][10]
+
+找到你刚刚下载的语言文件，然后点击确定，再重新打开设置菜单，就可以看到我们熟悉的中文了！（标签栏的右键菜单需要关掉文件夹再重新打开才能看到更换的语言）
+
+![][11]
+
+### 常用设置
+QTTabBar的功能非常多，如果要一个个说的话，恐怕要说很久了，其实**想要用好一个软件，就要把软件的功能一个个都尝试一遍**，这句话是很有道理的，所以如果你也想把QTTabBar用得好，就要自己慢慢去探索，反正搞不坏电脑，放心搞就是了。  
+下面我就简单介绍几个我觉得值得一说的设置
+
+#### 添加+按钮到标签栏
+有时候我们再浏览一个文件夹的时候想快速打开一个新的文件夹，再浏览器中，标签栏的位置会有一个+的按钮，点击就可以新建一个页面，QTTabBar也有这个按钮，但是默认是关闭的，所以我们就要手动打开：**标签设置**→**常规**→**添加“+”按钮到标签栏**
+
+![][12]
+
+应用后就可以看到QTTabBar多出一个+的按钮了，点击就可以新建窗口
+
+#### 点+号打开默认文件夹
+通过上面那一步增加了一个+按钮，但是点一下，就会发现，好像和我们想象中的功能不太一样？怎么会弹出一个框让我选文件夹呢，这样实在是太反人类了，我就想直接打开桌面然后让我自己去找文件夹。其实这也是可以的，让这个+按钮打开默认的文件夹，只需要**鼠标事件**→**互动**→**标签和标签栏**→**点击标签栏的“+”按钮**→**打开默认标签**，就可以了
+
+![][13]
+
+#### 更换皮肤
+如果默认的标签栏太丑了怎么办？敢不敢换一下样式？当然可以，看到设置里面有一个**外观选项**的设置就知道这个软件的样式不简单，不仅可以修改字体、颜色、大小，还可以直接替换背景
+
+![][14]
+
+下载方式和语言文件类似，就不赘述了
+
+![][15]
+
+可以替换的有背景和关闭按钮等，不过值得吐槽的是，想找到一个好看的真的很难……  
+可能你会发现不知道在那里选择下载好的背景图片，其实秘密在这里
+
+![][16]
+
+#### 群组列表
+浏览器会有收藏夹，可以快速打开收藏的网站，QTTabBar当然也有，这个功能叫做群组列表
+
+![][17]
+
+在群组列表中可以设置一些常用的文件夹，然后在标签栏可以快速打开
+
+![][18]
+
+#### 强大的文件预览功能
+前一段时间，某西在朋友圈推荐了一款仿Mac点击空格预览文件的软件，当时我的内心毫无波动甚至想吃冰淇淋！因为预览只是QTTabBar的一个小功能而已，但同样一点都不简单  
+QTTabBar可以预览图片、视频、音频、文本四大文件，默认是只要鼠标移动到文件上方就自动预览，但是这样对我们来说其实是很不方便的，总不能移动一下鼠标就开始放视频放音乐吧，所以我们可以设置**仅在shift键按下时显示**就可以了
+
+![][19]
+
+#### 文件夹预览
+文件可以预览，作为一个文件夹工具，又怎么不能预览文件夹呢？我们经常要打开一个文件夹来查看里面的文件，经常是一层层地点进去，等到要点回来的时候就傻眼了，这个时候！
+
+![][20]
+
+默认的情况下，我们把鼠标移动到文件夹上时，就会在右侧显示一个蓝色的小按钮，点这个按钮就可以立刻预览到文件夹下的文件夹和文件，直接点击就可以打开这个文件夹和文件，一个字：爽！
+
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/qttabbar_top.png "QTTabBar"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h03m05s_001_.png
@@ -54,3 +125,17 @@ tags: [软件推荐,杂谈]
   [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h16m26s_002_.png
   [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h20m53s_001_.png
   [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h21m23s_002_.png
+  [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h22m10s_003_.png
+  [8]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h25m32s_004_.png
+  [9]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h26m46s_005_.png
+  [10]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h46m34s_014_.png
+  [11]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h28m29s_006_.png
+  [12]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h54m12s_015_.png
+  [13]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h30m35s_007_.png
+  [14]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h28m29s_006_.png
+  [15]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h33m25s_008_.png
+  [16]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_10h09m43s_018_.png
+  [17]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h34m16s_010_.png
+  [18]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h34m01s_009_.png
+  [19]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h35m58s_011_.png
+  [20]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h39m20s_013_.png
