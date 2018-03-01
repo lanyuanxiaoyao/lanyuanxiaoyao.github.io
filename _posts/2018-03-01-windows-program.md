@@ -18,7 +18,7 @@ tags: [软件推荐,杂谈]
 [http://qttabbar.wikidot.com/](http://qttabbar.wikidot.com/)
 
 ## 简介
-相信你也有过这样糟心的体验：打开了很多个文件夹，全都堆在屏幕上乱七八糟，这个文件夹挡住那个文件夹，想找一个文件夹找不到，想全部关掉还要一个个点。如果可以项浏览器那样整理文件夹该多好啊！  
+相信你也有过这样糟心的体验：打开了很多个文件夹，全都堆在屏幕上乱七八糟，这个文件夹挡住那个文件夹，想找一个文件夹找不到，想全部关掉还要一个个点。如果可以像浏览器那样整理文件夹该多好啊！  
 没错！QTTabBar就可以让你做到这点！让Windows资源管理器变成一个浏览器，所有文件夹都在一个界面上，向使用浏览器一样使用多标签来使用文件夹。  
 
 ![QTTabBar][1]
@@ -92,7 +92,7 @@ QTTabBar的功能非常多，如果要一个个说的话，恐怕要说很久了
 ![][15]
 
 可以替换的有背景和关闭按钮等，不过值得吐槽的是，想找到一个好看的真的很难……  
-可能你会发现不知道在那里选择下载好的背景图片，其实秘密在这里
+可能你会发现不知道在哪里选择下载好的背景图片，其实秘密在这里
 
 ![][16]
 
@@ -118,6 +118,17 @@ QTTabBar可以预览图片、视频、音频、文本四大文件，默认是只
 
 默认的情况下，我们把鼠标移动到文件夹上时，就会在右侧显示一个蓝色的小按钮，点这个按钮就可以立刻预览到文件夹下的文件夹和文件，直接点击就可以打开这个文件夹和文件，一个字：爽！
 
+## 注意
+QTTabBar实际上是一个IE浏览器插件，可能不是程序猿的你很难想象，其实资源管理器和IE是差不多的东西，所以QTTabBar是以IE浏览器插件存在的，这里会遇到的问题就是QTTabBar会被杀毒软件误删，尤其是杀毒软件清理IE插件的时候，经常会把QTTabBar给禁用了，所以如果遇到QTTabBar突然失效，可以在IE浏览器里把插件重新打开
+
+![][21]
+
+然后就可以看到QTTabBar了
+
+![][22]
+
+如果看到QTTabBar有被禁用，就只需要重新启用就没问题了
+
 
   [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/qttabbar_top.png "QTTabBar"
   [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h03m05s_001_.png
@@ -139,3 +150,5 @@ QTTabBar可以预览图片、视频、音频、文本四大文件，默认是只
   [18]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h34m01s_009_.png
   [19]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h35m58s_011_.png
   [20]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h39m20s_013_.png
+  [21]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_10h38m18s_019_.png
+  [22]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_10h39m17s_020_.png
