@@ -17,3 +17,5 @@ top: true
 
 # 必备软件
 这里是我每次重装系统都要装上的软件，可以说真的就是**必备**了！
+
+- [QTTabBar](http://lanyuanxiaoyao.com/2018/03/01/windows-program/)
