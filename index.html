@@ -67,7 +67,11 @@ layout: default
                     </div>
                 </div>
                 <div class="excerpt">
+                    {% if post.description %}
+                    {{ post.description }}
+                    {% else %}
                     {{ post.content | strip_html | truncate:150 }}
+                    {% endif %}
                 </div>
                 <div class="read-all">
                     <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
