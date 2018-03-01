@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Windows软件推荐(自用)
+title: Win软件推荐——QTTabBar
 date: 2018-03-01 08:44
 categories: Others
 tags: [软件推荐,杂谈]
