@@ -4,6 +4,7 @@ title: Java Annotation(注解)
 date: 2018-03-13 16:11
 categories: Java
 tags: [Java]
+description: 注解是Java里面非常重要并且可以给我们的代码带来很大便捷的一个知识点，自从接触了Spring Boot之后，就发现注解的强大足以代替传统的xml文件，可以把配置项更加精准地定位到具体的代码上，这种“全局配置”的爽快的感觉非常令人欣喜，通过学习注解，也解开了Spring AOP神秘的面纱……
 ---
 
 * content
