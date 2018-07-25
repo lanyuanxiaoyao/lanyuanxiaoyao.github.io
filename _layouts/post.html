@@ -101,6 +101,11 @@ layout: default
     for (var i = 0; i < aTags.length; i++) {
         aTags[i].setAttribute('target', '_blank')
     }
+    // highline
+    var string = $('article').html()
+    string = string.replace(/==(.*?)==/g, '<highline>$1</highline>')
+    $('article').html(string)
+    console.log('works')
 }());
 </script>
 <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
