@@ -6,7 +6,8 @@ categories: Zookeeper
 tags: [Java,Zookeeper,大数据]
 description: Zookeeper是分布式大数据系统中的状态枢纽
 ---
-[toc]
+* content
+{:toc}
 
 # TODO
 - [ ] 技术背景
