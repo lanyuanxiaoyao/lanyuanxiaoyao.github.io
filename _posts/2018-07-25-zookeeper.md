@@ -1,7 +1,12 @@
 ---
-title: Zookeeper
+layout: post
+title: Zookeeper学习之路
+date: 2018-07-25 22:00
+categories: Zookeeper
+tags: [Java,Zookeeper,大数据]
+description: Zookeeper是分布式大数据系统中的状态枢纽
 ---
-[toc!?depth=4&direction=lr]
+[toc]
 
 # TODO
 - [ ] 技术背景
