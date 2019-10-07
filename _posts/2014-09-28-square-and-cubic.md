@@ -1,5 +1,6 @@
 ---
 title: 2007.平方和与立方和
+key: 2014-09-28-square-and-cubic
 date: 2014-09-28 17:27
 categories: 杭电HDU
 tags: [杭电HDU]

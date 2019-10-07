@@ -1,5 +1,6 @@
 ---
 title: 实体类怎么用上面向对象的原则?
+key: 2017-06-25-how-class-use-ood
 date: 2017-06-25 12:13
 categories: 2017编程提高
 tags: [面向对象设计,Issues]

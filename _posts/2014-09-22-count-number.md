@@ -1,5 +1,6 @@
 ---
 title: 2008.数值统计
+key: 2014-09-22-count-number
 date: 2014-09-22 09:54
 categories: 杭电HDU
 tags: [杭电HDU]

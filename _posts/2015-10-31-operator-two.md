@@ -1,5 +1,6 @@
 ---
 title: C++ 运算符重载II
+key: 2015-10-31-operator-two
 date: 2015-10-31 11:01
 categories: C++
 tags: [C++]

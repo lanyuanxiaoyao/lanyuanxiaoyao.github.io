@@ -1,5 +1,6 @@
 ---
 title: 70.Climbing Stairs(Easy)
+key: 2016-10-23-climbing-stairs
 date: 2016-10-23 12:50
 categories: LeetCode
 tags: [LeetCode,Easy,递归]

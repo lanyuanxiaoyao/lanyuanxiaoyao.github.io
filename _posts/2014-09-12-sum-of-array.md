@@ -1,5 +1,6 @@
 ---
 title: 2009.求数列的和
+key: 2014-09-12-sum-of-array
 date: 2014-09-12 11:28
 categories: 杭电HDU
 tags: [杭电HDU]

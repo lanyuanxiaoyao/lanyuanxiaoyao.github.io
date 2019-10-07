@@ -1,5 +1,6 @@
 ---
 title: C++ 成员函数与友元函数
+key: 2015-10-31-friend-function
 date: 2015-10-31 11:25
 categories: C++
 tags: [C++]

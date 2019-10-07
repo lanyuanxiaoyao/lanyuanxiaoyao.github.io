@@ -1,5 +1,6 @@
 ---
 title: Windows自用软件推荐
+key: 2018-02-28-window-program-0
 date: 2018-02-28 10:47
 categories: Others
 tags: [软件推荐,杂谈]

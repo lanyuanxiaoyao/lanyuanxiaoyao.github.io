@@ -1,5 +1,6 @@
 ---
 title: 1040.As Easy As A+B
+key: 2014-10-02-as-easy-as-a-add-b
 date: 2014-10-02 19:42
 categories: 杭电HDU
 tags: [杭电HDU]

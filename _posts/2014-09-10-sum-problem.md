@@ -1,5 +1,6 @@
 ---
 title: 1001.Sum Problem
+key: 2014-09-10-sum-problem
 date: 2014-09-10 16:45
 categories: 杭电HDU
 tags: [杭电HDU]

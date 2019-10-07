@@ -1,5 +1,6 @@
 ---
 title: 263.Ugly Number(Easy)
+key: 2016-11-14-ugly-number
 date: 2016-11-14 14:29
 categories: LeetCode
 tags: [LeetCode,Easy]

@@ -1,5 +1,6 @@
 ---
 title: 67.Add Binary(Easy)
+key: 2016-10-30-add-binary
 date: 2016-10-30 23:14
 categories: LeetCode
 tags: [LeetCode,Easy,大数运算,数组]

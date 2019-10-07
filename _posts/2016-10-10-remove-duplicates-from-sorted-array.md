@@ -1,5 +1,6 @@
 ---
 title: 26.Remove Duplicates from Sorted Array(Easy)
+key: 2016-10-10-remove-duplicates-from-sorted-array
 date: 2016-10-10 17:34
 categories: LeetCode
 tags: [LeetCode,Easy,数组]

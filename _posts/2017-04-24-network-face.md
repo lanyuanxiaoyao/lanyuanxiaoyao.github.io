@@ -1,5 +1,6 @@
 ---
 title: 计算机网络面试题集锦
+key: 2017-04-24-network-face
 date: 2017-04-24 12:46
 tags: [面试题,Java,网络]
 categories: 面试

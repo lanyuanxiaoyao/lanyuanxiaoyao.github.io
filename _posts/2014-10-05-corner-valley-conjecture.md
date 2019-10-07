@@ -1,5 +1,6 @@
 ---
 title: 1279.验证角谷猜想
+key: 2014-10-05-corner-valley-conjecture
 date: 2014-10-05 14:18
 categories: 杭电HDU
 tags: [杭电HDU]

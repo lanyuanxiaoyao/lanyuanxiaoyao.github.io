@@ -1,5 +1,6 @@
 ---
 title: 位运算
+key: 2017-03-26-bit-operation
 date: 2017-03-26 01:21
 categories: Java
 tags: [Java,位运算]

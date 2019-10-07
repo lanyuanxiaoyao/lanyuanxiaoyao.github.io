@@ -1,5 +1,6 @@
 ---
 title: Spring Boot（一） Spring Boot项目创建
+key: 2017-06-20-springboot-1
 date: 2017-06-20 10:44
 categories: Spring
 tags: [Spring,Spring Boot]

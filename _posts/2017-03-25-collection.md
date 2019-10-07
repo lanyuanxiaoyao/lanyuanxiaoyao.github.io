@@ -1,5 +1,6 @@
 ---
 title: 集合专题1 Collection
+key: 2017-03-25-collection
 date: 2017-03-25 20:58
 categories: 集合专题
 tags: [集合专题]

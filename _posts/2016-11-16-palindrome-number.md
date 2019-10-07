@@ -1,5 +1,6 @@
 ---
 title: 9.Palindrome Number(Easy)
+key: 2016-11-16-palindrome-number
 date: 2016-11-16 14:31
 categories: LeetCode
 tags: [LeetCode,Easy,回文数]

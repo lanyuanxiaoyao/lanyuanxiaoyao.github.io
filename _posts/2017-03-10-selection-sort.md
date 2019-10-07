@@ -1,5 +1,6 @@
 ---
 title: 选择排序(Selection Sort)
+key: 2017-03-10-selection-sort
 date: 2017-03-10 15:27
 categories: 排序专题
 tags: [排序,总结]

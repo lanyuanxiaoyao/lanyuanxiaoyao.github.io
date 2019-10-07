@@ -1,5 +1,6 @@
 ---
 title: 原码、反码和补码
+key: 2017-03-26-three-code
 date: 2017-03-26 17:08
 categories: Others
 tags: [计算机组成原理]

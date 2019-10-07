@@ -1,5 +1,6 @@
 ---
 title: 102.Binary Tree Level Order Traversal(Easy)
+key: 2016-10-18-binary-tree-level-order-traversal
 date: 2016-10-18 14:46
 categories: LeetCode
 tags: [LeetCode,Easy,二叉树,队列]

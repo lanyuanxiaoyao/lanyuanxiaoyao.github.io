@@ -1,5 +1,6 @@
 ---
 title: Java 注解(Annotation)
+key: 2018-03-13-annotation
 date: 2018-03-13 16:11
 categories: Java
 tags: [Java]

@@ -1,5 +1,6 @@
 ---
 title: 415.Add Strings(Easy)
+key: 2016-10-30-add-strings
 date: 2016-10-30 23:39
 categories: LeetCode
 tags: [LeetCode,Easy,大数运算,数组]

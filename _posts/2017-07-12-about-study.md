@@ -1,5 +1,6 @@
 ---
 title: 关于技术的学习
+key: 2017-07-12-about-study
 date: 2017-07-12 15:34
 categories: 2017编程提高
 tags: [学习]

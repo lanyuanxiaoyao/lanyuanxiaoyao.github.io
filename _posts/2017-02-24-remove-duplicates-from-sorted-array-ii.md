@@ -1,5 +1,6 @@
 ---
 title: 80.Remove Duplicates from Sorted Array II(Medium)
+key: 2017-02-24-remove-duplicates-from-sorted-array-ii
 date: 2017-02-24 11:11
 categories: LeetCode
 tags: [LeetCode,Medium,计数,数组]

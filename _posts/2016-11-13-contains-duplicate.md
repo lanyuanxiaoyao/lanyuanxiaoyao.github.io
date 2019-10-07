@@ -1,5 +1,6 @@
 ---
 title: 217.Contains Duplicate(Easy)
+key: 2016-11-13-contains-duplicate
 date: 2016-11-13 14:14
 categories: LeetCode
 tags: [LeetCode,Easy,数组,计数,一行实现]

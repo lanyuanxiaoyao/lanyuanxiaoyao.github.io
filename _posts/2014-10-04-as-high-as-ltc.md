@@ -1,5 +1,6 @@
 ---
 title: 1407.测试你是否和LTC水平一样高
+key: 2014-10-04-as-high-as-ltc
 date: 2014-10-04 01:43
 categories: 杭电HDU
 tags: [杭电HDU,解方程]

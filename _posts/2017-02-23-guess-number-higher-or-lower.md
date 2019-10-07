@@ -1,5 +1,6 @@
 ---
 title: 374.Guess Number Higher or Lower(Easy)
+key: 2017-02-23-guess-number-higher-or-lower
 date: 2017-02-23 10:18
 categories: LeetCode
 tags: [LeetCode,Easy,二分查找]

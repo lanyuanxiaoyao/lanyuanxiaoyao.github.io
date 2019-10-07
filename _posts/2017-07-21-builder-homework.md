@@ -1,5 +1,6 @@
 ---
 title: 2017编程提高第6节课(作业)
+key: 2017-07-21-builder-homework
 date: 2017-07-21 12:53
 categories: 2017编程提高
 tags: [设计模式,建造者模式,作业]

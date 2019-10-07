@@ -1,5 +1,6 @@
 ---
 title: 为什么不直接使用socket ,还要定义一个新的websocket 的呢？
+key: 2017-07-22-websocket-socket
 date: 2017-07-22 09:34
 categories: 2017编程提高
 tags: [Websocket,Socket,Issues]

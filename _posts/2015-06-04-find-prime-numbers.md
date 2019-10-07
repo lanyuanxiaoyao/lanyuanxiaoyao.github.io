@@ -1,5 +1,6 @@
 ---
 title: 1262.寻找素数对
+key: 2015-06-04-find-prime-numbers
 date: 2015-06-04 21:06
 categories: 杭电HDU
 tags: [杭电HDU,搜索]

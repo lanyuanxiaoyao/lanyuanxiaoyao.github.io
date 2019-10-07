@@ -1,5 +1,6 @@
 ---
 title: 1235.统计同成绩学生人数
+key: 2014-10-03-count-mark
 date: 2014-10-03 23:34
 categories: 杭电HDU
 tags: [杭电HDU,计数]

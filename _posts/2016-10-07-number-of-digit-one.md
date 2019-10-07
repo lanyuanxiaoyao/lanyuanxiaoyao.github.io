@@ -1,5 +1,6 @@
 ---
 title: 233.Number of Digit One（暂留）
+key: 2016-10-07-number-of-digit-one
 date: 2016-10-07 17:36
 categories: LeetCode
 tags: [LeetCode,Medium,搜索,计数]

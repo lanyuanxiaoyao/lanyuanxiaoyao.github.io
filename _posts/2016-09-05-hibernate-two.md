@@ -1,5 +1,6 @@
 ---
 title: Hibernate(2.0)＿Hibernate框架的配置
+key: 2016-09-05-hibernate-two
 date: 2016-09-05 23:43
 categories: Hibernate
 tags: Hibernate

@@ -1,5 +1,6 @@
 ---
 title: 206.Reverse Linked List(Easy)
+key: 2016-10-07-reverse-linked-list
 date: 2016-10-07 13:23
 categories: LeetCode
 tags: [LeetCode,Easy,链表]

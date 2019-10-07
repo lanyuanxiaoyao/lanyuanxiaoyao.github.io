@@ -1,5 +1,6 @@
 ---
 title: 2000.ASCII码排序
+key: 2014-09-13-ascii-sort
 date: 2014-09-13 23:12
 categories: 杭电HDU
 tags: [杭电HDU]

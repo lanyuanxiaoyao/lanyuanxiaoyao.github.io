@@ -1,5 +1,6 @@
 ---
 title: 141.Linked List Cycle(Easy)
+key: 2016-10-18-linked-list-cycle
 date: 2016-10-18 15:15
 categories: LeetCode
 tags: [LeetCode,Easy,链表]

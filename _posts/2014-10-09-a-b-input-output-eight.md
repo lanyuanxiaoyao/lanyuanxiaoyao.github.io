@@ -1,5 +1,6 @@
 ---
 title: 1096.A+B for Input-Output Practice (VIII)
+key: 2014-10-09-a-b-input-output-eight
 date: 2014-10-09 00:01
 categories: 杭电HDU
 tags: [杭电HDU]

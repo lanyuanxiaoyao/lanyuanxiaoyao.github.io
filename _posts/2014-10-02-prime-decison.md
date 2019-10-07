@@ -1,5 +1,6 @@
 ---
 title: 2012.素数判定
+key: 2014-10-02-prime-decison
 date: 2014-10-02 19:41
 categories: 杭电HDU
 tags: [杭电HDU]

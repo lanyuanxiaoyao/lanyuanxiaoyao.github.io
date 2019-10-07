@@ -1,5 +1,6 @@
 ---
 title: Java+SqlServer的增删改查 
+key: 2015-11-22-java-sqlserver
 date: 2015-11-22 15:25
 categories: Java
 tags: [Java,数据库,SqlServer]

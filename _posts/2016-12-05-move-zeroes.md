@@ -1,5 +1,6 @@
 ---
 title: 283.Move Zeroes(Easy)
+key: 2016-12-05-move-zeroes
 date: 2016-12-05 14:33
 categories: LeetCode
 tags: [LeetCode,Easy,数组]

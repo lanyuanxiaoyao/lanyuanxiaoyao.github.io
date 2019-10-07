@@ -1,5 +1,6 @@
 ---
 title: Spring Boot（三） Spring boot + Hibernate 多租户的使用
+key: 2017-07-14-muti-tenant
 date: 2017-07-14 11:44
 categories: Spring
 tags: [Spring,Spring Boot,Hibernate]

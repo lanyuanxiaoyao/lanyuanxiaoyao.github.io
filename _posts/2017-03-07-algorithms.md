@@ -1,5 +1,6 @@
 ---
 title: Algorithms(算法详解) 汉化项目
+key: 2017-03-07-algorithms
 date: 2017-03-07 14:00
 categories: 项目
 tags: [汉化,项目]

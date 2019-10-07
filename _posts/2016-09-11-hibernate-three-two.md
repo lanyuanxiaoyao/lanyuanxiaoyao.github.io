@@ -1,5 +1,6 @@
 ---
 title: Hibernate(3.2)＿Hibernate多表的操作
+key: 2016-09-11-hibernate-three-two
 date: 2016-09-11 11:18
 categories: Hibernate
 tags: Hibernate

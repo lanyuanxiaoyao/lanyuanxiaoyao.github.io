@@ -1,5 +1,6 @@
 ---
 title: 2004.成绩转换
+key: 2014-09-13-change-mark
 date: 2014-09-13 23:06
 categories: 杭电HDU
 tags: [杭电HDU]

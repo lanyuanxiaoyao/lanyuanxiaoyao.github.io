@@ -1,5 +1,6 @@
 ---
 title: 1095.A+B for Input-Output Practice (VII)
+key: 2014-09-17-a-b-input-output-seven
 date: 2014-09-17 17:44
 categories: 杭电HDU
 tags: [杭电HDU]

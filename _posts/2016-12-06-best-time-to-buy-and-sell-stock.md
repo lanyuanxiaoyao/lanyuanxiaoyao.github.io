@@ -1,5 +1,6 @@
 ---
 title: 121. Best Time to Buy and Sell Stock(Easy)
+key: 2016-12-06-best-time-to-buy-and-sell-stock
 date: 2016-12-06 14:33
 categories: LeetCode
 tags: [LeetCode,Easy,动态规划,一行实现]

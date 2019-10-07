@@ -1,5 +1,6 @@
 ---
 title: 241.Different Ways to Add Parentheses(Medium)
+key: 2016-10-07-different-ways-to-add-parentheses
 date: 2016-10-07 22:53
 categories: LeetCode
 tags: [LeetCode,Medium,递归,计数]

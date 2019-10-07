@@ -1,5 +1,6 @@
 ---
 title: 344.Reverse String(Easy)
+key: 2016-10-05-reverse-string
 date: 2016-10-05 17:12
 categories: LeetCode
 tags: [LeetCode,Easy,位运算,字符串处理]

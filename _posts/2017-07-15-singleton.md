@@ -1,5 +1,6 @@
 ---
 title: 单例模式（Singleton Pattern）
+key: 2017-07-15-singleton
 date: 2017-07-15 22:05
 categories: 设计模式
 tags: [设计模式,单例模式]

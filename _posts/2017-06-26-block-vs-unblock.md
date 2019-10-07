@@ -1,5 +1,6 @@
 ---
 title: 为什么异步IO不能完全取代阻塞IO
+key: 2017-06-26-block-vs-unblock
 date: 2017-06-26 10:55
 categories: 2017编程提高
 tags: [IO,Issues]

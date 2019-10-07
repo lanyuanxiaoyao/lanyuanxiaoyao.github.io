@@ -1,5 +1,6 @@
 ---
 title: 328.Odd Even Linked List(Medium)
+key: 2016-11-01-odd-even-linked-list
 date: 2016-11-01 23:22
 categories: LeetCode
 tags: [LeetCode,Medium,链表]

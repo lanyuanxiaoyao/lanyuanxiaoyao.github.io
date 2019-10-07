@@ -1,5 +1,6 @@
 ---
 title: 2001.计算两点间的距离
+key: 2014-09-10-caculate-two-point
 date: 2014-09-10 17:03
 categories: 杭电HDU
 tags: [杭电HDU]

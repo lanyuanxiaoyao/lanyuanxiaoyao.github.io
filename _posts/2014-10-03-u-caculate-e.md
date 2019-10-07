@@ -1,5 +1,6 @@
 ---
 title: 1012.u Calculate e
+key: 2014-10-03-u-caculate-e
 date: 2014-10-03 12:40
 categories: 杭电HDU
 tags: [杭电HDU]

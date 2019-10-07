@@ -1,5 +1,6 @@
 ---
 title: 2011.多项式求和
+key: 2014-09-22-polynomial-sum
 date: 2014-09-22 09:40
 categories: 杭电HDU
 tags: [杭电HDU]

@@ -1,5 +1,6 @@
 ---
 title: Hibernate(3.0)＿Hibernate单表的增删改查
+key: 2016-09-06-hibernate-three
 date: 2016-09-06 11:04
 categories: Hibernate
 tags: Hibernate

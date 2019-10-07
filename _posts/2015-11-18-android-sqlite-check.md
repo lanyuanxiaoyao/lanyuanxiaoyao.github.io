@@ -1,5 +1,6 @@
 ---
 title: Android 查看应用内数据库相关问题
+key: 2015-11-18-android-sqlite-check
 date: 2015-11-18 15:51
 categories: Android
 tags: [Android,数据库,Sqlite]

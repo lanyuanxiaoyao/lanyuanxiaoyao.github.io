@@ -1,5 +1,6 @@
 ---
 title: 345.Reverse Vowels of a String(Easy)
+key: 2016-10-30-reverse-vowels-of-a-string
 date: 2016-10-30 22:55
 categories: LeetCode
 tags: [LeetCode,Easy,字符串处理,堆栈]

@@ -1,5 +1,6 @@
 ---
 title: 2010.水仙花数
+key: 2014-09-30-flower-number
 date: 2014-09-30 19:29
 categories: 杭电HDU
 tags: [杭电HDU]

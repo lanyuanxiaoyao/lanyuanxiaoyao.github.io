@@ -1,5 +1,6 @@
 ---
 title: 226.Invert Binary Tree(Easy)
+key: 2016-11-27-invert-binary-tree
 date: 2016-11-27 14:32
 categories: LeetCode
 tags: [LeetCode,Easy,二叉树,递归]

@@ -1,5 +1,6 @@
 ---
 title: 7.Reverse Integer(Easy)
+key: 2016-10-11-reverse-integer
 date: 2016-10-11 23:02
 categories: LeetCode
 tags: [LeetCode,Easy,溢出]

@@ -1,5 +1,6 @@
 ---
 title: 冒泡排序(Bubble Sort)
+key: 2017-03-09-bubble-sort
 date: 2017-03-09 23:35
 categories: 排序专题
 tags: [排序,总结]

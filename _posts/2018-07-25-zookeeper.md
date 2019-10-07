@@ -1,5 +1,6 @@
 ---
 title: Zookeeper学习之路
+key: 2018-07-25-zookeeper
 date: 2018-07-25 22:00
 categories: Zookeeper
 tags: [Java,Zookeeper,大数据]

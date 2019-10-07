@@ -1,5 +1,6 @@
 ---
 title: 2002.计算球体积
+key: 2014-09-12-caculate-ball
 date: 2014-09-12 21:36
 categories: 杭电HDU
 tags: [杭电HDU]

@@ -1,5 +1,6 @@
 ---
 title: 6.ZigZag Conversion(Easy)
+key: 2016-11-01-zigzag-conversion
 date: 2016-11-01 23:15
 categories: LeetCode
 tags: [LeetCode,Easy]

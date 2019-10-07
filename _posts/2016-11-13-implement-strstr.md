@@ -1,5 +1,6 @@
 ---
 title: 28.Implement strStr()(Easy)
+key: 2016-11-13-implement-strstr
 date: 2016-11-13 12:24
 categories: LeetCode
 tags: [LeetCode,Easy,搜索,字符串处理,一行实现]

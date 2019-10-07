@@ -1,5 +1,6 @@
 ---
 title: C++ 继承与多重继承
+key: 2015-11-12-multiple-inheritance
 date: 2015-11-12 16:56
 categories: C++
 tags: [C++]

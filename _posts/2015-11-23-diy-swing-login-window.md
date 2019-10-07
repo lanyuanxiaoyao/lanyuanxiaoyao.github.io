@@ -1,5 +1,6 @@
 ---
 title: Java Swing 实现带抖动提示功能的登录窗口
+key: 2015-11-23-diy-swing-login-window
 date: 2015-11-23 20:35
 categories: Java
 tags: [Java,Swing]

@@ -1,5 +1,6 @@
 ---
 title: 1091.A+B for Input-Output Practice (III)
+key: 2014-09-17-a-b-input-output-three
 date: 2014-09-17 17:16
 categories: 杭电HDU
 tags: [杭电HDU]

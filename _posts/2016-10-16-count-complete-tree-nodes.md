@@ -1,5 +1,6 @@
 ---
 title: 222.Count Complete Tree Nodes(Medium)
+key: 2016-10-16-count-complete-tree-nodes
 date: 2016-10-16 11:58
 categories: LeetCode
 tags: [LeetCode,Medium,二叉树,计数,递归]

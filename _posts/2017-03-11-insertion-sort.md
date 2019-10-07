@@ -1,5 +1,6 @@
 ---
 title: 插入排序(Insertion Sort)
+key: 2017-03-11-insertion-sort
 date: 2017-3-11 17:23
 categories: 排序专题
 tags: [排序,总结]

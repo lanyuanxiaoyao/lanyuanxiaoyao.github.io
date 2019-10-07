@@ -1,5 +1,6 @@
 ---
 title: 500.Keyboard Row(Easy)
+key: 2017-02-23-keyboard-row
 date: 2017-02-23 11:26
 categories: LeetCode
 tags: [LeetCode,Easy,搜索,一行实现]

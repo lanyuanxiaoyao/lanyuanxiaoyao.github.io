@@ -1,5 +1,6 @@
 ---
 title: 264.Ugly Number II(Medium)
+key: 2016-11-15-ugly-number-two
 date: 2016-11-15 14:30
 categories: LeetCode
 tags: [LeetCode,Medium,DFS]

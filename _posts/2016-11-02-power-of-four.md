@@ -1,5 +1,6 @@
 ---
 title: 342.Power of Four(Easy)
+key: 2016-11-02-power-of-four
 date: 2016-11-02 23:40
 categories: LeetCode
 tags: [LeetCode,Easy,位运算,一行实现,正则表达式]

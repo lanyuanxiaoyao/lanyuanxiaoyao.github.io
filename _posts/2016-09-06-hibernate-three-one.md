@@ -1,5 +1,6 @@
 ---
 title: Hibernate(3.1)＿Hibernate的get和load
+key: 2016-09-06-hibernate-three-one
 date: 2016-09-06 20:50
 categories: Hibernate
 tags: Hibernate
