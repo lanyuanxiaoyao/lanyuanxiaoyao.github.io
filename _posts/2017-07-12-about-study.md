@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 关于技术的学习
 date: 2017-07-12 15:34
 categories: 2017编程提高

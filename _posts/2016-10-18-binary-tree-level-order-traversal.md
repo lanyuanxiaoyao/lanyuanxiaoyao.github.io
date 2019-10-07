@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 102.Binary Tree Level Order Traversal(Easy)
 date: 2016-10-18 14:46
 categories: LeetCode

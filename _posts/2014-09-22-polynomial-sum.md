@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2011.多项式求和
 date: 2014-09-22 09:40
 categories: 杭电HDU

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Java+SqlServer的增删改查 
 date: 2015-11-22 15:25
 categories: Java

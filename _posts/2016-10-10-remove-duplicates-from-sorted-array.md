@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 26.Remove Duplicates from Sorted Array(Easy)
 date: 2016-10-10 17:34
 categories: LeetCode

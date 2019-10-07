@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 500.Keyboard Row(Easy)
 date: 2017-02-23 11:26
 categories: LeetCode

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2017编程提高第7节课——面向对象设计(7)
 date: 2017-08-31 12:26
 categories: 2017编程提高

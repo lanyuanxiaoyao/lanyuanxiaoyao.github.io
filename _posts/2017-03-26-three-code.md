@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 原码、反码和补码
 date: 2017-03-26 17:08
 categories: Others

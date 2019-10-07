@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 344.Reverse String(Easy)
 date: 2016-10-05 17:12
 categories: LeetCode

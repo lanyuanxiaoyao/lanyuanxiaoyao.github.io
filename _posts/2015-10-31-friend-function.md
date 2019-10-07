@@ -1,5 +1,4 @@
 ---
-layout: post
 title: C++ 成员函数与友元函数
 date: 2015-10-31 11:25
 categories: C++

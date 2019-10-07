@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 374.Guess Number Higher or Lower(Easy)
 date: 2017-02-23 10:18
 categories: LeetCode

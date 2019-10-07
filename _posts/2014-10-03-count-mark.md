@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 1235.统计同成绩学生人数
 date: 2014-10-03 23:34
 categories: 杭电HDU

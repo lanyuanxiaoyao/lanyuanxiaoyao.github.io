@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 选择排序(Selection Sort)
 date: 2017-03-10 15:27
 categories: 排序专题

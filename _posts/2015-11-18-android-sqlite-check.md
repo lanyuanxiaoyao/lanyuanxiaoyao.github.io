@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Android 查看应用内数据库相关问题
 date: 2015-11-18 15:51
 categories: Android

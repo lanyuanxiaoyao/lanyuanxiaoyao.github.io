@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 单例模式（Singleton Pattern）
 date: 2017-07-15 22:05
 categories: 设计模式

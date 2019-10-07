@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 67.Add Binary(Easy)
 date: 2016-10-30 23:14
 categories: LeetCode

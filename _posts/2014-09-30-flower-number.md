@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2010.水仙花数
 date: 2014-09-30 19:29
 categories: 杭电HDU

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2009.求数列的和
 date: 2014-09-12 11:28
 categories: 杭电HDU

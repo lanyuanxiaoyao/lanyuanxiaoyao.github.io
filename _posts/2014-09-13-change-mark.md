@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2004.成绩转换
 date: 2014-09-13 23:06
 categories: 杭电HDU

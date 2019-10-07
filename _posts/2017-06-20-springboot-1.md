@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Spring Boot（一） Spring Boot项目创建
 date: 2017-06-20 10:44
 categories: Spring

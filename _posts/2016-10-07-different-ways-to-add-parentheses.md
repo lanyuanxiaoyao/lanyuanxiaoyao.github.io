@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 241.Different Ways to Add Parentheses(Medium)
 date: 2016-10-07 22:53
 categories: LeetCode

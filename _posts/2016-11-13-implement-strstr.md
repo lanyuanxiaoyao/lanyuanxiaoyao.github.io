@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 28.Implement strStr()(Easy)
 date: 2016-11-13 12:24
 categories: LeetCode

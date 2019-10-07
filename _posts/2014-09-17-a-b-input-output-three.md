@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 1091.A+B for Input-Output Practice (III)
 date: 2014-09-17 17:16
 categories: 杭电HDU

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 80.Remove Duplicates from Sorted Array II(Medium)
 date: 2017-02-24 11:11
 categories: LeetCode

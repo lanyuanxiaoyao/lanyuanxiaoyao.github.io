@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 插入排序(Insertion Sort)
 date: 2017-3-11 17:23
 categories: 排序专题

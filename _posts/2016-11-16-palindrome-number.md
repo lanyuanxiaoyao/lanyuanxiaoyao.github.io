@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 9.Palindrome Number(Easy)
 date: 2016-11-16 14:31
 categories: LeetCode

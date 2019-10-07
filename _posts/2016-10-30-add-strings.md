@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 415.Add Strings(Easy)
 date: 2016-10-30 23:39
 categories: LeetCode

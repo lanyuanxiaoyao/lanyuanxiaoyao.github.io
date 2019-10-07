@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 计算机网络面试题集锦
 date: 2017-04-24 12:46
 tags: [面试题,Java,网络]

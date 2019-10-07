@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 集合专题1 Collection
 date: 2017-03-25 20:58
 categories: 集合专题

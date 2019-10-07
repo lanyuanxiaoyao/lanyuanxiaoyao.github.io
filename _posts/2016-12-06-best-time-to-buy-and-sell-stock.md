@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 121. Best Time to Buy and Sell Stock(Easy)
 date: 2016-12-06 14:33
 categories: LeetCode

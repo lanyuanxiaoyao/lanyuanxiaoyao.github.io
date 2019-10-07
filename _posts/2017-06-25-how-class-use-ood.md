@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 实体类怎么用上面向对象的原则?
 date: 2017-06-25 12:13
 categories: 2017编程提高

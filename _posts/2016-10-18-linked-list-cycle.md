@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 141.Linked List Cycle(Easy)
 date: 2016-10-18 15:15
 categories: LeetCode

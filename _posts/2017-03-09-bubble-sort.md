@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 冒泡排序(Bubble Sort)
 date: 2017-03-09 23:35
 categories: 排序专题

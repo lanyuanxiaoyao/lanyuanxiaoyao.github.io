@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 328.Odd Even Linked List(Medium)
 date: 2016-11-01 23:22
 categories: LeetCode

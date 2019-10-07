@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 正则表达式(一) 基本表达式
 date: 2018-01-16 17:13
 categories: 正则表达式

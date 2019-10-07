@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hibernate(2.0)＿Hibernate框架的配置
 date: 2016-09-05 23:43
 categories: Hibernate
@@ -55,7 +54,7 @@ Window10 专业版 64-bit
 
 　　然后开始配置Hibernate配置文件
 　　打开hibernate.cfg.xml
-```
+```xml
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE hibernate-configuration PUBLIC
           "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
@@ -91,7 +90,7 @@ Window10 专业版 64-bit
 　　关于其中的属性，前面四个不再赘述
 　　***方言(dialect)***
 　　对于不同的数据库，其中的数据库的操作语句也不同，在Hibernate也要指定不同的配置文件，于是由
-```
+```xml
 <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 ```
 　　这个语句来指定，其中支持绝大多数主流的数据库，具体支持情况如下表（来源截止至2016.9.6官方文档）
@@ -139,7 +138,7 @@ Window10 专业版 64-bit
 　　TimesTen　　Support for the TimesTen database, version 5.1. May work with newer versions
 
 　　具体用法为：
-```
+```xml
 <property name="dialect">org.hibernate.dialect.(这里写对应数据库的名字)</property>
 ```
 　　***显示sql语句(show_sql)***

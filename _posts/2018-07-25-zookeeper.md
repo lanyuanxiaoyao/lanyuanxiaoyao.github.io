@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Zookeeper学习之路
 date: 2018-07-25 22:00
 categories: Zookeeper

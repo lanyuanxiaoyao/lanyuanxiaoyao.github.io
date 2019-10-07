@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 7.Reverse Integer(Easy)
 date: 2016-10-11 23:02
 categories: LeetCode

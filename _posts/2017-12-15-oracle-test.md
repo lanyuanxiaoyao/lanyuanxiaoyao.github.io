@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Oracle数据库常用操作
 date: 2017-12-15 19:11
 categories: 数据库

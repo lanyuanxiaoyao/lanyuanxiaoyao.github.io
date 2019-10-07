@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Spring Boot（三） Spring boot + Hibernate 多租户的使用
 date: 2017-07-14 11:44
 categories: Spring

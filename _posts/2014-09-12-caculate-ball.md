@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2002.计算球体积
 date: 2014-09-12 21:36
 categories: 杭电HDU

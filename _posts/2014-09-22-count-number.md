@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2008.数值统计
 date: 2014-09-22 09:54
 categories: 杭电HDU

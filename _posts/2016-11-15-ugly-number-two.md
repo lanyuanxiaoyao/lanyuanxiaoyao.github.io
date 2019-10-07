@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 264.Ugly Number II(Medium)
 date: 2016-11-15 14:30
 categories: LeetCode

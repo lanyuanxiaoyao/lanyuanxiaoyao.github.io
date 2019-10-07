@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 位运算
 date: 2017-03-26 01:21
 categories: Java

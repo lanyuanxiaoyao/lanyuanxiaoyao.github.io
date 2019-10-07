@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2007.平方和与立方和
 date: 2014-09-28 17:27
 categories: 杭电HDU

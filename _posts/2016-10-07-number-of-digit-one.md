@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 233.Number of Digit One（暂留）
 date: 2016-10-07 17:36
 categories: LeetCode

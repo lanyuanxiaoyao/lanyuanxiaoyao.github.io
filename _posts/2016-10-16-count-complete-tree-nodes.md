@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 222.Count Complete Tree Nodes(Medium)
 date: 2016-10-16 11:58
 categories: LeetCode

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 1279.验证角谷猜想
 date: 2014-10-05 14:18
 categories: 杭电HDU

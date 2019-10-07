@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 6.ZigZag Conversion(Easy)
 date: 2016-11-01 23:15
 categories: LeetCode

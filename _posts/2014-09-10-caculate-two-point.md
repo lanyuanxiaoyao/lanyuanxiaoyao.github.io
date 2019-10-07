@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2001.计算两点间的距离
 date: 2014-09-10 17:03
 categories: 杭电HDU

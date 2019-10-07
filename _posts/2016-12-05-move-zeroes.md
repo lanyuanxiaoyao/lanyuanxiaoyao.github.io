@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 283.Move Zeroes(Easy)
 date: 2016-12-05 14:33
 categories: LeetCode

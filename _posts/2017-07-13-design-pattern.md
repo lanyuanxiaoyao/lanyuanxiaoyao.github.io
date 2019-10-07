@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 设计模式（持续更新）
 date: 2017-07-13 08:19
 categories: 设计模式

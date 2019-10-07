@@ -1,5 +1,4 @@
 ---
-layout: post
 title: C++ 继承与多重继承
 date: 2015-11-12 16:56
 categories: C++

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2017编程提高第2.5节课——Java并发编程(2)
 date: 2017-06-21 23:29
 categories: 2017编程提高

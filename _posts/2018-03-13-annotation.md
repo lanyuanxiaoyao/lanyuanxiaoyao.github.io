@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Java 注解(Annotation)
 date: 2018-03-13 16:11
 categories: Java

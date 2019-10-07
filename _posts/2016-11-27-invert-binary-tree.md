@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 226.Invert Binary Tree(Easy)
 date: 2016-11-27 14:32
 categories: LeetCode

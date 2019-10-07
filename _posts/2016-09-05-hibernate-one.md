@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hibernate(1.0)＿简单认识Hibernate
 date: 2016-09-05 21:14
 categories: Hibernate

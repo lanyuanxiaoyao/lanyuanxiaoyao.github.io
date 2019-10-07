@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hibernate(3.2)＿Hibernate多表的操作
 date: 2016-09-11 11:18
 categories: Hibernate

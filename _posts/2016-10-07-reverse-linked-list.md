@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 206.Reverse Linked List(Easy)
 date: 2016-10-07 13:23
 categories: LeetCode

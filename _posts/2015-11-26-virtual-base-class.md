@@ -1,5 +1,4 @@
 ---
-layout: post
 title: C++ 虚基类的使用示例
 date: 2015-11-26 15:36
 categories: C++

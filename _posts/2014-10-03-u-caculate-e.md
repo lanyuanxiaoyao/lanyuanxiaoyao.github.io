@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 1012.u Calculate e
 date: 2014-10-03 12:40
 categories: 杭电HDU

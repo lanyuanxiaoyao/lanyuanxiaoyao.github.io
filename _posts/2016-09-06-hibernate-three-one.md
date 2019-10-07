@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hibernate(3.1)＿Hibernate的get和load
 date: 2016-09-06 20:50
 categories: Hibernate

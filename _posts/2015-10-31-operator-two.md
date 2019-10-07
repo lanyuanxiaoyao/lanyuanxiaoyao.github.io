@@ -1,5 +1,4 @@
 ---
-layout: post
 title: C++ 运算符重载II
 date: 2015-10-31 11:01
 categories: C++

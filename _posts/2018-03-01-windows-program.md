@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Win软件推荐——QTTabBar
 date: 2018-03-01 08:44
 categories: Others

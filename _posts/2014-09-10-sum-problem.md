@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 1001.Sum Problem
 date: 2014-09-10 16:45
 categories: 杭电HDU

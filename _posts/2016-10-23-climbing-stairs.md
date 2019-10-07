@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 70.Climbing Stairs(Easy)
 date: 2016-10-23 12:50
 categories: LeetCode

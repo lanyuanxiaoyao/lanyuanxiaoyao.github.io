@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 数据库连接为什么“昂贵”？
 date: 2017-06-25 10:38
 categories: 2017编程提高

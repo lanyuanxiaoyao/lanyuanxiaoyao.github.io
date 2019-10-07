@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hibernate(3.0)＿Hibernate单表的增删改查
 date: 2016-09-06 11:04
 categories: Hibernate

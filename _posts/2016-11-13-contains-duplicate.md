@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 217.Contains Duplicate(Easy)
 date: 2016-11-13 14:14
 categories: LeetCode

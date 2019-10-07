@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 342.Power of Four(Easy)
 date: 2016-11-02 23:40
 categories: LeetCode

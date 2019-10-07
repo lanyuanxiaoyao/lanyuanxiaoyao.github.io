@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2012.素数判定
 date: 2014-10-02 19:41
 categories: 杭电HDU

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2017编程提高第6节课(作业)
 date: 2017-07-21 12:53
 categories: 2017编程提高

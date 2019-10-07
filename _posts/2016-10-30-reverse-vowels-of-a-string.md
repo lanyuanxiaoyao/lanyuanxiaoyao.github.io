@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 345.Reverse Vowels of a String(Easy)
 date: 2016-10-30 22:55
 categories: LeetCode

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2000.ASCII码排序
 date: 2014-09-13 23:12
 categories: 杭电HDU
