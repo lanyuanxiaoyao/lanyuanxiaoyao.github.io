@@ -38,8 +38,8 @@ author:
   name      : LanyuanXiaoyao
   url       : http://lanyuanxiaoyao.com
   avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
-  email     :
+  bio       : 持续脱发.
+  email     : lanyuanxiaoyao@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -127,12 +127,12 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
+    clientID    : e9c4b4234b0a3c832ca9 # GitHub Application Client ID
+    clientSecret: 87a3e14eda429dd271a8c8e866ee8a79e9157375 # GitHub Application Client Secret
+    repository  : lanyuanxiaoyao.github.io # GitHub repo
+    owner       : lanyuanxiaoyao # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+      - lanyuanxiaoyao # - your GitHub Id
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
