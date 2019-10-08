@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,二分查找]
 ---
 
-* content
-{:toc}
 
 
 >We are playing the Guess Game. The game is as follows:

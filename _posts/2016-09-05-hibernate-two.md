@@ -6,8 +6,6 @@ categories: Hibernate
 tags: Hibernate
 ---
 
-* content
-{:toc}
 
 ## 操作平台
 

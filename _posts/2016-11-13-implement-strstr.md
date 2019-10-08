@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,搜索,字符串处理,一行实现]
 ---
 
-* content
-{:toc}
 
 
 >Implement strStr().

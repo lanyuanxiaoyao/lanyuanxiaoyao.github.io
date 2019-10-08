@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Medium,DFS]
 ---
 
-* content
-{:toc}
 
 
 >Write a program to find the `n`-th ugly number.

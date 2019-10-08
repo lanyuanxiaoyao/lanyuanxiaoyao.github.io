@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,数组,计数,一行实现]
 ---
 
-* content
-{:toc}
 
 
 >Given an array of integers, find if the array contains any duplicates.

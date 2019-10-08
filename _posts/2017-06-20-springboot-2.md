@@ -6,8 +6,6 @@ categories: Spring
 tags: [Spring,Spring Boot,Mybatis]
 ---
 
-* content
-{:toc}
 
 # 说明
 本文旨在记录spring boot中创建spring mvc + mybatis的整合，网上的各种乱七八糟的整合方式都有，所以把自己的套路记录下来，我采用的整合方式为：**gradle + spring mvc + mybatis**

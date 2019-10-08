@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Medium,搜索,计数]
 ---
 
-* content
-{:toc}
 
 
 >Given an integer n, count the total number of digit 1 appearing in all non-negative integers less than or equal to n.

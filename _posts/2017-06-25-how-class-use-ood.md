@@ -6,8 +6,6 @@ categories: 2017编程提高
 tags: [面向对象设计,Issues]
 ---
 
-* content
-{:toc}
 
 # 问题
 问题链接：[【实体类】怎么用上 【面向对象】的原则?](https://github.com/onlyliuxin/coding2017/issues/455)  

@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,大数运算,数组]
 ---
 
-* content
-{:toc}
 
 
 >Given two non-negative numbers num1

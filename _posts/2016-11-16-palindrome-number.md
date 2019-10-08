@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,回文数]
 ---
 
-* content
-{:toc}
 
 
 >Determine whether an integer is a palindrome. Do this without extra space.

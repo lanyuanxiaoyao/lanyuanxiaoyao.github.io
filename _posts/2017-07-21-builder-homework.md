@@ -6,8 +6,6 @@ categories: 2017编程提高
 tags: [设计模式,建造者模式,作业]
 ---
 
-* content
-{:toc}
 
 # 问题
 ## 自制Builder 创建xml 字符串

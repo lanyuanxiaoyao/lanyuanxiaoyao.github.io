@@ -6,8 +6,6 @@ categories: 2017编程提高
 tags: [数据库,Issues]
 ---
 
-* content
-{:toc}
 
 # 关于问题
 问题链接：[为什么数据库连接很“昂贵"？](https://github.com/onlyliuxin/coding2017/issues/451)

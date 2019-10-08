@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,二叉树,队列]
 ---
 
-* content
-{:toc}
 
 
 >Given a binary tree, return the *level order* traversal of its nodes' values. (ie, from left to right, level by level).

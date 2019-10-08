@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,动态规划,一行实现]
 ---
 
-* content
-{:toc}
 
 
 >Say you have an array for which the _i_ element is the price of a given stock on day _i_.

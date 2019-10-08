@@ -6,8 +6,6 @@ categories: 2017编程提高
 tags: [学习]
 ---
 
-* content
-{:toc}
 
 # 关于问题
 问题链接：[关于技术的学习](https://github.com/onlyliuxin/coding2017/issues/497)

@@ -6,8 +6,6 @@ categories: 正则表达式
 tags: [正则表达式]
 ---
 
-* content
-{:toc}
 
 # 定义
 **正则表达式(Regular Expression)**  

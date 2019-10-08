@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Medium,二叉树,计数,递归]
 ---
 
-* content
-{:toc}
 
 
 >Given a **complete** binary tree, count the number of nodes.

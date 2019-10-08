@@ -6,8 +6,6 @@ categories: 2017编程提高
 tags: [Websocket,Socket,Issues]
 ---
 
-* content
-{:toc}
 
 # 关于问题
 问题链接：[为什么不直接使用socket ,还要定义一个新的websocket 的呢？](https://github.com/onlyliuxin/coding2017/issues/497)

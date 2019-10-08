@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,链表]
 ---
 
-* content
-{:toc}
 
 
 >Reverse a singly linked list.

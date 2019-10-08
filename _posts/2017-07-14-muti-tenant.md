@@ -6,8 +6,6 @@ categories: Spring
 tags: [Spring,Spring Boot,Hibernate]
 ---
 
-* content
-{:toc}
 
 # 多租户
 > **多租户（Multi Tenancy/Tenant）** 是一种软件架构，其定义是：**在一台服务器上运行单个应用实例，它为多个租户提供服务**。

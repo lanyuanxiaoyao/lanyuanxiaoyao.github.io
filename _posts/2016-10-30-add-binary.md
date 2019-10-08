@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,大数运算,数组]
 ---
 
-* content
-{:toc}
 
 
 >Given two binary strings, return their sum (also a binary string).

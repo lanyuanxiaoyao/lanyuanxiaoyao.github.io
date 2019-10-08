@@ -6,8 +6,6 @@ categories: 2017编程提高
 tags: [Java,多线程]
 ---
 
-* content
-{:toc}
 
 # 作业讲评
 ## OCP重构作业

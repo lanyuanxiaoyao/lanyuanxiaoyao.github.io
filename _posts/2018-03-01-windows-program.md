@@ -7,8 +7,6 @@ tags: [软件推荐,杂谈]
 description: 资源管理器增强插件，从此摆脱乱糟糟的堆满文件夹的桌面，效率up！up！up！
 ---
 
-* content
-{:toc}
 
 # QTTabBar
 ## 官网

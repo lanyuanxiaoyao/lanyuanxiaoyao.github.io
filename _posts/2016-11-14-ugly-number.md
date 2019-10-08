@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy]
 ---
 
-* content
-{:toc}
 
 
 >Write a program to check whether a given number is an ugly number.

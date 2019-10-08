@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Medium,计数,数组]
 ---
 
-* content
-{:toc}
 
 
 >Follow up for "Remove Duplicates":

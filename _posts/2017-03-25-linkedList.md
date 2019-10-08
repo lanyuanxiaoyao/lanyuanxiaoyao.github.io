@@ -6,8 +6,6 @@ categories: 集合专题
 tags: [集合专题]
 ---
 
-* content
-{:toc}
 
 # 简介
 LinkedList 和 ArrayList 一样，都实现了 List 接口，但其内部的数据结构有本质的不同。LinkedList 是基于链表实现的（通过名字也能区分开来），所以它的插入和删除操作比 ArrayList 更加高效。但也是由于其为基于链表的，所以随机访问的效率要比 ArrayList 差。

@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,二叉树,递归]
 ---
 
-* content
-{:toc}
 
 
 >Invert a binary tree.

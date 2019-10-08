@@ -6,8 +6,6 @@ categories: 2017编程提高
 tags: [软件工程,OCP,开闭原则,设计模式,作业]
 ---
 
-* content
-{:toc}
 
 # 问题
 重构一个简单的log打印，使之符合开闭原则(OCP)

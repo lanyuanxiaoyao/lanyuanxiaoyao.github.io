@@ -6,8 +6,6 @@ categories: 集合专题
 tags: [集合专题]
 ---
 
-* content
-{:toc}
 
 # 简介
 ArrayList 可以理解为动态数组，用 MSDN 中的说法，就是 Array 的复杂版本。与 Java 中的数组相比，它的容量能动态增长。ArrayList 是 List 接口的可变数组的实现。实现了所有可选列表操作，并允许包括 null 在内的所有元素。除了实现 List 接口外，此类还提供一些方法来操作内部用来存储列表的数组的大小。  

@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,字符串处理,堆栈]
 ---
 
-* content
-{:toc}
 
 
 >Write a function that takes a string as input and reverse only the vowels of a string.

@@ -6,8 +6,6 @@ tags: [面试题,Java,网络]
 categories: 面试
 ---
 
-* content
-{:toc}
 
 ### OSI，TCP/IP，五层协议的体系结构，以及各层协议
 

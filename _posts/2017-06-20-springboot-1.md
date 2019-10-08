@@ -6,8 +6,6 @@ categories: Spring
 tags: [Spring,Spring Boot]
 ---
 
-* content
-{:toc}
 
 # 简介
 Spring Boot简化了基于Spring的应用开发，你只需要"run"就能创建一个独立的，产 品级别的Spring应用。	我们为Spring平台及第三方库提供开箱即用的设置，这样你 就可以有条不紊地开始。多数Spring	Boot应用只需要很少的Spring配置。

@@ -6,8 +6,6 @@ categories: 2017编程提高
 tags: [IO,Issues]
 ---
 
-* content
-{:toc}
 
 # 问题
 问题链接：[为什么异步IO不能完全取代阻塞IO](https://github.com/onlyliuxin/coding2017/issues/333)

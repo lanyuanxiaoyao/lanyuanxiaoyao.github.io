@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,溢出]
 ---
 
-* content
-{:toc}
 
 
 >Reverse digits of an integer.

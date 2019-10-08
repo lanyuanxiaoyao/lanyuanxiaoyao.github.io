@@ -6,8 +6,6 @@ categories: LeetCode
 tags: [LeetCode,Easy,数组]
 ---
 
-* content
-{:toc}
 
 
 >Given an array `nums`, write a function to move all `0`'s to the end of it while maintaining the relative order of the non-zero elements.
