@@ -22,7 +22,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : LanyuanXiaoyao's Blog
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  记录编程生活
 
 
 ## => Language and Timezone
@@ -37,7 +37,7 @@ author:
   type      : # "person" (default), "organization"
   name      : LanyuanXiaoyao
   url       : http://lanyuanxiaoyao.com
-  avatar    : # path or url of avatar image (square)
+  avatar    : https://s2.ax1x.com/2019/10/08/ufuKyQ.jpg # path or url of avatar image (square)
   bio       : 持续脱发.
   email     : lanyuanxiaoyao@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
