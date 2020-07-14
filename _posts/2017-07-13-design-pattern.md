@@ -120,7 +120,7 @@ tags: [设计模式]
 
 我们主要关注前面3类共25种设计模式，它们的关系可以用一张图来表示：
 
-![设计模式之间的关系](http://www.runoob.com/wp-content/uploads/2014/08/the-relationship-between-design-patterns.jpg)
+![设计模式之间的关系](https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/设计模式（持续更新）/2468115597e7492aeec2e7962a83ea59.jpg)
 
 # 思考
 这里是关于设计模式的一些说法和思考
