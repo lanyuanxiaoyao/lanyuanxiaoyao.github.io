@@ -663,9 +663,9 @@ public class SingletonConcurrentTest {
 4. [图说设计模式-单例模式](http://design-patterns.readthedocs.io/zh_CN/latest/creational_patterns/singleton.html)
 5. [了了在小-关于几种常见的单例模式的学习总结](http://www.cnblogs.com/UYGHYTYH/p/5912548.html)
 
-  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8815%E6%97%A5_23h27m52s_002_.png "实例一致性测试"
-  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_12h09m16s_003_.png "运行结果"
-  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_13h43m24s_005_.png "运行结果"
-  [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_13h46m43s_006_.png "运行结果"
-  [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_19h51m40s_001_.png "运行结果"
-  [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/16/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%88Singleton%20Pattern%EF%BC%89/Ashampoo_Snap_2017%E5%B9%B47%E6%9C%8816%E6%97%A5_19h59m18s_002_.png "运行结果"
+  [1]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/单例模式（Singleton_Pattern）/c7bf638b76febfa49ae6de19c88d15de.png "实例一致性测试"
+  [2]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/单例模式（Singleton_Pattern）/859829dd86d88e11615eda3ae690220f.png "运行结果"
+  [3]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/单例模式（Singleton_Pattern）/b90dd754ab5166b38b86072a648ab927.png "运行结果"
+  [4]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/单例模式（Singleton_Pattern）/e43c4b35042b9d253e44cb0e5cd8f4c5.png "运行结果"
+  [5]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/单例模式（Singleton_Pattern）/7e88d35735825d6a78cf1c6d2002434f.png "运行结果"
+  [6]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/单例模式（Singleton_Pattern）/8e443fae0bb2c8320490a7d04d4df6a9.png "运行结果"
