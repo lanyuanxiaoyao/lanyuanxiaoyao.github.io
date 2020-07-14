@@ -125,25 +125,25 @@ QTTabBar实际上是一个**IE浏览器插件**，可能不是程序猿的你很
 如果看到QTTabBar有被禁用，就只需要重新启用就没问题了
 
 
-  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/qttabbar_top.png "QTTabBar"
-  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h03m05s_001_.png
-  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h08m55s_002_.png
-  [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h16m26s_002_.png
-  [5]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h20m53s_001_.png
-  [6]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h21m23s_002_.png
-  [7]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h22m10s_003_.png
-  [8]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h25m32s_004_.png
-  [9]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h26m46s_005_.png
-  [10]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h46m34s_014_.png
-  [11]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h28m29s_006_.png
-  [12]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h54m12s_015_.png
-  [13]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h30m35s_007_.png
-  [14]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h28m29s_006_.png
-  [15]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h33m25s_008_.png
-  [16]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_10h09m43s_018_.png
-  [17]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h34m16s_010_.png
-  [18]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h34m01s_009_.png
-  [19]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h35m58s_011_.png
-  [20]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_09h39m20s_013_.png
-  [21]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_10h38m18s_019_.png
-  [22]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/%E5%B0%8F%E4%B9%A6%E5%8C%A0/2018/3/1/Windows%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90%28%E8%87%AA%E7%94%A8%29/Ashampoo_Snap_2018.03.01_10h39m17s_020_.png
+  [1]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/aee4d16628c66a6c7a5a12d131c86363.png "QTTabBar"
+  [2]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/de8fce10847b1da547a0b9784f1e9675.png
+  [3]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/211e464202033cdc963030ce3b847237.png
+  [4]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/6b55e04e2045202974c716ba91f7a9b3.png
+  [5]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/e1ecae54b39028455c3cecc24008552c.png
+  [6]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/44c6f9b89e261ad529c4003eb834c88c.png
+  [7]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/d10ee10d777a6da9ce397c248ce3b13c.png
+  [8]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/7141a04faf80b85c17806763115fdfc1.png
+  [9]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/23a179d959a6090700af92fabad9fb29.png
+  [10]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/0aa703d843a6d8d5f9e7de98c3cf7e0a.png
+  [11]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/80e64b47516b9b3e7e163f3d7f6550fd.png
+  [12]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/d108bcf85557d35021687cd1e9ea8cfc.png
+  [13]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/ce8f01870a85cb000a31b55ca887fb38.png
+  [14]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/80e64b47516b9b3e7e163f3d7f6550fd.png
+  [15]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/f773f4b539cfdd0397adc04237b923a0.png
+  [16]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/44316726e833878d57d3dd21fae74569.png
+  [17]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/e014bba2f6778c00ba3b8695ae1c7e1b.png
+  [18]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/d7865369a7ebb39b5b4f0c43d8cbb2f1.png
+  [19]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/db6222af433727d952aef628ece7dc7f.png
+  [20]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/d51f06c2392f9b5ebd2ab5b88108dc2a.png
+  [21]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/c12c9fec179576967c834d9467036f16.png
+  [22]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/Win软件推荐——QTTabBar/e17f88e2255c8e9f9ec649f4f2bc0030.png
