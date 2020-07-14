@@ -100,7 +100,7 @@ Socket起源于UNIX，在Unix一切皆文件哲学的思想下，Socket是一种
 5. [WebSocket和Socket的区别](http://www.jianshu.com/p/59b5594ffbb0)
 
 
-  [1]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/22/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8socket%20,%E8%BF%98%E8%A6%81%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84websocket%20%E7%9A%84%E5%91%A2%EF%BC%9F/1966024-28aa9e546a7c7528.jpg "websocket和socket的关系"
-  [2]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/22/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8socket%20,%E8%BF%98%E8%A6%81%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84websocket%20%E7%9A%84%E5%91%A2%EF%BC%9F/bg2017051502.png "HTTP和Websocket"
-  [3]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/22/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8socket%20,%E8%BF%98%E8%A6%81%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84websocket%20%E7%9A%84%E5%91%A2%EF%BC%9F/05225723-2ffa89aad91f46099afa530ef8660b20.jpg "Socket抽象层"
-  [4]: https://www.github.com/lanyuanxiaoyao/GitGallery/raw/master/2017/7/22/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8socket%20,%E8%BF%98%E8%A6%81%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84websocket%20%E7%9A%84%E5%91%A2%EF%BC%9F/05232335-fb19fc7527e944d4845ef40831da4ec2.png "Socket的使用"
+  [1]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/为什么不直接使用socket_,还要定义一个新的websocket_的呢？/b8f30a6e317ee813530918b7b93c2e7d.jpg "websocket和socket的关系"
+  [2]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/为什么不直接使用socket_,还要定义一个新的websocket_的呢？/01881d8f5cd4dc6d8650a6b9f173cb49.png "HTTP和Websocket"
+  [3]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/为什么不直接使用socket_,还要定义一个新的websocket_的呢？/5a8cad4c4f145a40366ce966a8ee438a.jpg "Socket抽象层"
+  [4]: https://xiaoshujiang-1251968084.cos.ap-guangzhou.myqcloud.com/xiaoshujiang/为什么不直接使用socket_,还要定义一个新的websocket_的呢？/069ba28026013ca83be30456b3a5b101.png "Socket的使用"
